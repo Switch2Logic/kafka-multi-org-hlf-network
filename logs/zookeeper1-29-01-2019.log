@@ -1,0 +1,790 @@
+ZooKeeper JMX enabled by default
+Using config: /conf/zoo.cfg
+2019-01-29 08:13:17,302 [myid:] - INFO  [main:QuorumPeerConfig@124] - Reading configuration from: /conf/zoo.cfg
+2019-01-29 08:13:17,342 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper2.switch2logic.co.za to address: zookeeper2.switch2logic.co.za/10.0.0.146
+2019-01-29 08:13:17,343 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper1.switch2logic.co.za to address: zookeeper1.switch2logic.co.za/10.0.0.145
+2019-01-29 08:13:17,346 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper0.switch2logic.co.za to address: zookeeper0.switch2logic.co.za/10.0.0.147
+2019-01-29 08:13:17,347 [myid:] - INFO  [main:QuorumPeerConfig@352] - Defaulting to majority quorums
+2019-01-29 08:13:17,363 [myid:2] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2019-01-29 08:13:17,363 [myid:2] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 1
+2019-01-29 08:13:17,365 [myid:2] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@138] - Purge task started.
+2019-01-29 08:13:17,394 [myid:2] - INFO  [main:QuorumPeerMain@127] - Starting quorum peer
+2019-01-29 08:13:17,400 [myid:2] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@144] - Purge task completed.
+2019-01-29 08:13:17,418 [myid:2] - INFO  [main:NIOServerCnxnFactory@89] - binding to port 0.0.0.0/0.0.0.0:2181
+2019-01-29 08:13:17,422 [myid:2] - INFO  [main:QuorumPeer@1019] - tickTime set to 2000
+2019-01-29 08:13:17,422 [myid:2] - INFO  [main:QuorumPeer@1039] - minSessionTimeout set to -1
+2019-01-29 08:13:17,423 [myid:2] - INFO  [main:QuorumPeer@1050] - maxSessionTimeout set to -1
+2019-01-29 08:13:17,423 [myid:2] - INFO  [main:QuorumPeer@1065] - initLimit set to 5
+2019-01-29 08:13:17,446 [myid:2] - INFO  [main:QuorumPeer@533] - currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2019-01-29 08:13:17,452 [myid:2] - INFO  [main:QuorumPeer@548] - acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2019-01-29 08:13:17,470 [myid:2] - INFO  [ListenerThread:QuorumCnxManager$Listener@534] - My election bind port: zookeeper1.switch2logic.co.za/10.0.0.145:3888
+2019-01-29 08:13:17,484 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer@774] - LOOKING
+2019-01-29 08:13:17,485 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FastLeaderElection@818] - New election. My id =  2, proposed zxid=0x0
+2019-01-29 08:13:17,491 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za/10.0.0.147:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 08:13:17,493 [myid:2] - INFO  [WorkerSender[myid=2]:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper0.switch2logic.co.za to address: zookeeper0.switch2logic.co.za/10.0.0.147
+2019-01-29 08:13:17,498 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 2 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x0 (n.peerEpoch) LOOKING (my state)
+2019-01-29 08:13:17,498 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@400] - Cannot open channel to 3 at election address zookeeper2.switch2logic.co.za/10.0.0.146:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 08:13:17,501 [myid:2] - INFO  [WorkerSender[myid=2]:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper2.switch2logic.co.za to address: zookeeper2.switch2logic.co.za/10.0.0.146
+2019-01-29 08:13:17,645 [myid:2] - INFO  [zookeeper1.switch2logic.co.za/10.0.0.145:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.146:55916
+2019-01-29 08:13:17,650 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x0 (n.peerEpoch) LOOKING (my state)
+2019-01-29 08:13:17,652 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za/10.0.0.147:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 08:13:17,652 [myid:2] - INFO  [WorkerSender[myid=2]:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper0.switch2logic.co.za to address: zookeeper0.switch2logic.co.za/10.0.0.147
+2019-01-29 08:13:17,654 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x0 (n.peerEpoch) LOOKING (my state)
+2019-01-29 08:13:17,760 [myid:2] - INFO  [zookeeper1.switch2logic.co.za/10.0.0.145:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.147:52290
+2019-01-29 08:13:17,766 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 1 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEpoch) LOOKING (my state)
+2019-01-29 08:13:17,769 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEpoch) LOOKING (my state)
+2019-01-29 08:13:17,971 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer@844] - FOLLOWING
+2019-01-29 08:13:17,980 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Learner@86] - TCP NoDelay set to: true
+2019-01-29 08:13:17,992 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:zookeeper.version=3.4.9-1757313, built on 08/23/2016 06:50 GMT
+2019-01-29 08:13:17,993 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:host.name=zookeeper1.switch2logic.co.za
+2019-01-29 08:13:17,995 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.version=1.8.0_171
+2019-01-29 08:13:17,995 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.vendor=Oracle Corporation
+2019-01-29 08:13:17,995 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+2019-01-29 08:13:17,995 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.class.path=/zookeeper-3.4.9/bin/../build/classes:/zookeeper-3.4.9/bin/../build/lib/*.jar:/zookeeper-3.4.9/bin/../lib/slf4j-log4j12-1.6.1.jar:/zookeeper-3.4.9/bin/../lib/slf4j-api-1.6.1.jar:/zookeeper-3.4.9/bin/../lib/netty-3.10.5.Final.jar:/zookeeper-3.4.9/bin/../lib/log4j-1.2.16.jar:/zookeeper-3.4.9/bin/../lib/jline-0.9.94.jar:/zookeeper-3.4.9/bin/../zookeeper-3.4.9.jar:/zookeeper-3.4.9/bin/../src/java/lib/*.jar:/conf:
+2019-01-29 08:13:17,996 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2019-01-29 08:13:17,996 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.io.tmpdir=/tmp
+2019-01-29 08:13:17,996 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.compiler=<NA>
+2019-01-29 08:13:17,996 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:os.name=Linux
+2019-01-29 08:13:17,996 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:os.arch=amd64
+2019-01-29 08:13:17,996 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:os.version=4.13.0-46-generic
+2019-01-29 08:13:17,996 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:user.name=zookeeper
+2019-01-29 08:13:17,996 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:user.home=/home/zookeeper
+2019-01-29 08:13:17,997 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:user.dir=/zookeeper-3.4.9
+2019-01-29 08:13:17,999 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:ZooKeeperServer@173] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /datalog/version-2 snapdir /data/version-2
+2019-01-29 08:13:18,000 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Follower@61] - FOLLOWING - LEADER ELECTION TOOK - 515
+2019-01-29 08:13:18,003 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper2.switch2logic.co.za to address: zookeeper2.switch2logic.co.za/10.0.0.146
+2019-01-29 08:13:18,034 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Learner@326] - Getting a diff from the leader 0x0
+2019-01-29 08:13:18,038 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FileTxnSnapLog@240] - Snapshotting: 0x0 to /data/version-2/snapshot.0
+2019-01-29 08:13:29,080 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:Follower@116] - Got zxid 0x100000001 expected 0x1
+2019-01-29 08:13:29,081 [myid:2] - INFO  [SyncThread:2:FileTxnLog@203] - Creating new log file: log.100000001
+2019-01-29 09:13:18,210 [myid:2] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@138] - Purge task started.
+2019-01-29 09:13:18,214 [myid:2] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@144] - Purge task completed.
+2019-01-29 10:13:17,377 [myid:2] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@138] - Purge task started.
+2019-01-29 10:13:17,379 [myid:2] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@144] - Purge task completed.
+ZooKeeper JMX enabled by default
+Using config: /conf/zoo.cfg
+2019-01-29 10:33:50,999 [myid:] - INFO  [main:QuorumPeerConfig@124] - Reading configuration from: /conf/zoo.cfg
+2019-01-29 10:33:52,125 [myid:] - WARN  [main:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper2.switch2logic.co.za
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za: Name or service not known
+	at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.<init>(QuorumPeer.java:133)
+	at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parseProperties(QuorumPeerConfig.java:228)
+	at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parse(QuorumPeerConfig.java:140)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:101)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:78)
+2019-01-29 10:33:52,134 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper1.switch2logic.co.za to address: zookeeper1.switch2logic.co.za/10.0.0.5
+2019-01-29 10:33:52,339 [myid:] - WARN  [main:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za: Name or service not known
+	at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.<init>(QuorumPeer.java:133)
+	at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parseProperties(QuorumPeerConfig.java:228)
+	at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parse(QuorumPeerConfig.java:140)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:101)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:78)
+2019-01-29 10:33:52,343 [myid:] - INFO  [main:QuorumPeerConfig@352] - Defaulting to majority quorums
+2019-01-29 10:33:52,358 [myid:2] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2019-01-29 10:33:52,359 [myid:2] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 1
+2019-01-29 10:33:52,361 [myid:2] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@138] - Purge task started.
+2019-01-29 10:33:52,403 [myid:2] - INFO  [main:QuorumPeerMain@127] - Starting quorum peer
+2019-01-29 10:33:52,429 [myid:2] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@144] - Purge task completed.
+2019-01-29 10:33:52,461 [myid:2] - INFO  [main:NIOServerCnxnFactory@89] - binding to port 0.0.0.0/0.0.0.0:2181
+2019-01-29 10:33:52,470 [myid:2] - INFO  [main:QuorumPeer@1019] - tickTime set to 2000
+2019-01-29 10:33:52,472 [myid:2] - INFO  [main:QuorumPeer@1039] - minSessionTimeout set to -1
+2019-01-29 10:33:52,472 [myid:2] - INFO  [main:QuorumPeer@1050] - maxSessionTimeout set to -1
+2019-01-29 10:33:52,472 [myid:2] - INFO  [main:QuorumPeer@1065] - initLimit set to 5
+2019-01-29 10:33:52,504 [myid:2] - INFO  [main:FileSnap@83] - Reading snapshot /data/version-2/snapshot.0
+2019-01-29 10:33:52,581 [myid:2] - INFO  [ListenerThread:QuorumCnxManager$Listener@534] - My election bind port: zookeeper1.switch2logic.co.za/10.0.0.5:3888
+2019-01-29 10:33:52,599 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer@774] - LOOKING
+2019-01-29 10:33:52,601 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FastLeaderElection@818] - New election. My id =  2, proposed zxid=0x100000044
+2019-01-29 10:33:52,615 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:33:52,616 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:33:52,618 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@400] - Cannot open channel to 3 at election address zookeeper2.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:33:52,620 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper2.switch2logic.co.za
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:33:52,619 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 2 (n.leader), 0x100000044 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:33:52,823 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:52,824 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:52,824 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumCnxManager@400] - Cannot open channel to 3 at election address zookeeper2.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:52,825 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper2.switch2logic.co.za
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:52,825 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FastLeaderElection@852] - Notification time out: 400
+2019-01-29 10:33:53,227 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:53,227 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:53,228 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumCnxManager@400] - Cannot open channel to 3 at election address zookeeper2.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:53,228 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper2.switch2logic.co.za
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:53,229 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FastLeaderElection@852] - Notification time out: 800
+2019-01-29 10:33:54,029 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:54,030 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:54,030 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumCnxManager@400] - Cannot open channel to 3 at election address zookeeper2.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:54,031 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper2.switch2logic.co.za
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:54,031 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FastLeaderElection@852] - Notification time out: 1600
+2019-01-29 10:33:55,632 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:55,633 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:55,634 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumCnxManager@400] - Cannot open channel to 3 at election address zookeeper2.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:55,634 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper2.switch2logic.co.za
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:426)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:822)
+2019-01-29 10:33:55,634 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FastLeaderElection@852] - Notification time out: 3200
+2019-01-29 10:33:56,041 [myid:2] - INFO  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.23:41422
+2019-01-29 10:33:56,070 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x100000044 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:33:56,070 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:33:56,071 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:33:56,083 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x100000044 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:33:56,284 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer@844] - FOLLOWING
+2019-01-29 10:33:56,319 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Learner@86] - TCP NoDelay set to: true
+2019-01-29 10:33:56,359 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:zookeeper.version=3.4.9-1757313, built on 08/23/2016 06:50 GMT
+2019-01-29 10:33:56,359 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:host.name=zookeeper1.switch2logic.co.za
+2019-01-29 10:33:56,359 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.version=1.8.0_171
+2019-01-29 10:33:56,359 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.vendor=Oracle Corporation
+2019-01-29 10:33:56,359 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+2019-01-29 10:33:56,359 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.class.path=/zookeeper-3.4.9/bin/../build/classes:/zookeeper-3.4.9/bin/../build/lib/*.jar:/zookeeper-3.4.9/bin/../lib/slf4j-log4j12-1.6.1.jar:/zookeeper-3.4.9/bin/../lib/slf4j-api-1.6.1.jar:/zookeeper-3.4.9/bin/../lib/netty-3.10.5.Final.jar:/zookeeper-3.4.9/bin/../lib/log4j-1.2.16.jar:/zookeeper-3.4.9/bin/../lib/jline-0.9.94.jar:/zookeeper-3.4.9/bin/../zookeeper-3.4.9.jar:/zookeeper-3.4.9/bin/../src/java/lib/*.jar:/conf:
+2019-01-29 10:33:56,359 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2019-01-29 10:33:56,360 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.io.tmpdir=/tmp
+2019-01-29 10:33:56,360 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.compiler=<NA>
+2019-01-29 10:33:56,360 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:os.name=Linux
+2019-01-29 10:33:56,360 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:os.arch=amd64
+2019-01-29 10:33:56,360 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:os.version=4.13.0-46-generic
+2019-01-29 10:33:56,360 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:user.name=zookeeper
+2019-01-29 10:33:56,360 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:user.home=/home/zookeeper
+2019-01-29 10:33:56,360 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:user.dir=/zookeeper-3.4.9
+2019-01-29 10:33:56,414 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:ZooKeeperServer@173] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /datalog/version-2 snapdir /data/version-2
+2019-01-29 10:33:56,415 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Follower@61] - FOLLOWING - LEADER ELECTION TOOK - 3814
+2019-01-29 10:33:56,421 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper2.switch2logic.co.za
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.Learner.findLeader(Learner.java:202)
+	at org.apache.zookeeper.server.quorum.Follower.followLeader(Follower.java:67)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:846)
+2019-01-29 10:33:56,422 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:Learner@236] - Unexpected exception, tries=0, connecting to zookeeper2.switch2logic.co.za:2888
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.Learner.connectToLeader(Learner.java:228)
+	at org.apache.zookeeper.server.quorum.Follower.followLeader(Follower.java:69)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:846)
+2019-01-29 10:33:57,423 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:Learner@236] - Unexpected exception, tries=1, connecting to zookeeper2.switch2logic.co.za:2888
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.Learner.connectToLeader(Learner.java:228)
+	at org.apache.zookeeper.server.quorum.Follower.followLeader(Follower.java:69)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:846)
+2019-01-29 10:33:58,162 [myid:2] - INFO  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.24:34406
+2019-01-29 10:33:58,164 [myid:2] - WARN  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.receiveConnection(QuorumCnxManager.java:295)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$Listener.run(QuorumCnxManager.java:543)
+2019-01-29 10:33:58,165 [myid:2] - WARN  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.receiveConnection(QuorumCnxManager.java:295)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$Listener.run(QuorumCnxManager.java:543)
+2019-01-29 10:33:58,356 [myid:2] - INFO  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.24:34412
+2019-01-29 10:33:58,357 [myid:2] - WARN  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.receiveConnection(QuorumCnxManager.java:295)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$Listener.run(QuorumCnxManager.java:543)
+2019-01-29 10:33:58,358 [myid:2] - WARN  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.receiveConnection(QuorumCnxManager.java:295)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$Listener.run(QuorumCnxManager.java:543)
+2019-01-29 10:33:58,424 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:Learner@236] - Unexpected exception, tries=2, connecting to zookeeper2.switch2logic.co.za:2888
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.Learner.connectToLeader(Learner.java:228)
+	at org.apache.zookeeper.server.quorum.Follower.followLeader(Follower.java:69)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:846)
+2019-01-29 10:33:58,762 [myid:2] - INFO  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.24:34420
+2019-01-29 10:33:58,762 [myid:2] - WARN  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.receiveConnection(QuorumCnxManager.java:295)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$Listener.run(QuorumCnxManager.java:543)
+2019-01-29 10:33:58,763 [myid:2] - WARN  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.receiveConnection(QuorumCnxManager.java:295)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$Listener.run(QuorumCnxManager.java:543)
+2019-01-29 10:33:59,425 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:Learner@236] - Unexpected exception, tries=3, connecting to zookeeper2.switch2logic.co.za:2888
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.Learner.connectToLeader(Learner.java:228)
+	at org.apache.zookeeper.server.quorum.Follower.followLeader(Follower.java:69)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:846)
+2019-01-29 10:33:59,565 [myid:2] - INFO  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.24:34424
+2019-01-29 10:33:59,566 [myid:2] - WARN  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.receiveConnection(QuorumCnxManager.java:295)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$Listener.run(QuorumCnxManager.java:543)
+2019-01-29 10:33:59,567 [myid:2] - WARN  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.receiveConnection(QuorumCnxManager.java:295)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$Listener.run(QuorumCnxManager.java:543)
+2019-01-29 10:34:00,426 [myid:2] - ERROR [QuorumPeer[myid=2]/0.0.0.0:2181:Learner@233] - Unexpected exception
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.Learner.connectToLeader(Learner.java:228)
+	at org.apache.zookeeper.server.quorum.Follower.followLeader(Follower.java:69)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:846)
+2019-01-29 10:34:00,427 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:Follower@87] - Exception when following the leader
+java.net.UnknownHostException: zookeeper2.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.Learner.connectToLeader(Learner.java:228)
+	at org.apache.zookeeper.server.quorum.Follower.followLeader(Follower.java:69)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:846)
+2019-01-29 10:34:00,428 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Follower@164] - shutdown called
+java.lang.Exception: shutdown Follower
+	at org.apache.zookeeper.server.quorum.Follower.shutdown(Follower.java:164)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:850)
+2019-01-29 10:34:00,429 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FollowerZooKeeperServer@140] - Shutting down
+2019-01-29 10:34:00,429 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer@774] - LOOKING
+2019-01-29 10:34:00,430 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FastLeaderElection@818] - New election. My id =  2, proposed zxid=0x100000044
+2019-01-29 10:34:00,431 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:34:00,431 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:34:00,432 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 2 (n.leader), 0x100000044 (n.zxid), 0x2 (n.round), LOOKING (n.state), 2 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:00,435 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x100000044 (n.zxid), 0x1 (n.round), LEADING (n.state), 3 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:00,636 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FastLeaderElection@852] - Notification time out: 400
+2019-01-29 10:34:00,636 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:34:00,637 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:34:00,638 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 2 (n.leader), 0x100000044 (n.zxid), 0x2 (n.round), LOOKING (n.state), 2 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:00,641 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x100000044 (n.zxid), 0x1 (n.round), LEADING (n.state), 3 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:01,042 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:34:01,042 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FastLeaderElection@852] - Notification time out: 800
+2019-01-29 10:34:01,042 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:34:01,043 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 2 (n.leader), 0x100000044 (n.zxid), 0x2 (n.round), LOOKING (n.state), 2 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:01,045 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x100000044 (n.zxid), 0x1 (n.round), LEADING (n.state), 3 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:01,170 [myid:2] - INFO  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.24:34430
+2019-01-29 10:34:01,172 [myid:2] - WARN  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.receiveConnection(QuorumCnxManager.java:295)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$Listener.run(QuorumCnxManager.java:543)
+2019-01-29 10:34:01,173 [myid:2] - WARN  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.receiveConnection(QuorumCnxManager.java:295)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$Listener.run(QuorumCnxManager.java:543)
+2019-01-29 10:34:01,846 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FastLeaderElection@852] - Notification time out: 1600
+2019-01-29 10:34:01,847 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:34:01,848 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumPeer$QuorumServer@155] - Failed to resolve address: zookeeper0.switch2logic.co.za
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.recreateSocketAddresses(QuorumPeer.java:148)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:407)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:34:01,849 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 2 (n.leader), 0x100000044 (n.zxid), 0x2 (n.round), LOOKING (n.state), 2 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:01,851 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x100000044 (n.zxid), 0x1 (n.round), LEADING (n.state), 3 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:03,452 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FastLeaderElection@852] - Notification time out: 3200
+2019-01-29 10:34:03,453 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za:3888
+java.net.UnknownHostException: zookeeper0.switch2logic.co.za
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:34:03,454 [myid:2] - INFO  [WorkerSender[myid=2]:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper0.switch2logic.co.za to address: zookeeper0.switch2logic.co.za/10.0.0.24
+2019-01-29 10:34:03,455 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 2 (n.leader), 0x100000044 (n.zxid), 0x2 (n.round), LOOKING (n.state), 2 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:03,457 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x100000044 (n.zxid), 0x1 (n.round), LEADING (n.state), 3 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:04,376 [myid:2] - INFO  [zookeeper1.switch2logic.co.za/10.0.0.5:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.24:34434
+2019-01-29 10:34:04,381 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 1 (n.leader), 0x100000044 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:04,382 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 2 (n.leader), 0x100000044 (n.zxid), 0x2 (n.round), LOOKING (n.state), 1 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:04,583 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer@856] - LEADING
+2019-01-29 10:34:04,592 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Leader@59] - TCP NoDelay set to: true
+2019-01-29 10:34:04,593 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:ZooKeeperServer@173] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /datalog/version-2 snapdir /data/version-2
+2019-01-29 10:34:04,594 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Leader@361] - LEADING - LEADER ELECTION TOOK - 4164
+2019-01-29 10:34:04,612 [myid:2] - INFO  [LearnerHandler-/10.0.0.24:41640:LearnerHandler@329] - Follower sid: 1 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@65fdcd0e
+2019-01-29 10:34:04,622 [myid:2] - INFO  [LearnerHandler-/10.0.0.24:41640:LearnerHandler@384] - Synchronizing with Follower sid: 1 maxCommittedLog=0x100000044 minCommittedLog=0x100000001 peerLastZxid=0x100000044
+2019-01-29 10:34:04,622 [myid:2] - INFO  [LearnerHandler-/10.0.0.24:41640:LearnerHandler@393] - leader and follower are in sync, zxid=0x100000044
+2019-01-29 10:34:04,622 [myid:2] - INFO  [LearnerHandler-/10.0.0.24:41640:LearnerHandler@458] - Sending DIFF
+2019-01-29 10:34:04,635 [myid:2] - INFO  [LearnerHandler-/10.0.0.24:41640:LearnerHandler@518] - Received NEWLEADER-ACK message from 1
+2019-01-29 10:34:04,636 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Leader@952] - Have quorum of supporters, sids: [ 1,2 ]; starting up and setting last processed zxid: 0x200000000
+2019-01-29 10:34:06,389 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x100000044 (n.zxid), 0x2 (n.round), LOOKING (n.state), 3 (n.sid), 0x1 (n.peerEpoch) LEADING (my state)
+2019-01-29 10:34:06,594 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x100000044 (n.zxid), 0x2 (n.round), LOOKING (n.state), 3 (n.sid), 0x1 (n.peerEpoch) LEADING (my state)
+2019-01-29 10:34:06,607 [myid:2] - INFO  [LearnerHandler-/10.0.0.23:52048:LearnerHandler@329] - Follower sid: 3 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@40fb48ae
+2019-01-29 10:34:06,612 [myid:2] - INFO  [LearnerHandler-/10.0.0.23:52048:LearnerHandler@384] - Synchronizing with Follower sid: 3 maxCommittedLog=0x100000044 minCommittedLog=0x100000001 peerLastZxid=0x100000044
+2019-01-29 10:34:06,613 [myid:2] - INFO  [LearnerHandler-/10.0.0.23:52048:LearnerHandler@458] - Sending DIFF
+2019-01-29 10:34:06,621 [myid:2] - INFO  [LearnerHandler-/10.0.0.23:52048:LearnerHandler@518] - Received NEWLEADER-ACK message from 3
+2019-01-29 10:34:12,000 [myid:2] - INFO  [SessionTracker:ZooKeeperServer@358] - Expiring session 0x16898ab6d540001, timeout of 6000ms exceeded
+2019-01-29 10:34:12,001 [myid:2] - INFO  [SessionTracker:ZooKeeperServer@358] - Expiring session 0x16898ab6d540000, timeout of 6000ms exceeded
+2019-01-29 10:34:12,001 [myid:2] - INFO  [SessionTracker:ZooKeeperServer@358] - Expiring session 0x16898ab6d540002, timeout of 6000ms exceeded
+2019-01-29 10:34:12,002 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@487] - Processed session termination for sessionid: 0x16898ab6d540001
+2019-01-29 10:34:12,002 [myid:2] - INFO  [SyncThread:2:FileTxnLog@203] - Creating new log file: log.200000001
+2019-01-29 10:34:12,003 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@487] - Processed session termination for sessionid: 0x16898ab6d540000
+2019-01-29 10:34:12,003 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@487] - Processed session termination for sessionid: 0x16898ab6d540002
+2019-01-29 10:41:00,994 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@649] - Got user-level KeeperException when processing sessionid:0x168992c4fd50000 type:create cxid:0x13 zxid:0x200000007 txntype:-1 reqpath:n/a Error Path:/controller Error:KeeperErrorCode = NodeExists for /controller
+2019-01-29 10:41:01,042 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@649] - Got user-level KeeperException when processing sessionid:0x168992c4fd50001 type:setData cxid:0x1c zxid:0x20000000a txntype:-1 reqpath:n/a Error Path:/latest_producer_id_block Error:KeeperErrorCode = BadVersion for /latest_producer_id_block
+2019-01-29 10:41:01,185 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@649] - Got user-level KeeperException when processing sessionid:0x168992c4fd50001 type:create cxid:0x3f zxid:0x20000000d txntype:-1 reqpath:n/a Error Path:/brokers Error:KeeperErrorCode = NodeExists for /brokers
+2019-01-29 10:41:01,187 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@649] - Got user-level KeeperException when processing sessionid:0x168992c4fd50001 type:create cxid:0x40 zxid:0x20000000e txntype:-1 reqpath:n/a Error Path:/brokers/ids Error:KeeperErrorCode = NodeExists for /brokers/ids
+2019-01-29 10:41:01,206 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@649] - Got user-level KeeperException when processing sessionid:0x168992c4fd50000 type:create cxid:0x26 zxid:0x200000010 txntype:-1 reqpath:n/a Error Path:/brokers Error:KeeperErrorCode = NodeExists for /brokers
+2019-01-29 10:41:01,210 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@649] - Got user-level KeeperException when processing sessionid:0x168992c4fd50000 type:create cxid:0x27 zxid:0x200000011 txntype:-1 reqpath:n/a Error Path:/brokers/ids Error:KeeperErrorCode = NodeExists for /brokers/ids
+2019-01-29 10:41:01,275 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@649] - Got user-level KeeperException when processing sessionid:0x168992c4fd50001 type:delete cxid:0x4d zxid:0x200000013 txntype:-1 reqpath:n/a Error Path:/admin/preferred_replica_election Error:KeeperErrorCode = NoNode for /admin/preferred_replica_election
+2019-01-29 10:41:02,465 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@649] - Got user-level KeeperException when processing sessionid:0x168992c4fd50002 type:create cxid:0x21 zxid:0x200000017 txntype:-1 reqpath:n/a Error Path:/brokers Error:KeeperErrorCode = NodeExists for /brokers
+2019-01-29 10:41:02,465 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@649] - Got user-level KeeperException when processing sessionid:0x168992c4fd50002 type:create cxid:0x22 zxid:0x200000018 txntype:-1 reqpath:n/a Error Path:/brokers/ids Error:KeeperErrorCode = NodeExists for /brokers/ids
+ZooKeeper JMX enabled by default
+Using config: /conf/zoo.cfg
+2019-01-29 10:46:36,894 [myid:] - INFO  [main:QuorumPeerConfig@124] - Reading configuration from: /conf/zoo.cfg
+2019-01-29 10:46:36,922 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper2.switch2logic.co.za to address: zookeeper2.switch2logic.co.za/10.0.0.31
+2019-01-29 10:46:36,922 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper1.switch2logic.co.za to address: zookeeper1.switch2logic.co.za/10.0.0.33
+2019-01-29 10:46:36,924 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper0.switch2logic.co.za to address: zookeeper0.switch2logic.co.za/10.0.0.32
+2019-01-29 10:46:36,924 [myid:] - INFO  [main:QuorumPeerConfig@352] - Defaulting to majority quorums
+2019-01-29 10:46:36,929 [myid:2] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2019-01-29 10:46:36,929 [myid:2] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 1
+2019-01-29 10:46:36,934 [myid:2] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@138] - Purge task started.
+2019-01-29 10:46:36,967 [myid:2] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@144] - Purge task completed.
+2019-01-29 10:46:36,969 [myid:2] - INFO  [main:QuorumPeerMain@127] - Starting quorum peer
+2019-01-29 10:46:36,985 [myid:2] - INFO  [main:NIOServerCnxnFactory@89] - binding to port 0.0.0.0/0.0.0.0:2181
+2019-01-29 10:46:36,988 [myid:2] - INFO  [main:QuorumPeer@1019] - tickTime set to 2000
+2019-01-29 10:46:36,989 [myid:2] - INFO  [main:QuorumPeer@1039] - minSessionTimeout set to -1
+2019-01-29 10:46:36,989 [myid:2] - INFO  [main:QuorumPeer@1050] - maxSessionTimeout set to -1
+2019-01-29 10:46:36,989 [myid:2] - INFO  [main:QuorumPeer@1065] - initLimit set to 5
+2019-01-29 10:46:37,005 [myid:2] - INFO  [main:FileSnap@83] - Reading snapshot /data/version-2/snapshot.0
+2019-01-29 10:46:37,065 [myid:2] - INFO  [ListenerThread:QuorumCnxManager$Listener@534] - My election bind port: zookeeper1.switch2logic.co.za/10.0.0.33:3888
+2019-01-29 10:46:37,075 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer@774] - LOOKING
+2019-01-29 10:46:37,078 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FastLeaderElection@818] - New election. My id =  2, proposed zxid=0x200000020
+2019-01-29 10:46:37,086 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za/10.0.0.32:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:46:37,088 [myid:2] - INFO  [WorkerSender[myid=2]:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper0.switch2logic.co.za to address: zookeeper0.switch2logic.co.za/10.0.0.32
+2019-01-29 10:46:37,089 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 2 (n.leader), 0x200000020 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x2 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:46:37,095 [myid:2] - INFO  [zookeeper1.switch2logic.co.za/10.0.0.33:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.31:40502
+2019-01-29 10:46:37,098 [myid:2] - INFO  [WorkerSender[myid=2]:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (3, 2)
+2019-01-29 10:46:37,099 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x200000020 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x2 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:46:37,100 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@400] - Cannot open channel to 1 at election address zookeeper0.switch2logic.co.za/10.0.0.32:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:381)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-29 10:46:37,100 [myid:2] - INFO  [WorkerSender[myid=2]:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper0.switch2logic.co.za to address: zookeeper0.switch2logic.co.za/10.0.0.32
+2019-01-29 10:46:37,101 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x200000020 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x2 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:46:37,137 [myid:2] - INFO  [zookeeper1.switch2logic.co.za/10.0.0.33:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.32:58626
+2019-01-29 10:46:37,143 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 1 (n.leader), 0x200000020 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x2 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:46:37,144 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x200000020 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x2 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:46:37,346 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer@844] - FOLLOWING
+2019-01-29 10:46:37,356 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Learner@86] - TCP NoDelay set to: true
+2019-01-29 10:46:37,363 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:zookeeper.version=3.4.9-1757313, built on 08/23/2016 06:50 GMT
+2019-01-29 10:46:37,363 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:host.name=zookeeper1.switch2logic.co.za
+2019-01-29 10:46:37,363 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.version=1.8.0_171
+2019-01-29 10:46:37,363 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.vendor=Oracle Corporation
+2019-01-29 10:46:37,364 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+2019-01-29 10:46:37,364 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.class.path=/zookeeper-3.4.9/bin/../build/classes:/zookeeper-3.4.9/bin/../build/lib/*.jar:/zookeeper-3.4.9/bin/../lib/slf4j-log4j12-1.6.1.jar:/zookeeper-3.4.9/bin/../lib/slf4j-api-1.6.1.jar:/zookeeper-3.4.9/bin/../lib/netty-3.10.5.Final.jar:/zookeeper-3.4.9/bin/../lib/log4j-1.2.16.jar:/zookeeper-3.4.9/bin/../lib/jline-0.9.94.jar:/zookeeper-3.4.9/bin/../zookeeper-3.4.9.jar:/zookeeper-3.4.9/bin/../src/java/lib/*.jar:/conf:
+2019-01-29 10:46:37,364 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2019-01-29 10:46:37,366 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.io.tmpdir=/tmp
+2019-01-29 10:46:37,366 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:java.compiler=<NA>
+2019-01-29 10:46:37,367 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:os.name=Linux
+2019-01-29 10:46:37,367 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:os.arch=amd64
+2019-01-29 10:46:37,368 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:os.version=4.13.0-46-generic
+2019-01-29 10:46:37,368 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:user.name=zookeeper
+2019-01-29 10:46:37,368 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:user.home=/home/zookeeper
+2019-01-29 10:46:37,368 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Environment@100] - Server environment:user.dir=/zookeeper-3.4.9
+2019-01-29 10:46:37,373 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:ZooKeeperServer@173] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /datalog/version-2 snapdir /data/version-2
+2019-01-29 10:46:37,375 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Follower@61] - FOLLOWING - LEADER ELECTION TOOK - 297
+2019-01-29 10:46:37,377 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper2.switch2logic.co.za to address: zookeeper2.switch2logic.co.za/10.0.0.31
+2019-01-29 10:46:37,401 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:Learner@326] - Getting a diff from the leader 0x200000020
+2019-01-29 10:46:37,407 [myid:2] - INFO  [QuorumPeer[myid=2]/0.0.0.0:2181:FileTxnSnapLog@240] - Snapshotting: 0x200000020 to /data/version-2/snapshot.200000020
+2019-01-29 10:46:44,004 [myid:2] - WARN  [QuorumPeer[myid=2]/0.0.0.0:2181:Follower@116] - Got zxid 0x300000001 expected 0x1
+2019-01-29 10:46:44,005 [myid:2] - INFO  [SyncThread:2:FileTxnLog@203] - Creating new log file: log.300000001

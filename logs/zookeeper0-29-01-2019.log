@@ -1,0 +1,219 @@
+ZooKeeper JMX enabled by default
+Using config: /conf/zoo.cfg
+2019-01-29 08:13:17,666 [myid:] - INFO  [main:QuorumPeerConfig@124] - Reading configuration from: /conf/zoo.cfg
+2019-01-29 08:13:17,682 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper2.switch2logic.co.za to address: zookeeper2.switch2logic.co.za/10.0.0.146
+2019-01-29 08:13:17,683 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper1.switch2logic.co.za to address: zookeeper1.switch2logic.co.za/10.0.0.145
+2019-01-29 08:13:17,683 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper0.switch2logic.co.za to address: zookeeper0.switch2logic.co.za/10.0.0.147
+2019-01-29 08:13:17,684 [myid:] - INFO  [main:QuorumPeerConfig@352] - Defaulting to majority quorums
+2019-01-29 08:13:17,689 [myid:1] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2019-01-29 08:13:17,689 [myid:1] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 1
+2019-01-29 08:13:17,690 [myid:1] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@138] - Purge task started.
+2019-01-29 08:13:17,700 [myid:1] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@144] - Purge task completed.
+2019-01-29 08:13:17,702 [myid:1] - INFO  [main:QuorumPeerMain@127] - Starting quorum peer
+2019-01-29 08:13:17,715 [myid:1] - INFO  [main:NIOServerCnxnFactory@89] - binding to port 0.0.0.0/0.0.0.0:2181
+2019-01-29 08:13:17,716 [myid:1] - INFO  [main:QuorumPeer@1019] - tickTime set to 2000
+2019-01-29 08:13:17,716 [myid:1] - INFO  [main:QuorumPeer@1039] - minSessionTimeout set to -1
+2019-01-29 08:13:17,717 [myid:1] - INFO  [main:QuorumPeer@1050] - maxSessionTimeout set to -1
+2019-01-29 08:13:17,717 [myid:1] - INFO  [main:QuorumPeer@1065] - initLimit set to 5
+2019-01-29 08:13:17,728 [myid:1] - INFO  [main:QuorumPeer@533] - currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2019-01-29 08:13:17,733 [myid:1] - INFO  [main:QuorumPeer@548] - acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2019-01-29 08:13:17,741 [myid:1] - INFO  [ListenerThread:QuorumCnxManager$Listener@534] - My election bind port: zookeeper0.switch2logic.co.za/10.0.0.147:3888
+2019-01-29 08:13:17,753 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumPeer@774] - LOOKING
+2019-01-29 08:13:17,754 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:FastLeaderElection@818] - New election. My id =  1, proposed zxid=0x0
+2019-01-29 08:13:17,756 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@600] - Notification: 1 (message format version), 1 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEpoch) LOOKING (my state)
+2019-01-29 08:13:17,761 [myid:1] - INFO  [zookeeper0.switch2logic.co.za/10.0.0.147:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.145:34366
+2019-01-29 08:13:17,761 [myid:1] - INFO  [WorkerSender[myid=1]:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (2, 1)
+2019-01-29 08:13:17,762 [myid:1] - INFO  [WorkerSender[myid=1]:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (3, 1)
+2019-01-29 08:13:17,765 [myid:1] - INFO  [zookeeper0.switch2logic.co.za/10.0.0.147:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.146:41876
+2019-01-29 08:13:17,765 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x0 (n.peerEpoch) LOOKING (my state)
+2019-01-29 08:13:17,767 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEpoch) LOOKING (my state)
+2019-01-29 08:13:17,768 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x0 (n.peerEpoch) LOOKING (my state)
+2019-01-29 08:13:17,969 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumPeer@844] - FOLLOWING
+2019-01-29 08:13:17,980 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Learner@86] - TCP NoDelay set to: true
+2019-01-29 08:13:17,991 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:zookeeper.version=3.4.9-1757313, built on 08/23/2016 06:50 GMT
+2019-01-29 08:13:17,991 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:host.name=zookeeper0.switch2logic.co.za
+2019-01-29 08:13:17,992 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.version=1.8.0_171
+2019-01-29 08:13:17,992 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.vendor=Oracle Corporation
+2019-01-29 08:13:17,992 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+2019-01-29 08:13:17,992 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.class.path=/zookeeper-3.4.9/bin/../build/classes:/zookeeper-3.4.9/bin/../build/lib/*.jar:/zookeeper-3.4.9/bin/../lib/slf4j-log4j12-1.6.1.jar:/zookeeper-3.4.9/bin/../lib/slf4j-api-1.6.1.jar:/zookeeper-3.4.9/bin/../lib/netty-3.10.5.Final.jar:/zookeeper-3.4.9/bin/../lib/log4j-1.2.16.jar:/zookeeper-3.4.9/bin/../lib/jline-0.9.94.jar:/zookeeper-3.4.9/bin/../zookeeper-3.4.9.jar:/zookeeper-3.4.9/bin/../src/java/lib/*.jar:/conf:
+2019-01-29 08:13:17,992 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2019-01-29 08:13:17,993 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.io.tmpdir=/tmp
+2019-01-29 08:13:17,993 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.compiler=<NA>
+2019-01-29 08:13:17,993 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:os.name=Linux
+2019-01-29 08:13:17,993 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:os.arch=amd64
+2019-01-29 08:13:17,994 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:os.version=4.13.0-46-generic
+2019-01-29 08:13:17,994 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:user.name=zookeeper
+2019-01-29 08:13:17,994 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:user.home=/home/zookeeper
+2019-01-29 08:13:17,994 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:user.dir=/zookeeper-3.4.9
+2019-01-29 08:13:17,997 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:ZooKeeperServer@173] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /datalog/version-2 snapdir /data/version-2
+2019-01-29 08:13:17,999 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Follower@61] - FOLLOWING - LEADER ELECTION TOOK - 245
+2019-01-29 08:13:18,011 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper2.switch2logic.co.za to address: zookeeper2.switch2logic.co.za/10.0.0.146
+2019-01-29 08:13:18,032 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Learner@326] - Getting a diff from the leader 0x0
+2019-01-29 08:13:18,037 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:FileTxnSnapLog@240] - Snapshotting: 0x0 to /data/version-2/snapshot.0
+2019-01-29 08:13:29,059 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /10.0.0.150:37922
+2019-01-29 08:13:29,071 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@928] - Client attempting to establish new session at /10.0.0.150:37922
+2019-01-29 08:13:29,081 [myid:1] - WARN  [QuorumPeer[myid=1]/0.0.0.0:2181:Follower@116] - Got zxid 0x100000001 expected 0x1
+2019-01-29 08:13:29,081 [myid:1] - INFO  [SyncThread:1:FileTxnLog@203] - Creating new log file: log.100000001
+2019-01-29 08:13:29,093 [myid:1] - INFO  [CommitProcessor:1:ZooKeeperServer@673] - Established session 0x16898ab6d540000 with negotiated timeout 6000 for client /10.0.0.150:37922
+2019-01-29 08:13:29,123 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /10.0.0.148:50878
+2019-01-29 08:13:29,126 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@928] - Client attempting to establish new session at /10.0.0.148:50878
+2019-01-29 08:13:29,146 [myid:1] - INFO  [CommitProcessor:1:ZooKeeperServer@673] - Established session 0x16898ab6d540001 with negotiated timeout 6000 for client /10.0.0.148:50878
+2019-01-29 08:13:30,797 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /10.0.0.149:56236
+2019-01-29 08:13:30,802 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@928] - Client attempting to establish new session at /10.0.0.149:56236
+2019-01-29 08:13:30,809 [myid:1] - INFO  [CommitProcessor:1:ZooKeeperServer@673] - Established session 0x16898ab6d540002 with negotiated timeout 6000 for client /10.0.0.149:56236
+2019-01-29 09:13:18,536 [myid:1] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@138] - Purge task started.
+2019-01-29 09:13:18,541 [myid:1] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@144] - Purge task completed.
+2019-01-29 10:13:17,703 [myid:1] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@138] - Purge task started.
+2019-01-29 10:13:17,705 [myid:1] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@144] - Purge task completed.
+ZooKeeper JMX enabled by default
+Using config: /conf/zoo.cfg
+2019-01-29 10:33:57,908 [myid:] - INFO  [main:QuorumPeerConfig@124] - Reading configuration from: /conf/zoo.cfg
+2019-01-29 10:33:57,941 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper2.switch2logic.co.za to address: zookeeper2.switch2logic.co.za/10.0.0.23
+2019-01-29 10:33:57,942 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper1.switch2logic.co.za to address: zookeeper1.switch2logic.co.za/10.0.0.5
+2019-01-29 10:33:57,943 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper0.switch2logic.co.za to address: zookeeper0.switch2logic.co.za/10.0.0.24
+2019-01-29 10:33:57,944 [myid:] - INFO  [main:QuorumPeerConfig@352] - Defaulting to majority quorums
+2019-01-29 10:33:57,952 [myid:1] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2019-01-29 10:33:57,953 [myid:1] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 1
+2019-01-29 10:33:57,961 [myid:1] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@138] - Purge task started.
+2019-01-29 10:33:57,988 [myid:1] - INFO  [main:QuorumPeerMain@127] - Starting quorum peer
+2019-01-29 10:33:57,990 [myid:1] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@144] - Purge task completed.
+2019-01-29 10:33:58,017 [myid:1] - INFO  [main:NIOServerCnxnFactory@89] - binding to port 0.0.0.0/0.0.0.0:2181
+2019-01-29 10:33:58,019 [myid:1] - INFO  [main:QuorumPeer@1019] - tickTime set to 2000
+2019-01-29 10:33:58,022 [myid:1] - INFO  [main:QuorumPeer@1039] - minSessionTimeout set to -1
+2019-01-29 10:33:58,022 [myid:1] - INFO  [main:QuorumPeer@1050] - maxSessionTimeout set to -1
+2019-01-29 10:33:58,022 [myid:1] - INFO  [main:QuorumPeer@1065] - initLimit set to 5
+2019-01-29 10:33:58,041 [myid:1] - INFO  [main:FileSnap@83] - Reading snapshot /data/version-2/snapshot.0
+2019-01-29 10:33:58,119 [myid:1] - INFO  [ListenerThread:QuorumCnxManager$Listener@534] - My election bind port: zookeeper0.switch2logic.co.za/10.0.0.24:3888
+2019-01-29 10:33:58,148 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumPeer@774] - LOOKING
+2019-01-29 10:33:58,151 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:FastLeaderElection@818] - New election. My id =  1, proposed zxid=0x100000044
+2019-01-29 10:33:58,154 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@600] - Notification: 1 (message format version), 1 (n.leader), 0x100000044 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:33:58,163 [myid:1] - INFO  [WorkerSender[myid=1]:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (2, 1)
+2019-01-29 10:33:58,166 [myid:1] - INFO  [WorkerSender[myid=1]:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (3, 1)
+2019-01-29 10:33:58,356 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (2, 1)
+2019-01-29 10:33:58,357 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (3, 1)
+2019-01-29 10:33:58,361 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:FastLeaderElection@852] - Notification time out: 400
+2019-01-29 10:33:58,762 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (2, 1)
+2019-01-29 10:33:58,763 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (3, 1)
+2019-01-29 10:33:58,763 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:FastLeaderElection@852] - Notification time out: 800
+2019-01-29 10:33:59,566 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (2, 1)
+2019-01-29 10:33:59,568 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (3, 1)
+2019-01-29 10:33:59,569 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:FastLeaderElection@852] - Notification time out: 1600
+2019-01-29 10:34:01,170 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (2, 1)
+2019-01-29 10:34:01,174 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (3, 1)
+2019-01-29 10:34:01,174 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:FastLeaderElection@852] - Notification time out: 3200
+2019-01-29 10:34:04,376 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (2, 1)
+2019-01-29 10:34:04,377 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (3, 1)
+2019-01-29 10:34:04,377 [myid:1] - INFO  [zookeeper0.switch2logic.co.za/10.0.0.24:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.5:38326
+2019-01-29 10:34:04,379 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:FastLeaderElection@852] - Notification time out: 6400
+2019-01-29 10:34:04,381 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@600] - Notification: 1 (message format version), 2 (n.leader), 0x100000044 (n.zxid), 0x2 (n.round), LOOKING (n.state), 2 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:04,382 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@600] - Notification: 1 (message format version), 2 (n.leader), 0x100000044 (n.zxid), 0x2 (n.round), LOOKING (n.state), 1 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:04,382 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@600] - Notification: 1 (message format version), 2 (n.leader), 0x100000044 (n.zxid), 0x2 (n.round), LOOKING (n.state), 2 (n.sid), 0x1 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:34:04,382 [myid:1] - INFO  [WorkerSender[myid=1]:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (3, 1)
+2019-01-29 10:34:04,583 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumPeer@844] - FOLLOWING
+2019-01-29 10:34:04,592 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Learner@86] - TCP NoDelay set to: true
+2019-01-29 10:34:04,600 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:zookeeper.version=3.4.9-1757313, built on 08/23/2016 06:50 GMT
+2019-01-29 10:34:04,600 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:host.name=zookeeper0.switch2logic.co.za
+2019-01-29 10:34:04,600 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.version=1.8.0_171
+2019-01-29 10:34:04,600 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.vendor=Oracle Corporation
+2019-01-29 10:34:04,600 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+2019-01-29 10:34:04,600 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.class.path=/zookeeper-3.4.9/bin/../build/classes:/zookeeper-3.4.9/bin/../build/lib/*.jar:/zookeeper-3.4.9/bin/../lib/slf4j-log4j12-1.6.1.jar:/zookeeper-3.4.9/bin/../lib/slf4j-api-1.6.1.jar:/zookeeper-3.4.9/bin/../lib/netty-3.10.5.Final.jar:/zookeeper-3.4.9/bin/../lib/log4j-1.2.16.jar:/zookeeper-3.4.9/bin/../lib/jline-0.9.94.jar:/zookeeper-3.4.9/bin/../zookeeper-3.4.9.jar:/zookeeper-3.4.9/bin/../src/java/lib/*.jar:/conf:
+2019-01-29 10:34:04,600 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2019-01-29 10:34:04,600 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.io.tmpdir=/tmp
+2019-01-29 10:34:04,601 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.compiler=<NA>
+2019-01-29 10:34:04,601 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:os.name=Linux
+2019-01-29 10:34:04,601 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:os.arch=amd64
+2019-01-29 10:34:04,601 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:os.version=4.13.0-46-generic
+2019-01-29 10:34:04,601 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:user.name=zookeeper
+2019-01-29 10:34:04,601 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:user.home=/home/zookeeper
+2019-01-29 10:34:04,601 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:user.dir=/zookeeper-3.4.9
+2019-01-29 10:34:04,603 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:ZooKeeperServer@173] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /datalog/version-2 snapdir /data/version-2
+2019-01-29 10:34:04,604 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Follower@61] - FOLLOWING - LEADER ELECTION TOOK - 6453
+2019-01-29 10:34:04,606 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper1.switch2logic.co.za to address: zookeeper1.switch2logic.co.za/10.0.0.5
+2019-01-29 10:34:04,623 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Learner@326] - Getting a diff from the leader 0x100000044
+2019-01-29 10:34:04,629 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:FileTxnSnapLog@240] - Snapshotting: 0x100000044 to /data/version-2/snapshot.100000044
+2019-01-29 10:34:06,592 [myid:1] - INFO  [zookeeper0.switch2logic.co.za/10.0.0.24:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.23:38172
+2019-01-29 10:34:06,595 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x100000044 (n.zxid), 0x2 (n.round), LOOKING (n.state), 3 (n.sid), 0x1 (n.peerEpoch) FOLLOWING (my state)
+2019-01-29 10:34:12,002 [myid:1] - WARN  [QuorumPeer[myid=1]/0.0.0.0:2181:Follower@116] - Got zxid 0x200000001 expected 0x1
+2019-01-29 10:34:12,003 [myid:1] - INFO  [SyncThread:1:FileTxnLog@203] - Creating new log file: log.200000001
+2019-01-29 10:40:59,178 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /10.0.0.30:58110
+2019-01-29 10:40:59,190 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@928] - Client attempting to establish new session at /10.0.0.30:58110
+2019-01-29 10:40:59,198 [myid:1] - INFO  [CommitProcessor:1:ZooKeeperServer@673] - Established session 0x168992c4fd50000 with negotiated timeout 6000 for client /10.0.0.30:58110
+2019-01-29 10:40:59,295 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /10.0.0.28:43674
+2019-01-29 10:40:59,300 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@928] - Client attempting to establish new session at /10.0.0.28:43674
+2019-01-29 10:40:59,304 [myid:1] - INFO  [CommitProcessor:1:ZooKeeperServer@673] - Established session 0x168992c4fd50001 with negotiated timeout 6000 for client /10.0.0.28:43674
+2019-01-29 10:41:01,120 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /10.0.0.29:60166
+2019-01-29 10:41:01,126 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@928] - Client attempting to establish new session at /10.0.0.29:60166
+2019-01-29 10:41:01,130 [myid:1] - INFO  [CommitProcessor:1:ZooKeeperServer@673] - Established session 0x168992c4fd50002 with negotiated timeout 6000 for client /10.0.0.29:60166
+ZooKeeper JMX enabled by default
+Using config: /conf/zoo.cfg
+2019-01-29 10:46:36,987 [myid:] - INFO  [main:QuorumPeerConfig@124] - Reading configuration from: /conf/zoo.cfg
+2019-01-29 10:46:37,018 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper2.switch2logic.co.za to address: zookeeper2.switch2logic.co.za/10.0.0.31
+2019-01-29 10:46:37,019 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper1.switch2logic.co.za to address: zookeeper1.switch2logic.co.za/10.0.0.33
+2019-01-29 10:46:37,022 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper0.switch2logic.co.za to address: zookeeper0.switch2logic.co.za/10.0.0.32
+2019-01-29 10:46:37,023 [myid:] - INFO  [main:QuorumPeerConfig@352] - Defaulting to majority quorums
+2019-01-29 10:46:37,028 [myid:1] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2019-01-29 10:46:37,029 [myid:1] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 1
+2019-01-29 10:46:37,031 [myid:1] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@138] - Purge task started.
+2019-01-29 10:46:37,043 [myid:1] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@144] - Purge task completed.
+2019-01-29 10:46:37,048 [myid:1] - INFO  [main:QuorumPeerMain@127] - Starting quorum peer
+2019-01-29 10:46:37,062 [myid:1] - INFO  [main:NIOServerCnxnFactory@89] - binding to port 0.0.0.0/0.0.0.0:2181
+2019-01-29 10:46:37,064 [myid:1] - INFO  [main:QuorumPeer@1019] - tickTime set to 2000
+2019-01-29 10:46:37,064 [myid:1] - INFO  [main:QuorumPeer@1039] - minSessionTimeout set to -1
+2019-01-29 10:46:37,064 [myid:1] - INFO  [main:QuorumPeer@1050] - maxSessionTimeout set to -1
+2019-01-29 10:46:37,064 [myid:1] - INFO  [main:QuorumPeer@1065] - initLimit set to 5
+2019-01-29 10:46:37,079 [myid:1] - INFO  [main:FileSnap@83] - Reading snapshot /data/version-2/snapshot.100000044
+2019-01-29 10:46:37,122 [myid:1] - INFO  [ListenerThread:QuorumCnxManager$Listener@534] - My election bind port: zookeeper0.switch2logic.co.za/10.0.0.32:3888
+2019-01-29 10:46:37,130 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumPeer@774] - LOOKING
+2019-01-29 10:46:37,132 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:FastLeaderElection@818] - New election. My id =  1, proposed zxid=0x200000020
+2019-01-29 10:46:37,134 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@600] - Notification: 1 (message format version), 1 (n.leader), 0x200000020 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x2 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:46:37,136 [myid:1] - INFO  [WorkerSender[myid=1]:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (2, 1)
+2019-01-29 10:46:37,137 [myid:1] - INFO  [WorkerSender[myid=1]:QuorumCnxManager@199] - Have smaller server identifier, so dropping the connection: (3, 1)
+2019-01-29 10:46:37,138 [myid:1] - INFO  [zookeeper0.switch2logic.co.za/10.0.0.32:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.31:56600
+2019-01-29 10:46:37,141 [myid:1] - INFO  [zookeeper0.switch2logic.co.za/10.0.0.32:3888:QuorumCnxManager$Listener@541] - Received connection request /10.0.0.33:57778
+2019-01-29 10:46:37,142 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x200000020 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x2 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:46:37,142 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x200000020 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x2 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:46:37,143 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x200000020 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x2 (n.peerEpoch) LOOKING (my state)
+2019-01-29 10:46:37,344 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumPeer@844] - FOLLOWING
+2019-01-29 10:46:37,356 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Learner@86] - TCP NoDelay set to: true
+2019-01-29 10:46:37,364 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:zookeeper.version=3.4.9-1757313, built on 08/23/2016 06:50 GMT
+2019-01-29 10:46:37,365 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:host.name=zookeeper0.switch2logic.co.za
+2019-01-29 10:46:37,365 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.version=1.8.0_171
+2019-01-29 10:46:37,365 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.vendor=Oracle Corporation
+2019-01-29 10:46:37,365 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+2019-01-29 10:46:37,365 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.class.path=/zookeeper-3.4.9/bin/../build/classes:/zookeeper-3.4.9/bin/../build/lib/*.jar:/zookeeper-3.4.9/bin/../lib/slf4j-log4j12-1.6.1.jar:/zookeeper-3.4.9/bin/../lib/slf4j-api-1.6.1.jar:/zookeeper-3.4.9/bin/../lib/netty-3.10.5.Final.jar:/zookeeper-3.4.9/bin/../lib/log4j-1.2.16.jar:/zookeeper-3.4.9/bin/../lib/jline-0.9.94.jar:/zookeeper-3.4.9/bin/../zookeeper-3.4.9.jar:/zookeeper-3.4.9/bin/../src/java/lib/*.jar:/conf:
+2019-01-29 10:46:37,365 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2019-01-29 10:46:37,366 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.io.tmpdir=/tmp
+2019-01-29 10:46:37,366 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:java.compiler=<NA>
+2019-01-29 10:46:37,366 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:os.name=Linux
+2019-01-29 10:46:37,366 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:os.arch=amd64
+2019-01-29 10:46:37,366 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:os.version=4.13.0-46-generic
+2019-01-29 10:46:37,366 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:user.name=zookeeper
+2019-01-29 10:46:37,366 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:user.home=/home/zookeeper
+2019-01-29 10:46:37,366 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Environment@100] - Server environment:user.dir=/zookeeper-3.4.9
+2019-01-29 10:46:37,369 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:ZooKeeperServer@173] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /datalog/version-2 snapdir /data/version-2
+2019-01-29 10:46:37,370 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Follower@61] - FOLLOWING - LEADER ELECTION TOOK - 238
+2019-01-29 10:46:37,372 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:QuorumPeer$QuorumServer@149] - Resolved hostname: zookeeper2.switch2logic.co.za to address: zookeeper2.switch2logic.co.za/10.0.0.31
+2019-01-29 10:46:37,374 [myid:1] - WARN  [QuorumPeer[myid=1]/0.0.0.0:2181:Learner@236] - Unexpected exception, tries=0, connecting to zookeeper2.switch2logic.co.za/10.0.0.31:2888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.Learner.connectToLeader(Learner.java:228)
+	at org.apache.zookeeper.server.quorum.Follower.followLeader(Follower.java:69)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:846)
+2019-01-29 10:46:38,395 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:Learner@326] - Getting a diff from the leader 0x200000020
+2019-01-29 10:46:38,399 [myid:1] - INFO  [QuorumPeer[myid=1]/0.0.0.0:2181:FileTxnSnapLog@240] - Snapshotting: 0x200000020 to /data/version-2/snapshot.200000020
+2019-01-29 10:46:44,004 [myid:1] - WARN  [QuorumPeer[myid=1]/0.0.0.0:2181:Follower@116] - Got zxid 0x300000001 expected 0x1
+2019-01-29 10:46:44,005 [myid:1] - INFO  [SyncThread:1:FileTxnLog@203] - Creating new log file: log.300000001
+2019-01-29 11:02:46,353 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /10.0.0.43:54748
+2019-01-29 11:02:46,377 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@928] - Client attempting to establish new session at /10.0.0.43:54748
+2019-01-29 11:02:46,415 [myid:1] - INFO  [CommitProcessor:1:ZooKeeperServer@673] - Established session 0x1689937d03f0000 with negotiated timeout 6000 for client /10.0.0.43:54748
+2019-01-29 11:02:47,198 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /10.0.0.45:47432
+2019-01-29 11:02:47,203 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@928] - Client attempting to establish new session at /10.0.0.45:47432
+2019-01-29 11:02:47,208 [myid:1] - INFO  [CommitProcessor:1:ZooKeeperServer@673] - Established session 0x1689937d03f0001 with negotiated timeout 6000 for client /10.0.0.45:47432
+2019-01-29 11:02:48,358 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /10.0.0.44:45902
+2019-01-29 11:02:48,363 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@928] - Client attempting to establish new session at /10.0.0.44:45902
+2019-01-29 11:02:48,381 [myid:1] - INFO  [CommitProcessor:1:ZooKeeperServer@673] - Established session 0x1689937d03f0002 with negotiated timeout 6000 for client /10.0.0.44:45902

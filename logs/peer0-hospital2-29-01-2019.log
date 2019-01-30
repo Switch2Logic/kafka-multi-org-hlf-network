@@ -1,0 +1,177 @@
+2019-01-29 08:32:54.370 UTC [msp] getMspConfig -> INFO 001[0m Loading NodeOUs
+2019-01-29 08:32:54.420 UTC [nodeCmd] serve -> INFO 002[0m Starting peer:
+ Version: 1.2.0
+ Commit SHA: cae2ad4
+ Go version: go1.10
+ OS/Arch: linux/amd64
+ Experimental features: false
+ Chaincode:
+  Base Image Version: 0.4.10
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+
+2019-01-29 08:32:54.420 UTC [ledgermgmt] initialize -> INFO 003[0m Initializing ledger mgmt
+2019-01-29 08:32:54.420 UTC [kvledger] NewProvider -> INFO 004[0m Initializing ledger provider
+[33m2019-01-29 08:32:54.483 UTC [couchdb] handleRequest -> WARN 005[0m Retrying couchdb request in 125ms. Attempt:1  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp 10.0.0.216:5984: connect: connection refused
+[33m2019-01-29 08:32:54.609 UTC [couchdb] handleRequest -> WARN 006[0m Retrying couchdb request in 250ms. Attempt:2  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp 10.0.0.216:5984: connect: connection refused
+[33m2019-01-29 08:32:54.872 UTC [couchdb] handleRequest -> WARN 007[0m Retrying couchdb request in 500ms. Attempt:3  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp 10.0.0.216:5984: connect: connection refused
+[33m2019-01-29 08:32:55.373 UTC [couchdb] handleRequest -> WARN 008[0m Retrying couchdb request in 1s. Attempt:4  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp 10.0.0.216:5984: connect: connection refused
+[33m2019-01-29 08:32:56.379 UTC [couchdb] handleRequest -> WARN 009[0m Retrying couchdb request in 2s. Attempt:5  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp 10.0.0.216:5984: connect: connection refused
+2019-01-29 08:32:58.541 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 00a[0m Created state database _users
+2019-01-29 08:32:58.571 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 00b[0m Created state database _replicator
+2019-01-29 08:32:58.604 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 00c[0m Created state database _global_changes
+2019-01-29 08:32:58.627 UTC [kvledger] NewProvider -> INFO 00d[0m ledger provider Initialized
+2019-01-29 08:32:58.627 UTC [ledgermgmt] initialize -> INFO 00e[0m ledger mgmt initialized
+2019-01-29 08:32:58.628 UTC [peer] func1 -> INFO 00f[0m Auto-detected peer address: 10.0.0.215:7051
+2019-01-29 08:32:58.628 UTC [peer] func1 -> INFO 010[0m Returning peer0.hospital2.switch2logic.co.za:7051
+2019-01-29 08:32:58.628 UTC [peer] func1 -> INFO 011[0m Auto-detected peer address: 10.0.0.215:7051
+2019-01-29 08:32:58.629 UTC [peer] func1 -> INFO 012[0m Returning peer0.hospital2.switch2logic.co.za:7051
+2019-01-29 08:32:58.630 UTC [nodeCmd] serve -> INFO 013[0m Starting peer with TLS enabled
+2019-01-29 08:32:58.632 UTC [eventhub_producer] start -> INFO 014[0m Event processor started
+2019-01-29 08:32:58.633 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 015[0m Entering computeChaincodeEndpoint with peerHostname: peer0.hospital2.switch2logic.co.za
+2019-01-29 08:32:58.633 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 016[0m Exit with ccEndpoint: peer0.hospital2.switch2logic.co.za:7052
+[33m2019-01-29 08:32:58.633 UTC [nodeCmd] createChaincodeServer -> WARN 017[0m peer.chaincodeListenAddress is not set, using peer0.hospital2.switch2logic.co.za:7052
+2019-01-29 08:32:58.636 UTC [sccapi] registerSysCC -> INFO 018[0m system chaincode cscc(github.com/hyperledger/fabric/core/scc/cscc) registered
+2019-01-29 08:32:58.636 UTC [sccapi] registerSysCC -> INFO 019[0m system chaincode lscc(github.com/hyperledger/fabric/core/scc/lscc) registered
+2019-01-29 08:32:58.636 UTC [sccapi] registerSysCC -> INFO 01a[0m system chaincode qscc(github.com/hyperledger/fabric/core/scc/qscc) registered
+2019-01-29 08:32:58.648 UTC [gossip/gossip] NewGossipService -> INFO 01b[0m Creating gossip service with self membership of {peer0.hospital2.switch2logic.co.za:7051 [] [129 160 69 108 240 129 132 39 224 91 133 6 239 207 101 108 202 93 253 160 221 227 27 198 83 125 187 108 19 40 251 103] peer0.hospital2.switch2logic.co.za:7051 <nil> <nil>}
+2019-01-29 08:32:58.649 UTC [gossip/gossip] start -> INFO 01c[0m Gossip instance peer0.hospital2.switch2logic.co.za:7051 started
+2019-01-29 08:32:58.650 UTC [cscc] Init -> INFO 01d[0m Init CSCC
+2019-01-29 08:32:58.650 UTC [sccapi] deploySysCC -> INFO 01e[0m system chaincode cscc/(github.com/hyperledger/fabric/core/scc/cscc) deployed
+2019-01-29 08:32:58.651 UTC [sccapi] deploySysCC -> INFO 01f[0m system chaincode lscc/(github.com/hyperledger/fabric/core/scc/lscc) deployed
+2019-01-29 08:32:58.651 UTC [qscc] Init -> INFO 020[0m Init QSCC
+2019-01-29 08:32:58.651 UTC [sccapi] deploySysCC -> INFO 021[0m system chaincode qscc/(github.com/hyperledger/fabric/core/scc/qscc) deployed
+2019-01-29 08:32:58.651 UTC [nodeCmd] serve -> INFO 022[0m Deployed system chaincodes
+2019-01-29 08:32:58.653 UTC [discovery] NewService -> INFO 023[0m Created with config TLS: true, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+2019-01-29 08:32:58.653 UTC [nodeCmd] registerDiscoveryService -> INFO 024[0m Discovery service activated
+2019-01-29 08:32:58.653 UTC [nodeCmd] serve -> INFO 025[0m Starting peer with ID=[name:"peer0.hospital2.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital2.switch2logic.co.za:7051]
+2019-01-29 08:32:58.653 UTC [nodeCmd] serve -> INFO 026[0m Started peer with ID=[name:"peer0.hospital2.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital2.switch2logic.co.za:7051]
+2019-01-29 08:32:58.653 UTC [nodeCmd] func9 -> INFO 027[0m Starting profiling server with listenAddress = 0.0.0.0:6060
+[33m2019-01-29 10:31:48.282 UTC [common/deliver] Handle -> WARN 028[0m Error reading from 10.0.0.229:45960: rpc error: code = Canceled desc = context canceled
+2019-01-29 10:32:58.685 UTC [gossip/gossip] Stop -> INFO 029[0m Stopping gossip
+2019-01-29 10:32:58.685 UTC [gossip/discovery] Stop -> INFO 02a[0m Stopping
+2019-01-29 10:32:58.685 UTC [gossip/discovery] Stop -> INFO 02b[0m Stopped
+2019-01-29 10:32:58.685 UTC [gossip/comm] Stop -> INFO 02c[0m Stopping
+2019-01-29 10:32:58.685 UTC [gossip/comm] Stop -> INFO 02d[0m Stopped
+2019-01-29 10:33:55.312 UTC [msp] getMspConfig -> INFO 001[0m Loading NodeOUs
+2019-01-29 10:33:55.403 UTC [nodeCmd] serve -> INFO 002[0m Starting peer:
+ Version: 1.2.0
+ Commit SHA: cae2ad4
+ Go version: go1.10
+ OS/Arch: linux/amd64
+ Experimental features: false
+ Chaincode:
+  Base Image Version: 0.4.10
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+
+2019-01-29 10:33:55.403 UTC [ledgermgmt] initialize -> INFO 003[0m Initializing ledger mgmt
+2019-01-29 10:33:55.404 UTC [kvledger] NewProvider -> INFO 004[0m Initializing ledger provider
+[33m2019-01-29 10:33:55.613 UTC [couchdb] handleRequest -> WARN 005[0m Retrying couchdb request in 125ms. Attempt:1  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp: lookup couchdb.peer0.hospital2.switch2logic.co.za on 127.0.0.11:53: no such host
+[33m2019-01-29 10:33:56.749 UTC [couchdb] handleRequest -> WARN 006[0m Retrying couchdb request in 250ms. Attempt:2  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp 10.0.0.26:5984: connect: connection refused
+[33m2019-01-29 10:33:57.003 UTC [couchdb] handleRequest -> WARN 007[0m Retrying couchdb request in 500ms. Attempt:3  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp 10.0.0.26:5984: connect: connection refused
+[33m2019-01-29 10:33:57.505 UTC [couchdb] handleRequest -> WARN 008[0m Retrying couchdb request in 1s. Attempt:4  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp 10.0.0.26:5984: connect: connection refused
+[33m2019-01-29 10:33:58.506 UTC [couchdb] handleRequest -> WARN 009[0m Retrying couchdb request in 2s. Attempt:5  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp 10.0.0.26:5984: connect: connection refused
+2019-01-29 10:34:00.591 UTC [kvledger] NewProvider -> INFO 00a[0m ledger provider Initialized
+2019-01-29 10:34:00.591 UTC [ledgermgmt] initialize -> INFO 00b[0m ledger mgmt initialized
+2019-01-29 10:34:00.592 UTC [peer] func1 -> INFO 00c[0m Auto-detected peer address: 10.0.0.21:7051
+2019-01-29 10:34:00.592 UTC [peer] func1 -> INFO 00d[0m Returning peer0.hospital2.switch2logic.co.za:7051
+2019-01-29 10:34:00.592 UTC [peer] func1 -> INFO 00e[0m Auto-detected peer address: 10.0.0.21:7051
+2019-01-29 10:34:00.592 UTC [peer] func1 -> INFO 00f[0m Returning peer0.hospital2.switch2logic.co.za:7051
+2019-01-29 10:34:00.594 UTC [nodeCmd] serve -> INFO 010[0m Starting peer with TLS enabled
+2019-01-29 10:34:00.596 UTC [eventhub_producer] start -> INFO 011[0m Event processor started
+2019-01-29 10:34:00.596 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 012[0m Entering computeChaincodeEndpoint with peerHostname: peer0.hospital2.switch2logic.co.za
+2019-01-29 10:34:00.597 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 013[0m Exit with ccEndpoint: peer0.hospital2.switch2logic.co.za:7052
+[33m2019-01-29 10:34:00.597 UTC [nodeCmd] createChaincodeServer -> WARN 014[0m peer.chaincodeListenAddress is not set, using peer0.hospital2.switch2logic.co.za:7052
+2019-01-29 10:34:00.600 UTC [sccapi] registerSysCC -> INFO 015[0m system chaincode cscc(github.com/hyperledger/fabric/core/scc/cscc) registered
+2019-01-29 10:34:00.600 UTC [sccapi] registerSysCC -> INFO 016[0m system chaincode lscc(github.com/hyperledger/fabric/core/scc/lscc) registered
+2019-01-29 10:34:00.600 UTC [sccapi] registerSysCC -> INFO 017[0m system chaincode qscc(github.com/hyperledger/fabric/core/scc/qscc) registered
+2019-01-29 10:34:00.605 UTC [gossip/gossip] NewGossipService -> INFO 018[0m Creating gossip service with self membership of {peer0.hospital2.switch2logic.co.za:7051 [] [129 160 69 108 240 129 132 39 224 91 133 6 239 207 101 108 202 93 253 160 221 227 27 198 83 125 187 108 19 40 251 103] peer0.hospital2.switch2logic.co.za:7051 <nil> <nil>}
+2019-01-29 10:34:00.605 UTC [gossip/gossip] start -> INFO 019[0m Gossip instance peer0.hospital2.switch2logic.co.za:7051 started
+2019-01-29 10:34:00.606 UTC [cscc] Init -> INFO 01a[0m Init CSCC
+2019-01-29 10:34:00.606 UTC [sccapi] deploySysCC -> INFO 01b[0m system chaincode cscc/(github.com/hyperledger/fabric/core/scc/cscc) deployed
+2019-01-29 10:34:00.607 UTC [sccapi] deploySysCC -> INFO 01c[0m system chaincode lscc/(github.com/hyperledger/fabric/core/scc/lscc) deployed
+2019-01-29 10:34:00.608 UTC [qscc] Init -> INFO 01d[0m Init QSCC
+2019-01-29 10:34:00.608 UTC [sccapi] deploySysCC -> INFO 01e[0m system chaincode qscc/(github.com/hyperledger/fabric/core/scc/qscc) deployed
+2019-01-29 10:34:00.608 UTC [nodeCmd] serve -> INFO 01f[0m Deployed system chaincodes
+2019-01-29 10:34:00.609 UTC [discovery] NewService -> INFO 020[0m Created with config TLS: true, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+2019-01-29 10:34:00.609 UTC [nodeCmd] registerDiscoveryService -> INFO 021[0m Discovery service activated
+2019-01-29 10:34:00.609 UTC [nodeCmd] serve -> INFO 022[0m Starting peer with ID=[name:"peer0.hospital2.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital2.switch2logic.co.za:7051]
+2019-01-29 10:34:00.609 UTC [nodeCmd] serve -> INFO 023[0m Started peer with ID=[name:"peer0.hospital2.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital2.switch2logic.co.za:7051]
+2019-01-29 10:34:00.610 UTC [nodeCmd] func9 -> INFO 024[0m Starting profiling server with listenAddress = 0.0.0.0:6060
+2019-01-29 10:51:48.648 UTC [gossip/gossip] Stop -> INFO 025[0m Stopping gossip
+2019-01-29 10:51:48.648 UTC [gossip/discovery] Stop -> INFO 026[0m Stopping
+2019-01-29 10:51:48.648 UTC [gossip/discovery] Stop -> INFO 027[0m Stopped
+2019-01-29 10:51:48.648 UTC [gossip/comm] Stop -> INFO 028[0m Stopping
+2019-01-29 10:51:48.648 UTC [gossip/comm] Stop -> INFO 029[0m Stopped
+2019-01-29 10:51:51.037 UTC [msp] getMspConfig -> INFO 001[0m Loading NodeOUs
+2019-01-29 10:51:51.060 UTC [nodeCmd] serve -> INFO 002[0m Starting peer:
+ Version: 1.2.0
+ Commit SHA: cae2ad4
+ Go version: go1.10
+ OS/Arch: linux/amd64
+ Experimental features: false
+ Chaincode:
+  Base Image Version: 0.4.10
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+
+2019-01-29 10:51:51.060 UTC [ledgermgmt] initialize -> INFO 003[0m Initializing ledger mgmt
+2019-01-29 10:51:51.060 UTC [kvledger] NewProvider -> INFO 004[0m Initializing ledger provider
+[33m2019-01-29 10:51:51.088 UTC [couchdb] handleRequest -> WARN 005[0m Retrying couchdb request in 125ms. Attempt:1  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp 10.0.0.41:5984: connect: connection refused
+[33m2019-01-29 10:51:51.215 UTC [couchdb] handleRequest -> WARN 006[0m Retrying couchdb request in 250ms. Attempt:2  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp 10.0.0.41:5984: connect: connection refused
+[33m2019-01-29 10:51:51.467 UTC [couchdb] handleRequest -> WARN 007[0m Retrying couchdb request in 500ms. Attempt:3  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp 10.0.0.41:5984: connect: connection refused
+[33m2019-01-29 10:51:51.968 UTC [couchdb] handleRequest -> WARN 008[0m Retrying couchdb request in 1s. Attempt:4  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp 10.0.0.41:5984: connect: connection refused
+[33m2019-01-29 10:51:52.969 UTC [couchdb] handleRequest -> WARN 009[0m Retrying couchdb request in 2s. Attempt:5  Error:Get http://couchdb.peer0.hospital2.switch2logic.co.za:5984/: dial tcp 10.0.0.41:5984: connect: connection refused
+2019-01-29 10:51:55.053 UTC [kvledger] NewProvider -> INFO 00a[0m ledger provider Initialized
+2019-01-29 10:51:55.053 UTC [ledgermgmt] initialize -> INFO 00b[0m ledger mgmt initialized
+2019-01-29 10:51:55.054 UTC [peer] func1 -> INFO 00c[0m Auto-detected peer address: 10.0.0.39:7051
+2019-01-29 10:51:55.054 UTC [peer] func1 -> INFO 00d[0m Returning peer0.hospital2.switch2logic.co.za:7051
+2019-01-29 10:51:55.054 UTC [peer] func1 -> INFO 00e[0m Auto-detected peer address: 10.0.0.39:7051
+2019-01-29 10:51:55.054 UTC [peer] func1 -> INFO 00f[0m Returning peer0.hospital2.switch2logic.co.za:7051
+2019-01-29 10:51:55.056 UTC [nodeCmd] serve -> INFO 010[0m Starting peer with TLS enabled
+2019-01-29 10:51:55.058 UTC [eventhub_producer] start -> INFO 011[0m Event processor started
+2019-01-29 10:51:55.059 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 012[0m Entering computeChaincodeEndpoint with peerHostname: peer0.hospital2.switch2logic.co.za
+2019-01-29 10:51:55.059 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 013[0m Exit with ccEndpoint: peer0.hospital2.switch2logic.co.za:7052
+[33m2019-01-29 10:51:55.060 UTC [nodeCmd] createChaincodeServer -> WARN 014[0m peer.chaincodeListenAddress is not set, using peer0.hospital2.switch2logic.co.za:7052
+2019-01-29 10:51:55.062 UTC [sccapi] registerSysCC -> INFO 015[0m system chaincode cscc(github.com/hyperledger/fabric/core/scc/cscc) registered
+2019-01-29 10:51:55.062 UTC [sccapi] registerSysCC -> INFO 016[0m system chaincode lscc(github.com/hyperledger/fabric/core/scc/lscc) registered
+2019-01-29 10:51:55.063 UTC [sccapi] registerSysCC -> INFO 017[0m system chaincode qscc(github.com/hyperledger/fabric/core/scc/qscc) registered
+2019-01-29 10:51:55.068 UTC [gossip/gossip] NewGossipService -> INFO 018[0m Creating gossip service with self membership of {peer0.hospital2.switch2logic.co.za:7051 [] [129 160 69 108 240 129 132 39 224 91 133 6 239 207 101 108 202 93 253 160 221 227 27 198 83 125 187 108 19 40 251 103] peer0.hospital2.switch2logic.co.za:7051 <nil> <nil>}
+2019-01-29 10:51:55.069 UTC [gossip/gossip] start -> INFO 019[0m Gossip instance peer0.hospital2.switch2logic.co.za:7051 started
+2019-01-29 10:51:55.069 UTC [cscc] Init -> INFO 01a[0m Init CSCC
+2019-01-29 10:51:55.069 UTC [sccapi] deploySysCC -> INFO 01b[0m system chaincode cscc/(github.com/hyperledger/fabric/core/scc/cscc) deployed
+2019-01-29 10:51:55.070 UTC [sccapi] deploySysCC -> INFO 01c[0m system chaincode lscc/(github.com/hyperledger/fabric/core/scc/lscc) deployed
+2019-01-29 10:51:55.070 UTC [qscc] Init -> INFO 01d[0m Init QSCC
+2019-01-29 10:51:55.070 UTC [sccapi] deploySysCC -> INFO 01e[0m system chaincode qscc/(github.com/hyperledger/fabric/core/scc/qscc) deployed
+2019-01-29 10:51:55.070 UTC [nodeCmd] serve -> INFO 01f[0m Deployed system chaincodes
+2019-01-29 10:51:55.072 UTC [discovery] NewService -> INFO 020[0m Created with config TLS: true, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+2019-01-29 10:51:55.072 UTC [nodeCmd] registerDiscoveryService -> INFO 021[0m Discovery service activated
+2019-01-29 10:51:55.072 UTC [nodeCmd] serve -> INFO 022[0m Starting peer with ID=[name:"peer0.hospital2.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital2.switch2logic.co.za:7051]
+2019-01-29 10:51:55.072 UTC [nodeCmd] serve -> INFO 023[0m Started peer with ID=[name:"peer0.hospital2.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital2.switch2logic.co.za:7051]
+2019-01-29 10:51:55.072 UTC [nodeCmd] func9 -> INFO 024[0m Starting profiling server with listenAddress = 0.0.0.0:6060
+2019-01-29 11:15:18.031 UTC [ledgermgmt] CreateLedger -> INFO 025[0m Creating ledger [comunitychannel] with genesis block
+2019-01-29 11:15:18.034 UTC [fsblkstorage] newBlockfileMgr -> INFO 026[0m Getting block information from block storage
+2019-01-29 11:15:18.080 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 027[0m Created state database comunitychannel_
+2019-01-29 11:15:18.087 UTC [kvledger] CommitWithPvtData -> INFO 028[0m Channel [comunitychannel]: Committed block [0] with 1 transaction(s)
+2019-01-29 11:15:18.087 UTC [pvtdatastorage] func1 -> INFO 029[0m Purger started: Purging expired private data till block number [0]
+2019-01-29 11:15:18.087 UTC [pvtdatastorage] func1 -> INFO 02a[0m Purger finished
+2019-01-29 11:15:18.150 UTC [ledgermgmt] CreateLedger -> INFO 02b[0m Created ledger [comunitychannel] with genesis block
+2019-01-29 11:15:18.179 UTC [cscc] Init -> INFO 02c[0m Init CSCC
+2019-01-29 11:15:18.179 UTC [sccapi] deploySysCC -> INFO 02d[0m system chaincode cscc/comunitychannel(github.com/hyperledger/fabric/core/scc/cscc) deployed
+2019-01-29 11:15:18.179 UTC [sccapi] deploySysCC -> INFO 02e[0m system chaincode lscc/comunitychannel(github.com/hyperledger/fabric/core/scc/lscc) deployed
+2019-01-29 11:15:18.180 UTC [qscc] Init -> INFO 02f[0m Init QSCC
+2019-01-29 11:15:18.180 UTC [sccapi] deploySysCC -> INFO 030[0m system chaincode qscc/comunitychannel(github.com/hyperledger/fabric/core/scc/qscc) deployed
+2019-01-29 11:15:24.181 UTC [gossip/election] beLeader -> INFO 031[0m [129 160 69 108 240 129 132 39 224 91 133 6 239 207 101 108 202 93 253 160 221 227 27 198 83 125 187 108 19 40 251 103] : Becoming a leader
+[31m2019-01-29 11:15:27.183 UTC [ConnProducer] NewConnection -> ERRO 032[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 11:15:30.186 UTC [ConnProducer] NewConnection -> ERRO 033[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+2019-01-29 11:21:22.085 UTC [kvledger] CommitWithPvtData -> INFO 034[0m Channel [comunitychannel]: Committed block [1] with 1 transaction(s)
+2019-01-29 11:21:24.457 UTC [gossip/gossip] func2 -> INFO 035[0m Learned of a new certificate: [10 12 72 111 115 112 105 116 97 108 51 77 83 80 18 219 6 45 45 45 45 45 66 69 71 73 78 32 67 69 82 84 73 70 73 67 65 84 69 45 45 45 45 45 10 77 73 73 67 84 106 67 67 65 102 83 103 65 119 73 66 65 103 73 82 65 75 65 110 69 52 80 98 68 87 77 101 82 108 48 68 105 120 100 76 105 86 115 119 67 103 89 73 75 111 90 73 122 106 48 69 65 119 73 119 103 89 115 120 10 67 122 65 74 66 103 78 86 66 65 89 84 65 108 86 84 77 82 77 119 69 81 89 68 86 81 81 73 69 119 112 68 89 87 120 112 90 109 57 121 98 109 108 104 77 82 89 119 70 65 89 68 86 81 81 72 69 119 49 84 89 87 52 103 10 82 110 74 104 98 109 78 112 99 50 78 118 77 83 85 119 73 119 89 68 86 81 81 75 69 120 120 111 98 51 78 119 97 88 82 104 98 68 77 117 99 51 100 112 100 71 78 111 77 109 120 118 90 50 108 106 76 109 78 118 76 110 112 104 10 77 83 103 119 74 103 89 68 86 81 81 68 69 120 57 106 89 83 53 111 98 51 78 119 97 88 82 104 98 68 77 117 99 51 100 112 100 71 78 111 77 109 120 118 90 50 108 106 76 109 78 118 76 110 112 104 77 66 52 88 68 84 69 53 10 77 68 69 121 79 84 65 51 78 68 69 49 78 70 111 88 68 84 73 53 77 68 69 121 78 106 65 51 78 68 69 49 78 70 111 119 100 106 69 76 77 65 107 71 65 49 85 69 66 104 77 67 86 86 77 120 69 122 65 82 66 103 78 86 10 66 65 103 84 67 107 78 104 98 71 108 109 98 51 74 117 97 87 69 120 70 106 65 85 66 103 78 86 66 65 99 84 68 86 78 104 98 105 66 71 99 109 70 117 89 50 108 122 89 50 56 120 68 84 65 76 66 103 78 86 66 65 115 84 10 66 72 66 108 90 88 73 120 75 122 65 112 66 103 78 86 66 65 77 84 73 110 66 108 90 88 73 119 76 109 104 118 99 51 66 112 100 71 70 115 77 121 53 122 100 50 108 48 89 50 103 121 98 71 57 110 97 87 77 117 89 50 56 117 10 101 109 69 119 87 84 65 84 66 103 99 113 104 107 106 79 80 81 73 66 66 103 103 113 104 107 106 79 80 81 77 66 66 119 78 67 65 65 83 65 118 87 87 50 108 57 88 106 119 102 105 77 105 90 54 80 116 56 81 114 107 56 49 69 10 68 97 73 102 71 56 104 82 112 67 86 55 75 72 122 114 72 109 112 105 121 51 121 56 56 80 108 103 122 81 104 104 51 115 81 53 105 89 113 65 113 119 48 81 106 122 54 66 114 69 98 104 101 100 71 113 112 118 54 80 111 48 48 119 10 83 122 65 79 66 103 78 86 72 81 56 66 65 102 56 69 66 65 77 67 66 52 65 119 68 65 89 68 86 82 48 84 65 81 72 47 66 65 73 119 65 68 65 114 66 103 78 86 72 83 77 69 74 68 65 105 103 67 65 55 118 86 87 70 10 88 87 112 103 90 66 111 106 81 49 90 76 120 85 118 103 66 76 101 105 97 53 57 77 105 118 73 82 99 106 120 109 89 97 110 112 121 84 65 75 66 103 103 113 104 107 106 79 80 81 81 68 65 103 78 73 65 68 66 70 65 105 69 65 10 50 69 48 53 51 55 115 107 108 53 121 88 107 86 75 83 106 114 106 114 48 85 74 67 51 71 82 80 84 56 99 122 82 108 110 51 70 50 78 66 50 121 103 67 73 65 112 71 51 111 108 105 99 56 102 118 89 65 74 115 112 77 81 72 10 57 50 70 122 90 108 78 87 81 51 66 87 68 66 52 100 54 100 113 51 65 101 43 47 10 45 45 45 45 45 69 78 68 32 67 69 82 84 73 70 73 67 65 84 69 45 45 45 45 45 10]
+2019-01-29 11:22:06.363 UTC [gossip/gossip] learnAnchorPeers -> INFO 036[0m Anchor peer with same endpoint, skipping connecting to myself
+2019-01-29 11:22:06.392 UTC [kvledger] CommitWithPvtData -> INFO 037[0m Channel [comunitychannel]: Committed block [2] with 1 transaction(s)
+2019-01-29 11:22:08.471 UTC [gossip/gossip] func2 -> INFO 038[0m Learned of a new certificate: [10 12 72 111 115 112 105 116 97 108 49 77 83 80 18 219 6 45 45 45 45 45 66 69 71 73 78 32 67 69 82 84 73 70 73 67 65 84 69 45 45 45 45 45 10 77 73 73 67 84 84 67 67 65 102 79 103 65 119 73 66 65 103 73 81 68 80 73 104 107 90 98 66 77 122 65 80 82 86 50 109 100 84 74 50 66 84 65 75 66 103 103 113 104 107 106 79 80 81 81 68 65 106 67 66 105 122 69 76 10 77 65 107 71 65 49 85 69 66 104 77 67 86 86 77 120 69 122 65 82 66 103 78 86 66 65 103 84 67 107 78 104 98 71 108 109 98 51 74 117 97 87 69 120 70 106 65 85 66 103 78 86 66 65 99 84 68 86 78 104 98 105 66 71 10 99 109 70 117 89 50 108 122 89 50 56 120 74 84 65 106 66 103 78 86 66 65 111 84 72 71 104 118 99 51 66 112 100 71 70 115 77 83 53 122 100 50 108 48 89 50 103 121 98 71 57 110 97 87 77 117 89 50 56 117 101 109 69 120 10 75 68 65 109 66 103 78 86 66 65 77 84 72 50 78 104 76 109 104 118 99 51 66 112 100 71 70 115 77 83 53 122 100 50 108 48 89 50 103 121 98 71 57 110 97 87 77 117 89 50 56 117 101 109 69 119 72 104 99 78 77 84 107 119 10 77 84 73 53 77 68 99 48 77 84 85 48 87 104 99 78 77 106 107 119 77 84 73 50 77 68 99 48 77 84 85 48 87 106 66 50 77 81 115 119 67 81 89 68 86 81 81 71 69 119 74 86 85 122 69 84 77 66 69 71 65 49 85 69 10 67 66 77 75 81 50 70 115 97 87 90 118 99 109 53 112 89 84 69 87 77 66 81 71 65 49 85 69 66 120 77 78 85 50 70 117 73 69 90 121 89 87 53 106 97 88 78 106 98 122 69 78 77 65 115 71 65 49 85 69 67 120 77 69 10 99 71 86 108 99 106 69 114 77 67 107 71 65 49 85 69 65 120 77 105 99 71 86 108 99 106 65 117 97 71 57 122 99 71 108 48 89 87 119 120 76 110 78 51 97 88 82 106 97 68 74 115 98 50 100 112 89 121 53 106 98 121 53 54 10 89 84 66 90 77 66 77 71 66 121 113 71 83 77 52 57 65 103 69 71 67 67 113 71 83 77 52 57 65 119 69 72 65 48 73 65 66 77 72 83 102 69 78 101 43 113 52 83 118 104 120 76 98 54 70 120 76 114 50 83 76 89 103 43 10 113 74 110 76 51 119 104 79 114 83 68 97 69 121 81 103 109 68 122 55 102 119 98 76 104 87 114 48 77 97 112 105 113 56 78 51 88 103 49 118 117 100 73 54 88 98 78 90 120 121 77 84 66 109 90 98 100 51 117 106 84 84 66 76 10 77 65 52 71 65 49 85 100 68 119 69 66 47 119 81 69 65 119 73 72 103 68 65 77 66 103 78 86 72 82 77 66 65 102 56 69 65 106 65 65 77 67 115 71 65 49 85 100 73 119 81 107 77 67 75 65 73 70 86 84 115 79 103 47 10 48 121 120 47 43 99 49 77 50 88 114 107 88 72 65 66 100 110 122 90 53 111 89 70 80 118 78 90 104 51 75 72 104 66 115 71 77 65 111 71 67 67 113 71 83 77 52 57 66 65 77 67 65 48 103 65 77 69 85 67 73 81 68 110 10 103 117 56 116 82 117 48 78 118 115 97 84 78 71 49 55 105 52 81 116 106 82 102 116 113 103 53 54 112 116 97 100 70 53 89 72 88 66 81 67 71 103 73 103 101 111 119 71 102 111 67 87 67 73 87 53 84 48 57 49 49 48 71 118 10 99 117 52 116 86 103 83 101 52 114 66 122 69 52 121 106 97 108 54 99 81 86 81 61 10 45 45 45 45 45 69 78 68 32 67 69 82 84 73 70 73 67 65 84 69 45 45 45 45 45 10]
+2019-01-29 11:22:46.415 UTC [gossip/gossip] learnAnchorPeers -> INFO 039[0m Anchor peer with same endpoint, skipping connecting to myself
+2019-01-29 11:22:46.437 UTC [kvledger] CommitWithPvtData -> INFO 03a[0m Channel [comunitychannel]: Committed block [3] with 1 transaction(s)

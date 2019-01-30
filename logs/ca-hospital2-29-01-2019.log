@@ -1,0 +1,250 @@
+2019/01/29 08:37:03 [INFO] Configuration file location: /etc/hyperledger/fabric/ca/fabric-ca-server-config.yaml
+2019/01/29 08:37:03 [INFO] Starting server in home directory: /etc/hyperledger/fabric/ca
+2019/01/29 08:37:03 [INFO] Server Version: 1.2.0-stable
+2019/01/29 08:37:03 [INFO] Server Levels: &{Identity:1 Affiliation:1 Certificate:1 Credential:1 RAInfo:1 Nonce:1}
+2019/01/29 08:37:03 [DEBUG] Making server filenames absolute
+2019/01/29 08:37:03 [DEBUG] Initializing default CA in directory /etc/hyperledger/fabric/ca
+2019/01/29 08:37:03 [DEBUG] Init CA with home /etc/hyperledger/fabric/ca and config {Version:1.2.0-stable Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name:ca.hospital2.switch2logic.co.za Keyfile:/etc/hyperledger/fabric/ca/f1026a58a3da5f6e0720dc114bab083454b0443fb8e34fdc7129ef155686176e_sk Certfile:/etc/hyperledger/fabric/ca/ca.hospital2.switch2logic.co.za-cert.pem Chainfile:ca-chain.pem} Signing:0xc42053a790 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[5e4089d0cf2b localhost] KeyRequest:<nil> CA:0xc4204c4ea0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Roles:* hf.Registrar.DelegateRoles:* hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc420526930 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** CAName: AttrReqs:[] Profile: Label: CSR:<nil> Type:x509  }} CRL:{Expiry:24h0m0s} Idemix:{IssuerPublicKeyfile: IssuerSecretKeyfile: RevocationPublicKeyfile: RevocationPrivateKeyfile: RHPoolSize:0 NonceExpiration: NonceSweepInterval:}}
+2019/01/29 08:37:03 [DEBUG] CA Home Directory: /etc/hyperledger/fabric/ca
+2019/01/29 08:37:03 [DEBUG] Checking configuration file version '1.2.0-stable' against server version: '1.2.0-stable'
+2019/01/29 08:37:03 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc420526990 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2019/01/29 08:37:03 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc42053a460 DummyKeystore:<nil>}
+2019/01/29 08:37:03 [DEBUG] Initialize key material
+2019/01/29 08:37:03 [DEBUG] Making CA filenames absolute
+2019/01/29 08:37:03 [INFO] The CA key and certificate files already exist
+2019/01/29 08:37:03 [INFO] Key file location: /etc/hyperledger/fabric/ca/f1026a58a3da5f6e0720dc114bab083454b0443fb8e34fdc7129ef155686176e_sk
+2019/01/29 08:37:03 [INFO] Certificate file location: /etc/hyperledger/fabric/ca/ca.hospital2.switch2logic.co.za-cert.pem
+2019/01/29 08:37:03 [DEBUG] Validating the CA certificate and key
+2019/01/29 08:37:03 [DEBUG] Check CA certificate for valid dates
+2019/01/29 08:37:03 [DEBUG] Check CA certificate for valid usages
+2019/01/29 08:37:03 [DEBUG] Check CA certificate for valid IsCA value
+2019/01/29 08:37:03 [DEBUG] Check that key type is supported
+2019/01/29 08:37:03 [DEBUG] Check that key size is of appropriate length
+2019/01/29 08:37:03 [DEBUG] Check that public key and private key match
+2019/01/29 08:37:03 [DEBUG] Validation of CA certificate and key successful
+2019/01/29 08:37:03 [DEBUG] Loading CN from existing enrollment information
+2019/01/29 08:37:03 [DEBUG] Initializing DB
+2019/01/29 08:37:03 [DEBUG] Initializing 'sqlite3' database at '/etc/hyperledger/fabric/ca/fabric-ca-server.db'
+2019/01/29 08:37:03 [DEBUG] Using sqlite database, connect to database in home (/etc/hyperledger/fabric/ca/fabric-ca-server.db) directory
+2019/01/29 08:37:03 [DEBUG] Creating SQLite database (/etc/hyperledger/fabric/ca/fabric-ca-server.db) if it does not exist...
+2019/01/29 08:37:03 [DEBUG] Creating users table if it does not exist
+2019/01/29 08:37:03 [DEBUG] Creating affiliations table if it does not exist
+2019/01/29 08:37:03 [DEBUG] Creating certificates table if it does not exist
+2019/01/29 08:37:03 [DEBUG] Creating credentials table if it does not exist
+2019/01/29 08:37:03 [DEBUG] Creating revocation_authority_info table if it does not exist
+2019/01/29 08:37:03 [DEBUG] Creating nonces table if it does not exist
+2019/01/29 08:37:03 [DEBUG] Creating properties table if it does not exist
+2019/01/29 08:37:03 [DEBUG] Successfully opened sqlite3 DB
+2019/01/29 08:37:03 [DEBUG] Checking database schema...
+2019/01/29 08:37:03 [DEBUG] Update SQLite schema, if using outdated schema
+2019/01/29 08:37:03 [DEBUG] Initializing identity registry
+2019/01/29 08:37:03 [DEBUG] Initialized DB identity registry
+2019/01/29 08:37:03 [DEBUG] DB: Get properties [identity.level affiliation.level certificate.level]
+2019/01/29 08:37:03 [DEBUG] Checking database levels 'map[affiliation.level:1 certificate.level:1 identity.level:1]' against server levels '&{Identity:1 Affiliation:1 Certificate:1 Credential:1 RAInfo:1 Nonce:1}'
+2019/01/29 08:37:03 [DEBUG] Loading identity table
+2019/01/29 08:37:03 [DEBUG] Loading identity 'admin'
+2019/01/29 08:37:03 [DEBUG] DB: Getting identity admin
+2019/01/29 08:37:03 [DEBUG] Identity 'admin' already registered, loaded identity
+2019/01/29 08:37:03 [DEBUG] Successfully loaded identity table
+2019/01/29 08:37:03 [DEBUG] Loading affiliations table
+2019/01/29 08:37:03 [DEBUG] DB: Add affiliation org2
+2019/01/29 08:37:03 [DEBUG] Affiliation 'org2' already exists
+2019/01/29 08:37:03 [DEBUG] DB: Add affiliation org2.department1
+2019/01/29 08:37:03 [DEBUG] Affiliation 'org2.department1' already exists
+2019/01/29 08:37:03 [DEBUG] DB: Add affiliation org1
+2019/01/29 08:37:03 [DEBUG] Affiliation 'org1' already exists
+2019/01/29 08:37:03 [DEBUG] DB: Add affiliation org1.department1
+2019/01/29 08:37:03 [DEBUG] Affiliation 'org1.department1' already exists
+2019/01/29 08:37:03 [DEBUG] DB: Add affiliation org1.department2
+2019/01/29 08:37:03 [DEBUG] Affiliation 'org1.department2' already exists
+2019/01/29 08:37:03 [DEBUG] Successfully loaded affiliations table
+2019/01/29 08:37:03 [DEBUG] Checking and performing migration, if needed
+2019/01/29 08:37:03 [DEBUG] Updating database level to &{Identity:1 Affiliation:1 Certificate:1 Credential:1 RAInfo:1 Nonce:1}
+2019/01/29 08:37:03 [INFO] Initialized sqlite3 database at /etc/hyperledger/fabric/ca/fabric-ca-server.db
+2019/01/29 08:37:03 [DEBUG] Initializing enrollment signer
+2019/01/29 08:37:03 [DEBUG] validating configuration
+2019/01/29 08:37:03 [DEBUG] validate local profile
+2019/01/29 08:37:03 [DEBUG] profile is valid
+2019/01/29 08:37:03 [DEBUG] validate local profile
+2019/01/29 08:37:03 [DEBUG] profile is valid
+2019/01/29 08:37:03 [DEBUG] validate local profile
+2019/01/29 08:37:03 [DEBUG] profile is valid
+2019/01/29 08:37:03 [DEBUG] CA initialization successful
+2019/01/29 08:37:03 [INFO] Home directory for default CA: /etc/hyperledger/fabric/ca
+2019/01/29 08:37:03 [DEBUG] 1 CA instance(s) running on server
+2019/01/29 08:37:03 [DEBUG] TLS is enabled
+2019/01/29 08:37:03 [DEBUG] TLS Certificate: /etc/hyperledger/fabric/tlsca/tlsca.hospital2.switch2logic.co.za-cert.pem, TLS Key: /etc/hyperledger/fabric/tlsca/e91719bb17d90f9f6bd2b845fe7ec94ee9c65ef3022db137eebc7abd952c1de8_sk
+2019/01/29 08:37:03 [DEBUG] Could not load TLS certificate with BCCSP: Could not find matching private key for SKI: Failed getting key for SKI [[233 23 25 187 23 217 15 159 107 210 184 69 254 126 201 78 233 198 94 243 2 45 177 55 238 188 122 189 149 44 29 232]]: Key with SKI e91719bb17d90f9f6bd2b845fe7ec94ee9c65ef3022db137eebc7abd952c1de8 not found in /etc/hyperledger/fabric/ca/msp/keystore
+2019/01/29 08:37:03 [DEBUG] Attempting fallback with certfile /etc/hyperledger/fabric/tlsca/tlsca.hospital2.switch2logic.co.za-cert.pem and keyfile /etc/hyperledger/fabric/tlsca/e91719bb17d90f9f6bd2b845fe7ec94ee9c65ef3022db137eebc7abd952c1de8_sk
+2019/01/29 08:37:03 [DEBUG] Client authentication type requested: noclientcert
+2019/01/29 08:37:03 [INFO] Listening on https://0.0.0.0:7054
+2019/01/29 08:52:03 [DEBUG] Cleaning up expired nonces for CA 'ca.hospital2.switch2logic.co.za'
+2019/01/29 09:07:04 [DEBUG] Cleaning up expired nonces for CA 'ca.hospital2.switch2logic.co.za'
+2019/01/29 09:22:04 [DEBUG] Cleaning up expired nonces for CA 'ca.hospital2.switch2logic.co.za'
+2019/01/29 09:37:04 [DEBUG] Cleaning up expired nonces for CA 'ca.hospital2.switch2logic.co.za'
+2019/01/29 09:52:04 [DEBUG] Cleaning up expired nonces for CA 'ca.hospital2.switch2logic.co.za'
+2019/01/29 10:07:04 [DEBUG] Cleaning up expired nonces for CA 'ca.hospital2.switch2logic.co.za'
+2019/01/29 10:22:03 [DEBUG] Cleaning up expired nonces for CA 'ca.hospital2.switch2logic.co.za'
+2019/01/29 10:33:51 [INFO] Configuration file location: /etc/hyperledger/fabric/ca/fabric-ca-server-config.yaml
+2019/01/29 10:33:51 [INFO] Starting server in home directory: /etc/hyperledger/fabric/ca
+2019/01/29 10:33:51 [INFO] Server Version: 1.2.0-stable
+2019/01/29 10:33:51 [INFO] Server Levels: &{Identity:1 Affiliation:1 Certificate:1 Credential:1 RAInfo:1 Nonce:1}
+2019/01/29 10:33:51 [DEBUG] Making server filenames absolute
+2019/01/29 10:33:51 [DEBUG] Initializing default CA in directory /etc/hyperledger/fabric/ca
+2019/01/29 10:33:51 [DEBUG] Init CA with home /etc/hyperledger/fabric/ca and config {Version:1.2.0-stable Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name:ca.hospital2.switch2logic.co.za Keyfile:/etc/hyperledger/fabric/ca/f1026a58a3da5f6e0720dc114bab083454b0443fb8e34fdc7129ef155686176e_sk Certfile:/etc/hyperledger/fabric/ca/ca.hospital2.switch2logic.co.za-cert.pem Chainfile:ca-chain.pem} Signing:0xc42023ddf0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[5e4089d0cf2b localhost] KeyRequest:<nil> CA:0xc42000d3e0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.DelegateRoles:* hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:*]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc420226db0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** CAName: AttrReqs:[] Profile: Label: CSR:<nil> Type:x509  }} CRL:{Expiry:24h0m0s} Idemix:{IssuerPublicKeyfile: IssuerSecretKeyfile: RevocationPublicKeyfile: RevocationPrivateKeyfile: RHPoolSize:0 NonceExpiration: NonceSweepInterval:}}
+2019/01/29 10:33:51 [DEBUG] CA Home Directory: /etc/hyperledger/fabric/ca
+2019/01/29 10:33:51 [DEBUG] Checking configuration file version '1.2.0-stable' against server version: '1.2.0-stable'
+2019/01/29 10:33:51 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc420226e10 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2019/01/29 10:33:51 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc420247770 DummyKeystore:<nil>}
+2019/01/29 10:33:51 [DEBUG] Initialize key material
+2019/01/29 10:33:51 [DEBUG] Making CA filenames absolute
+2019/01/29 10:33:51 [INFO] The CA key and certificate files already exist
+2019/01/29 10:33:51 [INFO] Key file location: /etc/hyperledger/fabric/ca/f1026a58a3da5f6e0720dc114bab083454b0443fb8e34fdc7129ef155686176e_sk
+2019/01/29 10:33:51 [INFO] Certificate file location: /etc/hyperledger/fabric/ca/ca.hospital2.switch2logic.co.za-cert.pem
+2019/01/29 10:33:51 [DEBUG] Validating the CA certificate and key
+2019/01/29 10:33:51 [DEBUG] Check CA certificate for valid dates
+2019/01/29 10:33:51 [DEBUG] Check CA certificate for valid usages
+2019/01/29 10:33:51 [DEBUG] Check CA certificate for valid IsCA value
+2019/01/29 10:33:51 [DEBUG] Check that key type is supported
+2019/01/29 10:33:51 [DEBUG] Check that key size is of appropriate length
+2019/01/29 10:33:51 [DEBUG] Check that public key and private key match
+2019/01/29 10:33:51 [DEBUG] Validation of CA certificate and key successful
+2019/01/29 10:33:51 [DEBUG] Loading CN from existing enrollment information
+2019/01/29 10:33:51 [DEBUG] Initializing DB
+2019/01/29 10:33:51 [DEBUG] Initializing 'sqlite3' database at '/etc/hyperledger/fabric/ca/fabric-ca-server.db'
+2019/01/29 10:33:51 [DEBUG] Using sqlite database, connect to database in home (/etc/hyperledger/fabric/ca/fabric-ca-server.db) directory
+2019/01/29 10:33:51 [DEBUG] Creating SQLite database (/etc/hyperledger/fabric/ca/fabric-ca-server.db) if it does not exist...
+2019/01/29 10:33:51 [DEBUG] Creating users table if it does not exist
+2019/01/29 10:33:51 [DEBUG] Creating affiliations table if it does not exist
+2019/01/29 10:33:51 [DEBUG] Creating certificates table if it does not exist
+2019/01/29 10:33:51 [DEBUG] Creating credentials table if it does not exist
+2019/01/29 10:33:51 [DEBUG] Creating revocation_authority_info table if it does not exist
+2019/01/29 10:33:51 [DEBUG] Creating nonces table if it does not exist
+2019/01/29 10:33:51 [DEBUG] Creating properties table if it does not exist
+2019/01/29 10:33:51 [DEBUG] Successfully opened sqlite3 DB
+2019/01/29 10:33:51 [DEBUG] Checking database schema...
+2019/01/29 10:33:51 [DEBUG] Update SQLite schema, if using outdated schema
+2019/01/29 10:33:51 [DEBUG] Initializing identity registry
+2019/01/29 10:33:51 [DEBUG] Initialized DB identity registry
+2019/01/29 10:33:51 [DEBUG] DB: Get properties [identity.level affiliation.level certificate.level]
+2019/01/29 10:33:51 [DEBUG] Checking database levels 'map[certificate.level:1 identity.level:1 affiliation.level:1]' against server levels '&{Identity:1 Affiliation:1 Certificate:1 Credential:1 RAInfo:1 Nonce:1}'
+2019/01/29 10:33:51 [DEBUG] Loading identity table
+2019/01/29 10:33:51 [DEBUG] Loading identity 'admin'
+2019/01/29 10:33:51 [DEBUG] DB: Getting identity admin
+2019/01/29 10:33:51 [DEBUG] Identity 'admin' already registered, loaded identity
+2019/01/29 10:33:51 [DEBUG] Successfully loaded identity table
+2019/01/29 10:33:51 [DEBUG] Loading affiliations table
+2019/01/29 10:33:51 [DEBUG] DB: Add affiliation org1
+2019/01/29 10:33:51 [DEBUG] Affiliation 'org1' already exists
+2019/01/29 10:33:51 [DEBUG] DB: Add affiliation org1.department1
+2019/01/29 10:33:51 [DEBUG] Affiliation 'org1.department1' already exists
+2019/01/29 10:33:51 [DEBUG] DB: Add affiliation org1.department2
+2019/01/29 10:33:51 [DEBUG] Affiliation 'org1.department2' already exists
+2019/01/29 10:33:51 [DEBUG] DB: Add affiliation org2
+2019/01/29 10:33:51 [DEBUG] Affiliation 'org2' already exists
+2019/01/29 10:33:51 [DEBUG] DB: Add affiliation org2.department1
+2019/01/29 10:33:51 [DEBUG] Affiliation 'org2.department1' already exists
+2019/01/29 10:33:51 [DEBUG] Successfully loaded affiliations table
+2019/01/29 10:33:51 [DEBUG] Checking and performing migration, if needed
+2019/01/29 10:33:51 [DEBUG] Updating database level to &{Identity:1 Affiliation:1 Certificate:1 Credential:1 RAInfo:1 Nonce:1}
+2019/01/29 10:33:51 [INFO] Initialized sqlite3 database at /etc/hyperledger/fabric/ca/fabric-ca-server.db
+2019/01/29 10:33:51 [DEBUG] Initializing enrollment signer
+2019/01/29 10:33:51 [DEBUG] validating configuration
+2019/01/29 10:33:51 [DEBUG] validate local profile
+2019/01/29 10:33:51 [DEBUG] profile is valid
+2019/01/29 10:33:51 [DEBUG] validate local profile
+2019/01/29 10:33:51 [DEBUG] profile is valid
+2019/01/29 10:33:51 [DEBUG] validate local profile
+2019/01/29 10:33:51 [DEBUG] profile is valid
+2019/01/29 10:33:51 [DEBUG] CA initialization successful
+2019/01/29 10:33:51 [INFO] Home directory for default CA: /etc/hyperledger/fabric/ca
+2019/01/29 10:33:51 [DEBUG] 1 CA instance(s) running on server
+2019/01/29 10:33:51 [DEBUG] TLS is enabled
+2019/01/29 10:33:51 [DEBUG] TLS Certificate: /etc/hyperledger/fabric/tlsca/tlsca.hospital2.switch2logic.co.za-cert.pem, TLS Key: /etc/hyperledger/fabric/tlsca/e91719bb17d90f9f6bd2b845fe7ec94ee9c65ef3022db137eebc7abd952c1de8_sk
+2019/01/29 10:33:51 [DEBUG] Could not load TLS certificate with BCCSP: Could not find matching private key for SKI: Failed getting key for SKI [[233 23 25 187 23 217 15 159 107 210 184 69 254 126 201 78 233 198 94 243 2 45 177 55 238 188 122 189 149 44 29 232]]: Key with SKI e91719bb17d90f9f6bd2b845fe7ec94ee9c65ef3022db137eebc7abd952c1de8 not found in /etc/hyperledger/fabric/ca/msp/keystore
+2019/01/29 10:33:51 [DEBUG] Attempting fallback with certfile /etc/hyperledger/fabric/tlsca/tlsca.hospital2.switch2logic.co.za-cert.pem and keyfile /etc/hyperledger/fabric/tlsca/e91719bb17d90f9f6bd2b845fe7ec94ee9c65ef3022db137eebc7abd952c1de8_sk
+2019/01/29 10:33:51 [DEBUG] Client authentication type requested: noclientcert
+2019/01/29 10:33:51 [INFO] Listening on https://0.0.0.0:7054
+2019/01/29 10:48:51 [DEBUG] Cleaning up expired nonces for CA 'ca.hospital2.switch2logic.co.za'
+2019/01/29 10:51:59 [INFO] Configuration file location: /etc/hyperledger/fabric/ca/fabric-ca-server-config.yaml
+2019/01/29 10:51:59 [INFO] Starting server in home directory: /etc/hyperledger/fabric/ca
+2019/01/29 10:51:59 [INFO] Server Version: 1.2.0-stable
+2019/01/29 10:51:59 [INFO] Server Levels: &{Identity:1 Affiliation:1 Certificate:1 Credential:1 RAInfo:1 Nonce:1}
+2019/01/29 10:51:59 [DEBUG] Making server filenames absolute
+2019/01/29 10:51:59 [DEBUG] Initializing default CA in directory /etc/hyperledger/fabric/ca
+2019/01/29 10:51:59 [DEBUG] Init CA with home /etc/hyperledger/fabric/ca and config {Version:1.2.0-stable Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name:ca.hospital2.switch2logic.co.za Keyfile:/etc/hyperledger/fabric/ca/f1026a58a3da5f6e0720dc114bab083454b0443fb8e34fdc7129ef155686176e_sk Certfile:/etc/hyperledger/fabric/ca/ca.hospital2.switch2logic.co.za-cert.pem Chainfile:ca-chain.pem} Signing:0xc4201e5680 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[5e4089d0cf2b localhost] KeyRequest:<nil> CA:0xc4201f08a0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.DelegateRoles:* hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:*]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4201e0750 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** CAName: AttrReqs:[] Profile: Label: CSR:<nil> Type:x509  }} CRL:{Expiry:24h0m0s} Idemix:{IssuerPublicKeyfile: IssuerSecretKeyfile: RevocationPublicKeyfile: RevocationPrivateKeyfile: RHPoolSize:0 NonceExpiration: NonceSweepInterval:}}
+2019/01/29 10:51:59 [DEBUG] CA Home Directory: /etc/hyperledger/fabric/ca
+2019/01/29 10:51:59 [DEBUG] Checking configuration file version '1.2.0-stable' against server version: '1.2.0-stable'
+2019/01/29 10:51:59 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4201e07b0 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2019/01/29 10:51:59 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4201f8660 DummyKeystore:<nil>}
+2019/01/29 10:51:59 [DEBUG] Initialize key material
+2019/01/29 10:51:59 [DEBUG] Making CA filenames absolute
+2019/01/29 10:51:59 [INFO] The CA key and certificate files already exist
+2019/01/29 10:51:59 [INFO] Key file location: /etc/hyperledger/fabric/ca/f1026a58a3da5f6e0720dc114bab083454b0443fb8e34fdc7129ef155686176e_sk
+2019/01/29 10:51:59 [INFO] Certificate file location: /etc/hyperledger/fabric/ca/ca.hospital2.switch2logic.co.za-cert.pem
+2019/01/29 10:51:59 [DEBUG] Validating the CA certificate and key
+2019/01/29 10:51:59 [DEBUG] Check CA certificate for valid dates
+2019/01/29 10:51:59 [DEBUG] Check CA certificate for valid usages
+2019/01/29 10:51:59 [DEBUG] Check CA certificate for valid IsCA value
+2019/01/29 10:51:59 [DEBUG] Check that key type is supported
+2019/01/29 10:51:59 [DEBUG] Check that key size is of appropriate length
+2019/01/29 10:51:59 [DEBUG] Check that public key and private key match
+2019/01/29 10:51:59 [DEBUG] Validation of CA certificate and key successful
+2019/01/29 10:51:59 [DEBUG] Loading CN from existing enrollment information
+2019/01/29 10:51:59 [DEBUG] Initializing DB
+2019/01/29 10:51:59 [DEBUG] Initializing 'sqlite3' database at '/etc/hyperledger/fabric/ca/fabric-ca-server.db'
+2019/01/29 10:51:59 [DEBUG] Using sqlite database, connect to database in home (/etc/hyperledger/fabric/ca/fabric-ca-server.db) directory
+2019/01/29 10:51:59 [DEBUG] Creating SQLite database (/etc/hyperledger/fabric/ca/fabric-ca-server.db) if it does not exist...
+2019/01/29 10:51:59 [DEBUG] Creating users table if it does not exist
+2019/01/29 10:51:59 [DEBUG] Creating affiliations table if it does not exist
+2019/01/29 10:51:59 [DEBUG] Creating certificates table if it does not exist
+2019/01/29 10:51:59 [DEBUG] Creating credentials table if it does not exist
+2019/01/29 10:51:59 [DEBUG] Creating revocation_authority_info table if it does not exist
+2019/01/29 10:51:59 [DEBUG] Creating nonces table if it does not exist
+2019/01/29 10:51:59 [DEBUG] Creating properties table if it does not exist
+2019/01/29 10:51:59 [DEBUG] Successfully opened sqlite3 DB
+2019/01/29 10:51:59 [DEBUG] Checking database schema...
+2019/01/29 10:51:59 [DEBUG] Update SQLite schema, if using outdated schema
+2019/01/29 10:51:59 [DEBUG] Initializing identity registry
+2019/01/29 10:51:59 [DEBUG] Initialized DB identity registry
+2019/01/29 10:51:59 [DEBUG] DB: Get properties [identity.level affiliation.level certificate.level]
+2019/01/29 10:51:59 [DEBUG] Checking database levels 'map[affiliation.level:1 certificate.level:1 identity.level:1]' against server levels '&{Identity:1 Affiliation:1 Certificate:1 Credential:1 RAInfo:1 Nonce:1}'
+2019/01/29 10:51:59 [DEBUG] Loading identity table
+2019/01/29 10:51:59 [DEBUG] Loading identity 'admin'
+2019/01/29 10:51:59 [DEBUG] DB: Getting identity admin
+2019/01/29 10:51:59 [DEBUG] Identity 'admin' already registered, loaded identity
+2019/01/29 10:51:59 [DEBUG] Successfully loaded identity table
+2019/01/29 10:51:59 [DEBUG] Loading affiliations table
+2019/01/29 10:51:59 [DEBUG] DB: Add affiliation org1
+2019/01/29 10:51:59 [DEBUG] Affiliation 'org1' already exists
+2019/01/29 10:51:59 [DEBUG] DB: Add affiliation org1.department1
+2019/01/29 10:51:59 [DEBUG] Affiliation 'org1.department1' already exists
+2019/01/29 10:51:59 [DEBUG] DB: Add affiliation org1.department2
+2019/01/29 10:51:59 [DEBUG] Affiliation 'org1.department2' already exists
+2019/01/29 10:51:59 [DEBUG] DB: Add affiliation org2
+2019/01/29 10:51:59 [DEBUG] Affiliation 'org2' already exists
+2019/01/29 10:51:59 [DEBUG] DB: Add affiliation org2.department1
+2019/01/29 10:51:59 [DEBUG] Affiliation 'org2.department1' already exists
+2019/01/29 10:51:59 [DEBUG] Successfully loaded affiliations table
+2019/01/29 10:51:59 [DEBUG] Checking and performing migration, if needed
+2019/01/29 10:51:59 [DEBUG] Updating database level to &{Identity:1 Affiliation:1 Certificate:1 Credential:1 RAInfo:1 Nonce:1}
+2019/01/29 10:51:59 [INFO] Initialized sqlite3 database at /etc/hyperledger/fabric/ca/fabric-ca-server.db
+2019/01/29 10:51:59 [DEBUG] Initializing enrollment signer
+2019/01/29 10:51:59 [DEBUG] validating configuration
+2019/01/29 10:51:59 [DEBUG] validate local profile
+2019/01/29 10:51:59 [DEBUG] profile is valid
+2019/01/29 10:51:59 [DEBUG] validate local profile
+2019/01/29 10:51:59 [DEBUG] profile is valid
+2019/01/29 10:51:59 [DEBUG] validate local profile
+2019/01/29 10:51:59 [DEBUG] profile is valid
+2019/01/29 10:51:59 [DEBUG] CA initialization successful
+2019/01/29 10:51:59 [INFO] Home directory for default CA: /etc/hyperledger/fabric/ca
+2019/01/29 10:51:59 [DEBUG] 1 CA instance(s) running on server
+2019/01/29 10:51:59 [DEBUG] TLS is enabled
+2019/01/29 10:51:59 [DEBUG] TLS Certificate: /etc/hyperledger/fabric/tlsca/tlsca.hospital2.switch2logic.co.za-cert.pem, TLS Key: /etc/hyperledger/fabric/tlsca/e91719bb17d90f9f6bd2b845fe7ec94ee9c65ef3022db137eebc7abd952c1de8_sk
+2019/01/29 10:51:59 [DEBUG] Could not load TLS certificate with BCCSP: Could not find matching private key for SKI: Failed getting key for SKI [[233 23 25 187 23 217 15 159 107 210 184 69 254 126 201 78 233 198 94 243 2 45 177 55 238 188 122 189 149 44 29 232]]: Key with SKI e91719bb17d90f9f6bd2b845fe7ec94ee9c65ef3022db137eebc7abd952c1de8 not found in /etc/hyperledger/fabric/ca/msp/keystore
+2019/01/29 10:51:59 [DEBUG] Attempting fallback with certfile /etc/hyperledger/fabric/tlsca/tlsca.hospital2.switch2logic.co.za-cert.pem and keyfile /etc/hyperledger/fabric/tlsca/e91719bb17d90f9f6bd2b845fe7ec94ee9c65ef3022db137eebc7abd952c1de8_sk
+2019/01/29 10:51:59 [DEBUG] Client authentication type requested: noclientcert
+2019/01/29 10:51:59 [INFO] Listening on https://0.0.0.0:7054
+2019/01/29 11:06:59 [DEBUG] Cleaning up expired nonces for CA 'ca.hospital2.switch2logic.co.za'
+2019/01/29 11:21:59 [DEBUG] Cleaning up expired nonces for CA 'ca.hospital2.switch2logic.co.za'

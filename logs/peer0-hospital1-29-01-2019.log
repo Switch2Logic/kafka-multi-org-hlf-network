@@ -1,0 +1,552 @@
+2019-01-29 08:13:40.302 UTC [msp] getMspConfig -> INFO 001[0m Loading NodeOUs
+2019-01-29 08:13:40.354 UTC [nodeCmd] serve -> INFO 002[0m Starting peer:
+ Version: 1.2.0
+ Commit SHA: cae2ad4
+ Go version: go1.10
+ OS/Arch: linux/amd64
+ Experimental features: false
+ Chaincode:
+  Base Image Version: 0.4.10
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+
+2019-01-29 08:13:40.354 UTC [ledgermgmt] initialize -> INFO 003[0m Initializing ledger mgmt
+2019-01-29 08:13:40.354 UTC [kvledger] NewProvider -> INFO 004[0m Initializing ledger provider
+[33m2019-01-29 08:13:41.423 UTC [couchdb] handleRequest -> WARN 005[0m Retrying couchdb request in 125ms. Attempt:1  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.152:5984: connect: connection refused
+[33m2019-01-29 08:13:41.549 UTC [couchdb] handleRequest -> WARN 006[0m Retrying couchdb request in 250ms. Attempt:2  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.152:5984: connect: connection refused
+[33m2019-01-29 08:13:41.800 UTC [couchdb] handleRequest -> WARN 007[0m Retrying couchdb request in 500ms. Attempt:3  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.152:5984: connect: connection refused
+[33m2019-01-29 08:13:42.304 UTC [couchdb] handleRequest -> WARN 008[0m Retrying couchdb request in 1s. Attempt:4  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.152:5984: connect: connection refused
+[33m2019-01-29 08:13:43.305 UTC [couchdb] handleRequest -> WARN 009[0m Retrying couchdb request in 2s. Attempt:5  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.152:5984: connect: connection refused
+2019-01-29 08:13:45.522 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 00a[0m Created state database _users
+2019-01-29 08:13:45.542 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 00b[0m Created state database _replicator
+2019-01-29 08:13:45.564 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 00c[0m Created state database _global_changes
+2019-01-29 08:13:45.584 UTC [kvledger] NewProvider -> INFO 00d[0m ledger provider Initialized
+2019-01-29 08:13:45.584 UTC [ledgermgmt] initialize -> INFO 00e[0m ledger mgmt initialized
+2019-01-29 08:13:45.584 UTC [peer] func1 -> INFO 00f[0m Auto-detected peer address: 10.0.0.151:7051
+2019-01-29 08:13:45.584 UTC [peer] func1 -> INFO 010[0m Returning peer0.hospital1.switch2logic.co.za:7051
+2019-01-29 08:13:45.584 UTC [peer] func1 -> INFO 011[0m Auto-detected peer address: 10.0.0.151:7051
+2019-01-29 08:13:45.585 UTC [peer] func1 -> INFO 012[0m Returning peer0.hospital1.switch2logic.co.za:7051
+2019-01-29 08:13:45.586 UTC [nodeCmd] serve -> INFO 013[0m Starting peer with TLS enabled
+2019-01-29 08:13:45.588 UTC [eventhub_producer] start -> INFO 014[0m Event processor started
+2019-01-29 08:13:45.589 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 015[0m Entering computeChaincodeEndpoint with peerHostname: peer0.hospital1.switch2logic.co.za
+2019-01-29 08:13:45.589 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 016[0m Exit with ccEndpoint: peer0.hospital1.switch2logic.co.za:7052
+2019-01-29 08:13:45.592 UTC [sccapi] registerSysCC -> INFO 017[0m system chaincode cscc(github.com/hyperledger/fabric/core/scc/cscc) registered
+2019-01-29 08:13:45.592 UTC [sccapi] registerSysCC -> INFO 018[0m system chaincode lscc(github.com/hyperledger/fabric/core/scc/lscc) registered
+2019-01-29 08:13:45.592 UTC [sccapi] registerSysCC -> INFO 019[0m system chaincode qscc(github.com/hyperledger/fabric/core/scc/qscc) registered
+2019-01-29 08:13:45.601 UTC [gossip/gossip] NewGossipService -> INFO 01a[0m Creating gossip service with self membership of {peer0.hospital1.switch2logic.co.za:7051 [] [97 15 22 24 60 183 255 127 100 13 239 70 46 88 180 28 62 250 12 124 176 242 157 194 203 149 248 202 234 104 203 137] peer0.hospital1.switch2logic.co.za:7051 <nil> <nil>}
+2019-01-29 08:13:45.603 UTC [cscc] Init -> INFO 01c[0m Init CSCC
+2019-01-29 08:13:45.603 UTC [sccapi] deploySysCC -> INFO 01d[0m system chaincode cscc/(github.com/hyperledger/fabric/core/scc/cscc) deployed
+2019-01-29 08:13:45.602 UTC [gossip/gossip] start -> INFO 01b[0m Gossip instance peer0.hospital1.switch2logic.co.za:7051 started
+2019-01-29 08:13:45.603 UTC [sccapi] deploySysCC -> INFO 01e[0m system chaincode lscc/(github.com/hyperledger/fabric/core/scc/lscc) deployed
+2019-01-29 08:13:45.604 UTC [qscc] Init -> INFO 01f[0m Init QSCC
+2019-01-29 08:13:45.604 UTC [sccapi] deploySysCC -> INFO 020[0m system chaincode qscc/(github.com/hyperledger/fabric/core/scc/qscc) deployed
+2019-01-29 08:13:45.604 UTC [nodeCmd] serve -> INFO 021[0m Deployed system chaincodes
+2019-01-29 08:13:45.606 UTC [discovery] NewService -> INFO 022[0m Created with config TLS: true, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+2019-01-29 08:13:45.606 UTC [nodeCmd] registerDiscoveryService -> INFO 023[0m Discovery service activated
+2019-01-29 08:13:45.607 UTC [nodeCmd] serve -> INFO 024[0m Starting peer with ID=[name:"peer0.hospital1.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital1.switch2logic.co.za:7051]
+2019-01-29 08:13:45.607 UTC [nodeCmd] serve -> INFO 025[0m Started peer with ID=[name:"peer0.hospital1.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital1.switch2logic.co.za:7051]
+2019-01-29 08:13:45.607 UTC [nodeCmd] func9 -> INFO 026[0m Starting profiling server with listenAddress = 0.0.0.0:6060
+2019-01-29 08:18:05.666 UTC [gossip/gossip] Stop -> INFO 027[0m Stopping gossip
+2019-01-29 08:18:05.666 UTC [gossip/discovery] Stop -> INFO 028[0m Stopping
+2019-01-29 08:18:05.666 UTC [gossip/discovery] Stop -> INFO 029[0m Stopped
+2019-01-29 08:18:05.666 UTC [gossip/comm] Stop -> INFO 02a[0m Stopping
+2019-01-29 08:18:05.669 UTC [gossip/comm] Stop -> INFO 02b[0m Stopped
+2019-01-29 08:18:09.433 UTC [msp] getMspConfig -> INFO 001[0m Loading NodeOUs
+2019-01-29 08:18:09.470 UTC [nodeCmd] serve -> INFO 002[0m Starting peer:
+ Version: 1.2.0
+ Commit SHA: cae2ad4
+ Go version: go1.10
+ OS/Arch: linux/amd64
+ Experimental features: false
+ Chaincode:
+  Base Image Version: 0.4.10
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+
+2019-01-29 08:18:09.470 UTC [ledgermgmt] initialize -> INFO 003[0m Initializing ledger mgmt
+2019-01-29 08:18:09.470 UTC [kvledger] NewProvider -> INFO 004[0m Initializing ledger provider
+[33m2019-01-29 08:18:09.521 UTC [couchdb] handleRequest -> WARN 005[0m Retrying couchdb request in 125ms. Attempt:1  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.173:5984: connect: connection refused
+[33m2019-01-29 08:18:09.648 UTC [couchdb] handleRequest -> WARN 006[0m Retrying couchdb request in 250ms. Attempt:2  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.173:5984: connect: connection refused
+[33m2019-01-29 08:18:09.898 UTC [couchdb] handleRequest -> WARN 007[0m Retrying couchdb request in 500ms. Attempt:3  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.173:5984: connect: connection refused
+[33m2019-01-29 08:18:10.401 UTC [couchdb] handleRequest -> WARN 008[0m Retrying couchdb request in 1s. Attempt:4  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.173:5984: connect: connection refused
+[33m2019-01-29 08:18:11.402 UTC [couchdb] handleRequest -> WARN 009[0m Retrying couchdb request in 2s. Attempt:5  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.173:5984: connect: connection refused
+2019-01-29 08:18:13.487 UTC [kvledger] NewProvider -> INFO 00a[0m ledger provider Initialized
+2019-01-29 08:18:13.487 UTC [ledgermgmt] initialize -> INFO 00b[0m ledger mgmt initialized
+2019-01-29 08:18:13.487 UTC [peer] func1 -> INFO 00c[0m Auto-detected peer address: 172.22.0.13:7051
+2019-01-29 08:18:13.488 UTC [peer] func1 -> INFO 00d[0m Returning peer0.hospital1.switch2logic.co.za:7051
+2019-01-29 08:18:13.488 UTC [peer] func1 -> INFO 00e[0m Auto-detected peer address: 172.22.0.13:7051
+2019-01-29 08:18:13.488 UTC [peer] func1 -> INFO 00f[0m Returning peer0.hospital1.switch2logic.co.za:7051
+2019-01-29 08:18:13.489 UTC [nodeCmd] serve -> INFO 010[0m Starting peer with TLS enabled
+2019-01-29 08:18:13.491 UTC [eventhub_producer] start -> INFO 011[0m Event processor started
+2019-01-29 08:18:13.492 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 012[0m Entering computeChaincodeEndpoint with peerHostname: peer0.hospital1.switch2logic.co.za
+2019-01-29 08:18:13.492 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 013[0m Exit with ccEndpoint: peer0.hospital1.switch2logic.co.za:7052
+2019-01-29 08:18:13.493 UTC [sccapi] registerSysCC -> INFO 014[0m system chaincode cscc(github.com/hyperledger/fabric/core/scc/cscc) registered
+2019-01-29 08:18:13.493 UTC [sccapi] registerSysCC -> INFO 015[0m system chaincode lscc(github.com/hyperledger/fabric/core/scc/lscc) registered
+2019-01-29 08:18:13.493 UTC [sccapi] registerSysCC -> INFO 016[0m system chaincode qscc(github.com/hyperledger/fabric/core/scc/qscc) registered
+2019-01-29 08:18:13.499 UTC [gossip/gossip] NewGossipService -> INFO 017[0m Creating gossip service with self membership of {peer0.hospital1.switch2logic.co.za:7051 [] [97 15 22 24 60 183 255 127 100 13 239 70 46 88 180 28 62 250 12 124 176 242 157 194 203 149 248 202 234 104 203 137] peer0.hospital1.switch2logic.co.za:7051 <nil> <nil>}
+2019-01-29 08:18:13.499 UTC [gossip/gossip] start -> INFO 018[0m Gossip instance peer0.hospital1.switch2logic.co.za:7051 started
+2019-01-29 08:18:13.500 UTC [cscc] Init -> INFO 019[0m Init CSCC
+2019-01-29 08:18:13.500 UTC [sccapi] deploySysCC -> INFO 01a[0m system chaincode cscc/(github.com/hyperledger/fabric/core/scc/cscc) deployed
+2019-01-29 08:18:13.501 UTC [sccapi] deploySysCC -> INFO 01b[0m system chaincode lscc/(github.com/hyperledger/fabric/core/scc/lscc) deployed
+2019-01-29 08:18:13.501 UTC [qscc] Init -> INFO 01c[0m Init QSCC
+2019-01-29 08:18:13.501 UTC [sccapi] deploySysCC -> INFO 01d[0m system chaincode qscc/(github.com/hyperledger/fabric/core/scc/qscc) deployed
+2019-01-29 08:18:13.501 UTC [nodeCmd] serve -> INFO 01e[0m Deployed system chaincodes
+2019-01-29 08:18:13.502 UTC [discovery] NewService -> INFO 01f[0m Created with config TLS: true, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+2019-01-29 08:18:13.502 UTC [nodeCmd] registerDiscoveryService -> INFO 020[0m Discovery service activated
+2019-01-29 08:18:13.502 UTC [nodeCmd] serve -> INFO 021[0m Starting peer with ID=[name:"peer0.hospital1.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital1.switch2logic.co.za:7051]
+2019-01-29 08:18:13.503 UTC [nodeCmd] serve -> INFO 022[0m Started peer with ID=[name:"peer0.hospital1.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital1.switch2logic.co.za:7051]
+2019-01-29 08:18:13.503 UTC [nodeCmd] func9 -> INFO 023[0m Starting profiling server with listenAddress = 0.0.0.0:6060
+2019-01-29 08:19:51.424 UTC [gossip/gossip] Stop -> INFO 024[0m Stopping gossip
+2019-01-29 08:19:51.424 UTC [gossip/discovery] Stop -> INFO 025[0m Stopping
+2019-01-29 08:19:51.424 UTC [gossip/discovery] Stop -> INFO 026[0m Stopped
+2019-01-29 08:19:51.424 UTC [gossip/comm] Stop -> INFO 027[0m Stopping
+2019-01-29 08:19:51.424 UTC [gossip/comm] Stop -> INFO 028[0m Stopped
+2019-01-29 08:19:53.780 UTC [msp] getMspConfig -> INFO 001[0m Loading NodeOUs
+2019-01-29 08:19:53.806 UTC [nodeCmd] serve -> INFO 002[0m Starting peer:
+ Version: 1.2.0
+ Commit SHA: cae2ad4
+ Go version: go1.10
+ OS/Arch: linux/amd64
+ Experimental features: false
+ Chaincode:
+  Base Image Version: 0.4.10
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+
+2019-01-29 08:19:53.807 UTC [ledgermgmt] initialize -> INFO 003[0m Initializing ledger mgmt
+2019-01-29 08:19:53.807 UTC [kvledger] NewProvider -> INFO 004[0m Initializing ledger provider
+[33m2019-01-29 08:19:53.850 UTC [couchdb] handleRequest -> WARN 005[0m Retrying couchdb request in 125ms. Attempt:1  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.185:5984: connect: connection refused
+[33m2019-01-29 08:19:53.977 UTC [couchdb] handleRequest -> WARN 006[0m Retrying couchdb request in 250ms. Attempt:2  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.185:5984: connect: connection refused
+[33m2019-01-29 08:19:54.229 UTC [couchdb] handleRequest -> WARN 007[0m Retrying couchdb request in 500ms. Attempt:3  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.185:5984: connect: connection refused
+[33m2019-01-29 08:19:54.730 UTC [couchdb] handleRequest -> WARN 008[0m Retrying couchdb request in 1s. Attempt:4  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.185:5984: connect: connection refused
+[33m2019-01-29 08:19:55.731 UTC [couchdb] handleRequest -> WARN 009[0m Retrying couchdb request in 2s. Attempt:5  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.185:5984: connect: connection refused
+2019-01-29 08:19:57.823 UTC [kvledger] NewProvider -> INFO 00a[0m ledger provider Initialized
+2019-01-29 08:19:57.823 UTC [ledgermgmt] initialize -> INFO 00b[0m ledger mgmt initialized
+2019-01-29 08:19:57.823 UTC [peer] func1 -> INFO 00c[0m Auto-detected peer address: 10.0.0.184:7051
+2019-01-29 08:19:57.824 UTC [peer] func1 -> INFO 00d[0m Returning peer0.hospital1.switch2logic.co.za:7051
+2019-01-29 08:19:57.824 UTC [peer] func1 -> INFO 00e[0m Auto-detected peer address: 10.0.0.184:7051
+2019-01-29 08:19:57.824 UTC [peer] func1 -> INFO 00f[0m Returning peer0.hospital1.switch2logic.co.za:7051
+2019-01-29 08:19:57.825 UTC [nodeCmd] serve -> INFO 010[0m Starting peer with TLS enabled
+2019-01-29 08:19:57.827 UTC [eventhub_producer] start -> INFO 011[0m Event processor started
+2019-01-29 08:19:57.827 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 012[0m Entering computeChaincodeEndpoint with peerHostname: peer0.hospital1.switch2logic.co.za
+2019-01-29 08:19:57.827 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 013[0m Exit with ccEndpoint: peer0.hospital1.switch2logic.co.za:7052
+2019-01-29 08:19:57.828 UTC [sccapi] registerSysCC -> INFO 014[0m system chaincode cscc(github.com/hyperledger/fabric/core/scc/cscc) registered
+2019-01-29 08:19:57.829 UTC [sccapi] registerSysCC -> INFO 015[0m system chaincode lscc(github.com/hyperledger/fabric/core/scc/lscc) registered
+2019-01-29 08:19:57.829 UTC [sccapi] registerSysCC -> INFO 016[0m system chaincode qscc(github.com/hyperledger/fabric/core/scc/qscc) registered
+2019-01-29 08:19:57.834 UTC [gossip/gossip] NewGossipService -> INFO 017[0m Creating gossip service with self membership of {peer0.hospital1.switch2logic.co.za:7051 [] [97 15 22 24 60 183 255 127 100 13 239 70 46 88 180 28 62 250 12 124 176 242 157 194 203 149 248 202 234 104 203 137] peer0.hospital1.switch2logic.co.za:7051 <nil> <nil>}
+2019-01-29 08:19:57.835 UTC [gossip/gossip] start -> INFO 018[0m Gossip instance peer0.hospital1.switch2logic.co.za:7051 started
+2019-01-29 08:19:57.835 UTC [cscc] Init -> INFO 019[0m Init CSCC
+2019-01-29 08:19:57.835 UTC [sccapi] deploySysCC -> INFO 01a[0m system chaincode cscc/(github.com/hyperledger/fabric/core/scc/cscc) deployed
+2019-01-29 08:19:57.836 UTC [sccapi] deploySysCC -> INFO 01b[0m system chaincode lscc/(github.com/hyperledger/fabric/core/scc/lscc) deployed
+2019-01-29 08:19:57.837 UTC [qscc] Init -> INFO 01c[0m Init QSCC
+2019-01-29 08:19:57.837 UTC [sccapi] deploySysCC -> INFO 01d[0m system chaincode qscc/(github.com/hyperledger/fabric/core/scc/qscc) deployed
+2019-01-29 08:19:57.837 UTC [nodeCmd] serve -> INFO 01e[0m Deployed system chaincodes
+2019-01-29 08:19:57.838 UTC [discovery] NewService -> INFO 01f[0m Created with config TLS: true, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+2019-01-29 08:19:57.838 UTC [nodeCmd] registerDiscoveryService -> INFO 020[0m Discovery service activated
+2019-01-29 08:19:57.838 UTC [nodeCmd] serve -> INFO 021[0m Starting peer with ID=[name:"peer0.hospital1.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital1.switch2logic.co.za:7051]
+2019-01-29 08:19:57.838 UTC [nodeCmd] serve -> INFO 022[0m Started peer with ID=[name:"peer0.hospital1.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital1.switch2logic.co.za:7051]
+2019-01-29 08:19:57.839 UTC [nodeCmd] func9 -> INFO 023[0m Starting profiling server with listenAddress = 0.0.0.0:6060
+2019-01-29 10:11:47.064 UTC [ledgermgmt] CreateLedger -> INFO 024[0m Creating ledger [comunitychannel] with genesis block
+2019-01-29 10:11:47.066 UTC [fsblkstorage] newBlockfileMgr -> INFO 025[0m Getting block information from block storage
+2019-01-29 10:11:47.112 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 026[0m Created state database comunitychannel_
+2019-01-29 10:11:47.120 UTC [kvledger] CommitWithPvtData -> INFO 027[0m Channel [comunitychannel]: Committed block [0] with 1 transaction(s)
+2019-01-29 10:11:47.120 UTC [pvtdatastorage] func1 -> INFO 028[0m Purger started: Purging expired private data till block number [0]
+2019-01-29 10:11:47.120 UTC [pvtdatastorage] func1 -> INFO 029[0m Purger finished
+2019-01-29 10:11:47.173 UTC [ledgermgmt] CreateLedger -> INFO 02a[0m Created ledger [comunitychannel] with genesis block
+2019-01-29 10:11:47.198 UTC [cscc] Init -> INFO 02b[0m Init CSCC
+2019-01-29 10:11:47.198 UTC [sccapi] deploySysCC -> INFO 02c[0m system chaincode cscc/comunitychannel(github.com/hyperledger/fabric/core/scc/cscc) deployed
+2019-01-29 10:11:47.198 UTC [sccapi] deploySysCC -> INFO 02d[0m system chaincode lscc/comunitychannel(github.com/hyperledger/fabric/core/scc/lscc) deployed
+2019-01-29 10:11:47.198 UTC [qscc] Init -> INFO 02e[0m Init QSCC
+2019-01-29 10:11:47.198 UTC [sccapi] deploySysCC -> INFO 02f[0m system chaincode qscc/comunitychannel(github.com/hyperledger/fabric/core/scc/qscc) deployed
+2019-01-29 10:11:53.200 UTC [gossip/election] beLeader -> INFO 030[0m [97 15 22 24 60 183 255 127 100 13 239 70 46 88 180 28 62 250 12 124 176 242 157 194 203 149 248 202 234 104 203 137] : Becoming a leader
+2019-01-29 10:32:58.719 UTC [gossip/gossip] Stop -> INFO 031[0m Stopping gossip
+2019-01-29 10:32:58.719 UTC [gossip/discovery] Stop -> INFO 032[0m Stopping
+2019-01-29 10:32:58.719 UTC [gossip/discovery] Stop -> INFO 033[0m Stopped
+[33m2019-01-29 10:32:58.720 UTC [deliveryClient] try -> WARN 034[0m Got error: rpc error: code = Canceled desc = context canceled , at 1 attempt. Retrying in 1s
+[33m2019-01-29 10:32:58.720 UTC [blocksProvider] DeliverBlocks -> WARN 035[0m [comunitychannel] Receive error: client is closing
+2019-01-29 10:32:58.720 UTC [gossip/comm] Stop -> INFO 036[0m Stopping
+2019-01-29 10:32:58.720 UTC [gossip/comm] Stop -> INFO 037[0m Stopped
+2019-01-29 10:33:56.252 UTC [msp] getMspConfig -> INFO 001[0m Loading NodeOUs
+2019-01-29 10:33:56.381 UTC [nodeCmd] serve -> INFO 002[0m Starting peer:
+ Version: 1.2.0
+ Commit SHA: cae2ad4
+ Go version: go1.10
+ OS/Arch: linux/amd64
+ Experimental features: false
+ Chaincode:
+  Base Image Version: 0.4.10
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+
+2019-01-29 10:33:56.381 UTC [ledgermgmt] initialize -> INFO 003[0m Initializing ledger mgmt
+2019-01-29 10:33:56.381 UTC [kvledger] NewProvider -> INFO 004[0m Initializing ledger provider
+[33m2019-01-29 10:33:56.474 UTC [couchdb] handleRequest -> WARN 005[0m Retrying couchdb request in 125ms. Attempt:1  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.12:5984: connect: connection refused
+[33m2019-01-29 10:33:56.600 UTC [couchdb] handleRequest -> WARN 006[0m Retrying couchdb request in 250ms. Attempt:2  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.12:5984: connect: connection refused
+[33m2019-01-29 10:33:56.852 UTC [couchdb] handleRequest -> WARN 007[0m Retrying couchdb request in 500ms. Attempt:3  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.12:5984: connect: connection refused
+[33m2019-01-29 10:33:57.354 UTC [couchdb] handleRequest -> WARN 008[0m Retrying couchdb request in 1s. Attempt:4  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.12:5984: connect: connection refused
+2019-01-29 10:33:58.544 UTC [kvledger] NewProvider -> INFO 009[0m ledger provider Initialized
+2019-01-29 10:33:58.544 UTC [ledgermgmt] initialize -> INFO 00a[0m ledger mgmt initialized
+2019-01-29 10:33:58.545 UTC [peer] func1 -> INFO 00b[0m Auto-detected peer address: 10.0.0.22:7051
+2019-01-29 10:33:58.545 UTC [peer] func1 -> INFO 00c[0m Returning peer0.hospital1.switch2logic.co.za:7051
+2019-01-29 10:33:58.545 UTC [peer] func1 -> INFO 00d[0m Auto-detected peer address: 10.0.0.22:7051
+2019-01-29 10:33:58.546 UTC [peer] func1 -> INFO 00e[0m Returning peer0.hospital1.switch2logic.co.za:7051
+2019-01-29 10:33:58.548 UTC [nodeCmd] serve -> INFO 00f[0m Starting peer with TLS enabled
+2019-01-29 10:33:58.550 UTC [eventhub_producer] start -> INFO 010[0m Event processor started
+2019-01-29 10:33:58.550 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 011[0m Entering computeChaincodeEndpoint with peerHostname: peer0.hospital1.switch2logic.co.za
+2019-01-29 10:33:58.550 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 012[0m Exit with ccEndpoint: peer0.hospital1.switch2logic.co.za:7052
+2019-01-29 10:33:58.553 UTC [sccapi] registerSysCC -> INFO 013[0m system chaincode cscc(github.com/hyperledger/fabric/core/scc/cscc) registered
+2019-01-29 10:33:58.553 UTC [sccapi] registerSysCC -> INFO 014[0m system chaincode lscc(github.com/hyperledger/fabric/core/scc/lscc) registered
+2019-01-29 10:33:58.553 UTC [sccapi] registerSysCC -> INFO 015[0m system chaincode qscc(github.com/hyperledger/fabric/core/scc/qscc) registered
+2019-01-29 10:33:58.563 UTC [gossip/gossip] NewGossipService -> INFO 016[0m Creating gossip service with self membership of {peer0.hospital1.switch2logic.co.za:7051 [] [97 15 22 24 60 183 255 127 100 13 239 70 46 88 180 28 62 250 12 124 176 242 157 194 203 149 248 202 234 104 203 137] peer0.hospital1.switch2logic.co.za:7051 <nil> <nil>}
+2019-01-29 10:33:58.565 UTC [gossip/gossip] start -> INFO 017[0m Gossip instance peer0.hospital1.switch2logic.co.za:7051 started
+2019-01-29 10:33:58.565 UTC [cscc] Init -> INFO 018[0m Init CSCC
+2019-01-29 10:33:58.565 UTC [sccapi] deploySysCC -> INFO 019[0m system chaincode cscc/(github.com/hyperledger/fabric/core/scc/cscc) deployed
+2019-01-29 10:33:58.567 UTC [sccapi] deploySysCC -> INFO 01a[0m system chaincode lscc/(github.com/hyperledger/fabric/core/scc/lscc) deployed
+2019-01-29 10:33:58.567 UTC [qscc] Init -> INFO 01b[0m Init QSCC
+2019-01-29 10:33:58.567 UTC [sccapi] deploySysCC -> INFO 01c[0m system chaincode qscc/(github.com/hyperledger/fabric/core/scc/qscc) deployed
+2019-01-29 10:33:58.567 UTC [nodeCmd] serve -> INFO 01d[0m Deployed system chaincodes
+2019-01-29 10:33:58.568 UTC [peer] Initialize -> INFO 01e[0m Loading chain comunitychannel
+2019-01-29 10:33:58.568 UTC [ledgermgmt] OpenLedger -> INFO 01f[0m Opening ledger with id = comunitychannel
+2019-01-29 10:33:58.578 UTC [ledgermgmt] OpenLedger -> INFO 020[0m Opened ledger with id = comunitychannel
+2019-01-29 10:33:58.628 UTC [cscc] Init -> INFO 021[0m Init CSCC
+2019-01-29 10:33:58.628 UTC [sccapi] deploySysCC -> INFO 022[0m system chaincode cscc/comunitychannel(github.com/hyperledger/fabric/core/scc/cscc) deployed
+2019-01-29 10:33:58.628 UTC [sccapi] deploySysCC -> INFO 023[0m system chaincode lscc/comunitychannel(github.com/hyperledger/fabric/core/scc/lscc) deployed
+2019-01-29 10:33:58.628 UTC [qscc] Init -> INFO 024[0m Init QSCC
+2019-01-29 10:33:58.629 UTC [sccapi] deploySysCC -> INFO 025[0m system chaincode qscc/comunitychannel(github.com/hyperledger/fabric/core/scc/qscc) deployed
+2019-01-29 10:33:58.629 UTC [discovery] NewService -> INFO 026[0m Created with config TLS: true, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+2019-01-29 10:33:58.629 UTC [nodeCmd] registerDiscoveryService -> INFO 027[0m Discovery service activated
+2019-01-29 10:33:58.630 UTC [nodeCmd] serve -> INFO 028[0m Starting peer with ID=[name:"peer0.hospital1.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital1.switch2logic.co.za:7051]
+2019-01-29 10:33:58.630 UTC [nodeCmd] serve -> INFO 029[0m Started peer with ID=[name:"peer0.hospital1.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital1.switch2logic.co.za:7051]
+2019-01-29 10:33:58.630 UTC [nodeCmd] func9 -> INFO 02a[0m Starting profiling server with listenAddress = 0.0.0.0:6060
+2019-01-29 10:34:04.629 UTC [gossip/election] beLeader -> INFO 02b[0m [97 15 22 24 60 183 255 127 100 13 239 70 46 88 180 28 62 250 12 124 176 242 157 194 203 149 248 202 234 104 203 137] : Becoming a leader
+[33m2019-01-29 10:34:04.636 UTC [blocksProvider] DeliverBlocks -> WARN 02c[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:34:07.741 UTC [ConnProducer] NewConnection -> ERRO 02d[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:34:10.743 UTC [ConnProducer] NewConnection -> ERRO 02e[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:34:10.743 UTC [deliveryClient] connect -> ERRO 02f[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:34:10.744 UTC [deliveryClient] try -> WARN 030[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:34:14.747 UTC [ConnProducer] NewConnection -> ERRO 031[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:34:17.749 UTC [ConnProducer] NewConnection -> ERRO 032[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:34:17.749 UTC [deliveryClient] connect -> ERRO 033[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:34:17.749 UTC [deliveryClient] try -> WARN 034[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:34:22.753 UTC [ConnProducer] NewConnection -> ERRO 035[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[33m2019-01-29 10:34:22.758 UTC [blocksProvider] DeliverBlocks -> WARN 036[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:34:25.963 UTC [ConnProducer] NewConnection -> ERRO 037[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:34:28.965 UTC [ConnProducer] NewConnection -> ERRO 038[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:34:28.965 UTC [deliveryClient] connect -> ERRO 039[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:34:28.965 UTC [deliveryClient] try -> WARN 03a[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:34:32.969 UTC [ConnProducer] NewConnection -> ERRO 03b[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:34:35.972 UTC [ConnProducer] NewConnection -> ERRO 03c[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:34:35.972 UTC [deliveryClient] connect -> ERRO 03d[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:34:35.973 UTC [deliveryClient] try -> WARN 03e[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:34:40.976 UTC [ConnProducer] NewConnection -> ERRO 03f[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:34:43.979 UTC [ConnProducer] NewConnection -> ERRO 040[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[33m2019-01-29 10:34:43.988 UTC [blocksProvider] DeliverBlocks -> WARN 041[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:34:47.391 UTC [ConnProducer] NewConnection -> ERRO 042[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:34:50.393 UTC [ConnProducer] NewConnection -> ERRO 043[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:34:50.393 UTC [deliveryClient] connect -> ERRO 044[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:34:50.394 UTC [deliveryClient] try -> WARN 045[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:34:54.396 UTC [ConnProducer] NewConnection -> ERRO 046[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:34:57.402 UTC [ConnProducer] NewConnection -> ERRO 047[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:34:57.403 UTC [deliveryClient] connect -> ERRO 048[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:34:57.404 UTC [deliveryClient] try -> WARN 049[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:35:02.407 UTC [ConnProducer] NewConnection -> ERRO 04a[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:35:05.409 UTC [ConnProducer] NewConnection -> ERRO 04b[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[33m2019-01-29 10:35:05.419 UTC [blocksProvider] DeliverBlocks -> WARN 04c[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:35:09.223 UTC [ConnProducer] NewConnection -> ERRO 04d[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:35:12.225 UTC [ConnProducer] NewConnection -> ERRO 04e[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:35:12.225 UTC [deliveryClient] connect -> ERRO 04f[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:35:12.226 UTC [deliveryClient] try -> WARN 050[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:35:15.657 UTC [ConnProducer] NewConnection -> ERRO 051[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:35:18.660 UTC [ConnProducer] NewConnection -> ERRO 052[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:35:18.660 UTC [deliveryClient] connect -> ERRO 053[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:35:18.662 UTC [deliveryClient] try -> WARN 054[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:35:23.666 UTC [ConnProducer] NewConnection -> ERRO 055[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:35:26.669 UTC [ConnProducer] NewConnection -> ERRO 056[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[33m2019-01-29 10:35:26.679 UTC [blocksProvider] DeliverBlocks -> WARN 057[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:35:31.282 UTC [ConnProducer] NewConnection -> ERRO 058[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:35:34.285 UTC [ConnProducer] NewConnection -> ERRO 059[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:35:34.285 UTC [deliveryClient] connect -> ERRO 05a[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:35:34.286 UTC [deliveryClient] try -> WARN 05b[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:35:38.290 UTC [ConnProducer] NewConnection -> ERRO 05c[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:35:41.294 UTC [ConnProducer] NewConnection -> ERRO 05d[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:35:41.294 UTC [deliveryClient] connect -> ERRO 05e[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:35:41.294 UTC [deliveryClient] try -> WARN 05f[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:35:46.296 UTC [ConnProducer] NewConnection -> ERRO 060[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[33m2019-01-29 10:35:46.303 UTC [blocksProvider] DeliverBlocks -> WARN 061[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:35:52.507 UTC [ConnProducer] NewConnection -> ERRO 062[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:35:55.508 UTC [ConnProducer] NewConnection -> ERRO 063[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:35:55.508 UTC [deliveryClient] connect -> ERRO 064[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:35:55.509 UTC [deliveryClient] try -> WARN 065[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:35:59.513 UTC [ConnProducer] NewConnection -> ERRO 066[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:36:02.515 UTC [ConnProducer] NewConnection -> ERRO 067[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:36:02.515 UTC [deliveryClient] connect -> ERRO 068[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:36:02.516 UTC [deliveryClient] try -> WARN 069[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:36:07.517 UTC [ConnProducer] NewConnection -> ERRO 06a[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:36:10.520 UTC [ConnProducer] NewConnection -> ERRO 06b[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[33m2019-01-29 10:36:10.526 UTC [blocksProvider] DeliverBlocks -> WARN 06c[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:36:19.929 UTC [ConnProducer] NewConnection -> ERRO 06d[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:36:22.931 UTC [ConnProducer] NewConnection -> ERRO 06e[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:36:22.931 UTC [deliveryClient] connect -> ERRO 06f[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:36:22.932 UTC [deliveryClient] try -> WARN 070[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:36:26.934 UTC [ConnProducer] NewConnection -> ERRO 071[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:36:29.937 UTC [ConnProducer] NewConnection -> ERRO 072[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:36:29.937 UTC [deliveryClient] connect -> ERRO 073[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:36:29.938 UTC [deliveryClient] try -> WARN 074[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:36:34.941 UTC [ConnProducer] NewConnection -> ERRO 075[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[33m2019-01-29 10:36:34.950 UTC [blocksProvider] DeliverBlocks -> WARN 076[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:36:47.954 UTC [ConnProducer] NewConnection -> ERRO 077[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:36:50.956 UTC [ConnProducer] NewConnection -> ERRO 078[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:36:50.956 UTC [deliveryClient] connect -> ERRO 079[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:36:50.957 UTC [deliveryClient] try -> WARN 07a[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:36:55.642 UTC [ConnProducer] NewConnection -> ERRO 07b[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:36:58.644 UTC [ConnProducer] NewConnection -> ERRO 07c[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:36:58.644 UTC [deliveryClient] connect -> ERRO 07d[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:36:58.645 UTC [deliveryClient] try -> WARN 07e[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 2 attempt. Retrying in 2s
+[33m2019-01-29 10:37:00.654 UTC [blocksProvider] DeliverBlocks -> WARN 07f[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:37:13.656 UTC [ConnProducer] NewConnection -> ERRO 080[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:37:16.659 UTC [ConnProducer] NewConnection -> ERRO 081[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:37:16.659 UTC [deliveryClient] connect -> ERRO 082[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:37:16.660 UTC [deliveryClient] try -> WARN 083[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:37:20.663 UTC [ConnProducer] NewConnection -> ERRO 084[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:37:23.665 UTC [ConnProducer] NewConnection -> ERRO 085[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:37:23.665 UTC [deliveryClient] connect -> ERRO 086[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:37:23.665 UTC [deliveryClient] try -> WARN 087[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:37:28.668 UTC [ConnProducer] NewConnection -> ERRO 088[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[33m2019-01-29 10:37:28.675 UTC [blocksProvider] DeliverBlocks -> WARN 089[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:37:41.678 UTC [ConnProducer] NewConnection -> ERRO 08a[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:37:44.680 UTC [ConnProducer] NewConnection -> ERRO 08b[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:37:44.681 UTC [deliveryClient] connect -> ERRO 08c[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:37:44.682 UTC [deliveryClient] try -> WARN 08d[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:37:48.685 UTC [ConnProducer] NewConnection -> ERRO 08e[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:37:51.686 UTC [ConnProducer] NewConnection -> ERRO 08f[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:37:51.686 UTC [deliveryClient] connect -> ERRO 090[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:37:51.688 UTC [deliveryClient] try -> WARN 091[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 2 attempt. Retrying in 2s
+[33m2019-01-29 10:37:53.694 UTC [blocksProvider] DeliverBlocks -> WARN 092[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:38:06.698 UTC [ConnProducer] NewConnection -> ERRO 093[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:38:09.701 UTC [ConnProducer] NewConnection -> ERRO 094[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:38:09.701 UTC [deliveryClient] connect -> ERRO 095[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:38:09.702 UTC [deliveryClient] try -> WARN 096[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:38:13.705 UTC [ConnProducer] NewConnection -> ERRO 097[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:38:16.708 UTC [ConnProducer] NewConnection -> ERRO 098[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:38:16.708 UTC [deliveryClient] connect -> ERRO 099[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:38:16.709 UTC [deliveryClient] try -> WARN 09a[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:38:21.712 UTC [ConnProducer] NewConnection -> ERRO 09b[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:38:24.714 UTC [ConnProducer] NewConnection -> ERRO 09c[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[33m2019-01-29 10:38:24.726 UTC [blocksProvider] DeliverBlocks -> WARN 09d[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:38:37.730 UTC [ConnProducer] NewConnection -> ERRO 09e[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:38:40.732 UTC [ConnProducer] NewConnection -> ERRO 09f[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:38:40.733 UTC [deliveryClient] connect -> ERRO 0a0[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:38:40.734 UTC [deliveryClient] try -> WARN 0a1[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:38:44.736 UTC [ConnProducer] NewConnection -> ERRO 0a2[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:38:47.739 UTC [ConnProducer] NewConnection -> ERRO 0a3[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:38:47.739 UTC [deliveryClient] connect -> ERRO 0a4[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:38:47.740 UTC [deliveryClient] try -> WARN 0a5[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:38:52.743 UTC [ConnProducer] NewConnection -> ERRO 0a6[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:38:55.745 UTC [ConnProducer] NewConnection -> ERRO 0a7[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[33m2019-01-29 10:38:55.756 UTC [blocksProvider] DeliverBlocks -> WARN 0a8[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:39:08.760 UTC [ConnProducer] NewConnection -> ERRO 0a9[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:39:11.762 UTC [ConnProducer] NewConnection -> ERRO 0aa[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:39:11.762 UTC [deliveryClient] connect -> ERRO 0ab[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:39:11.763 UTC [deliveryClient] try -> WARN 0ac[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:39:15.766 UTC [ConnProducer] NewConnection -> ERRO 0ad[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:39:18.770 UTC [ConnProducer] NewConnection -> ERRO 0ae[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:39:18.770 UTC [deliveryClient] connect -> ERRO 0af[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:39:18.771 UTC [deliveryClient] try -> WARN 0b0[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:39:23.774 UTC [ConnProducer] NewConnection -> ERRO 0b1[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[33m2019-01-29 10:39:23.785 UTC [blocksProvider] DeliverBlocks -> WARN 0b2[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:39:36.786 UTC [ConnProducer] NewConnection -> ERRO 0b3[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:39:39.787 UTC [ConnProducer] NewConnection -> ERRO 0b4[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:39:39.787 UTC [deliveryClient] connect -> ERRO 0b5[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:39:39.788 UTC [deliveryClient] try -> WARN 0b6[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:39:43.790 UTC [ConnProducer] NewConnection -> ERRO 0b7[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:39:46.792 UTC [ConnProducer] NewConnection -> ERRO 0b8[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:39:46.792 UTC [deliveryClient] connect -> ERRO 0b9[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:39:46.793 UTC [deliveryClient] try -> WARN 0ba[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:39:51.795 UTC [ConnProducer] NewConnection -> ERRO 0bb[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:39:54.796 UTC [ConnProducer] NewConnection -> ERRO 0bc[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[33m2019-01-29 10:39:54.807 UTC [blocksProvider] DeliverBlocks -> WARN 0bd[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:40:07.810 UTC [ConnProducer] NewConnection -> ERRO 0be[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:40:10.813 UTC [ConnProducer] NewConnection -> ERRO 0bf[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:40:10.813 UTC [deliveryClient] connect -> ERRO 0c0[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:40:10.813 UTC [deliveryClient] try -> WARN 0c1[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:40:14.816 UTC [ConnProducer] NewConnection -> ERRO 0c2[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:40:17.819 UTC [ConnProducer] NewConnection -> ERRO 0c3[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:40:17.819 UTC [deliveryClient] connect -> ERRO 0c4[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:40:17.820 UTC [deliveryClient] try -> WARN 0c5[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:40:22.823 UTC [ConnProducer] NewConnection -> ERRO 0c6[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:40:25.826 UTC [ConnProducer] NewConnection -> ERRO 0c7[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[33m2019-01-29 10:40:25.837 UTC [blocksProvider] DeliverBlocks -> WARN 0c8[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:40:38.840 UTC [ConnProducer] NewConnection -> ERRO 0c9[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:40:41.843 UTC [ConnProducer] NewConnection -> ERRO 0ca[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:40:41.843 UTC [deliveryClient] connect -> ERRO 0cb[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:40:41.844 UTC [deliveryClient] try -> WARN 0cc[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:40:45.847 UTC [ConnProducer] NewConnection -> ERRO 0cd[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:40:48.850 UTC [ConnProducer] NewConnection -> ERRO 0ce[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:40:48.850 UTC [deliveryClient] connect -> ERRO 0cf[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:40:48.851 UTC [deliveryClient] try -> WARN 0d0[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 2 attempt. Retrying in 2s
+[33m2019-01-29 10:40:50.861 UTC [blocksProvider] DeliverBlocks -> WARN 0d1[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:41:03.863 UTC [ConnProducer] NewConnection -> ERRO 0d2[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:41:06.865 UTC [ConnProducer] NewConnection -> ERRO 0d3[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:41:06.865 UTC [deliveryClient] connect -> ERRO 0d4[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:41:06.867 UTC [deliveryClient] try -> WARN 0d5[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:41:10.870 UTC [ConnProducer] NewConnection -> ERRO 0d6[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:41:13.872 UTC [ConnProducer] NewConnection -> ERRO 0d7[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:41:13.872 UTC [deliveryClient] connect -> ERRO 0d8[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:41:13.873 UTC [deliveryClient] try -> WARN 0d9[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 2 attempt. Retrying in 2s
+[33m2019-01-29 10:41:15.885 UTC [blocksProvider] DeliverBlocks -> WARN 0da[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:41:28.889 UTC [ConnProducer] NewConnection -> ERRO 0db[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:41:31.892 UTC [ConnProducer] NewConnection -> ERRO 0dc[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:41:31.892 UTC [deliveryClient] connect -> ERRO 0dd[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:41:31.893 UTC [deliveryClient] try -> WARN 0de[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:41:35.897 UTC [ConnProducer] NewConnection -> ERRO 0df[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:41:38.899 UTC [ConnProducer] NewConnection -> ERRO 0e0[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:41:38.900 UTC [deliveryClient] connect -> ERRO 0e1[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:41:38.901 UTC [deliveryClient] try -> WARN 0e2[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 2 attempt. Retrying in 2s
+[33m2019-01-29 10:41:40.911 UTC [blocksProvider] DeliverBlocks -> WARN 0e3[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:41:53.915 UTC [ConnProducer] NewConnection -> ERRO 0e4[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:41:56.916 UTC [ConnProducer] NewConnection -> ERRO 0e5[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:41:56.917 UTC [deliveryClient] connect -> ERRO 0e6[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:41:56.918 UTC [deliveryClient] try -> WARN 0e7[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:42:00.921 UTC [ConnProducer] NewConnection -> ERRO 0e8[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:42:03.924 UTC [ConnProducer] NewConnection -> ERRO 0e9[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:42:03.924 UTC [deliveryClient] connect -> ERRO 0ea[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:42:03.925 UTC [deliveryClient] try -> WARN 0eb[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:42:08.927 UTC [ConnProducer] NewConnection -> ERRO 0ec[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:42:11.931 UTC [ConnProducer] NewConnection -> ERRO 0ed[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[33m2019-01-29 10:42:11.942 UTC [blocksProvider] DeliverBlocks -> WARN 0ee[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:42:24.946 UTC [ConnProducer] NewConnection -> ERRO 0ef[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:42:27.949 UTC [ConnProducer] NewConnection -> ERRO 0f0[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:42:27.949 UTC [deliveryClient] connect -> ERRO 0f1[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:42:27.950 UTC [deliveryClient] try -> WARN 0f2[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:42:31.954 UTC [ConnProducer] NewConnection -> ERRO 0f3[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:42:34.957 UTC [ConnProducer] NewConnection -> ERRO 0f4[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:42:34.957 UTC [deliveryClient] connect -> ERRO 0f5[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:42:34.958 UTC [deliveryClient] try -> WARN 0f6[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:42:39.961 UTC [ConnProducer] NewConnection -> ERRO 0f7[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:42:42.964 UTC [ConnProducer] NewConnection -> ERRO 0f8[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[33m2019-01-29 10:42:42.975 UTC [blocksProvider] DeliverBlocks -> WARN 0f9[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:42:55.979 UTC [ConnProducer] NewConnection -> ERRO 0fa[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:42:58.981 UTC [ConnProducer] NewConnection -> ERRO 0fb[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:42:58.981 UTC [deliveryClient] connect -> ERRO 0fc[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:42:58.982 UTC [deliveryClient] try -> WARN 0fd[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:43:02.985 UTC [ConnProducer] NewConnection -> ERRO 0fe[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:43:05.988 UTC [ConnProducer] NewConnection -> ERRO 0ff[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:43:05.988 UTC [deliveryClient] connect -> ERRO 100[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:43:05.988 UTC [deliveryClient] try -> WARN 101[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:43:10.990 UTC [ConnProducer] NewConnection -> ERRO 102[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:43:13.993 UTC [ConnProducer] NewConnection -> ERRO 103[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[33m2019-01-29 10:43:13.998 UTC [blocksProvider] DeliverBlocks -> WARN 104[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:43:27.002 UTC [ConnProducer] NewConnection -> ERRO 105[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:43:30.003 UTC [ConnProducer] NewConnection -> ERRO 106[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:43:30.003 UTC [deliveryClient] connect -> ERRO 107[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:43:30.004 UTC [deliveryClient] try -> WARN 108[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:43:34.007 UTC [ConnProducer] NewConnection -> ERRO 109[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:43:37.010 UTC [ConnProducer] NewConnection -> ERRO 10a[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:43:37.010 UTC [deliveryClient] connect -> ERRO 10b[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:43:37.010 UTC [deliveryClient] try -> WARN 10c[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:43:42.012 UTC [ConnProducer] NewConnection -> ERRO 10d[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[33m2019-01-29 10:43:42.023 UTC [blocksProvider] DeliverBlocks -> WARN 10e[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:43:55.027 UTC [ConnProducer] NewConnection -> ERRO 10f[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:43:58.028 UTC [ConnProducer] NewConnection -> ERRO 110[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:43:58.028 UTC [deliveryClient] connect -> ERRO 111[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:43:58.029 UTC [deliveryClient] try -> WARN 112[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:44:02.033 UTC [ConnProducer] NewConnection -> ERRO 113[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:44:05.036 UTC [ConnProducer] NewConnection -> ERRO 114[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:44:05.036 UTC [deliveryClient] connect -> ERRO 115[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:44:05.037 UTC [deliveryClient] try -> WARN 116[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 2 attempt. Retrying in 2s
+[33m2019-01-29 10:44:07.048 UTC [blocksProvider] DeliverBlocks -> WARN 117[0m [comunitychannel] Got error &{SERVICE_UNAVAILABLE}
+[31m2019-01-29 10:44:20.052 UTC [ConnProducer] NewConnection -> ERRO 118[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:44:23.054 UTC [ConnProducer] NewConnection -> ERRO 119[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:44:23.055 UTC [deliveryClient] connect -> ERRO 11a[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050]
+[33m2019-01-29 10:44:23.055 UTC [deliveryClient] try -> WARN 11b[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital3.switch2logic.co.za:9050 orderer0.hospital2.switch2logic.co.za:8050] , at 1 attempt. Retrying in 1s
+[31m2019-01-29 10:44:27.058 UTC [ConnProducer] NewConnection -> ERRO 11c[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+[31m2019-01-29 10:44:30.060 UTC [ConnProducer] NewConnection -> ERRO 11d[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+[31m2019-01-29 10:44:30.060 UTC [deliveryClient] connect -> ERRO 11e[0m Failed obtaining connection: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050]
+[33m2019-01-29 10:44:30.061 UTC [deliveryClient] try -> WARN 11f[0m Got error: Could not connect to any of the endpoints: [orderer0.hospital2.switch2logic.co.za:8050 orderer0.hospital3.switch2logic.co.za:9050] , at 2 attempt. Retrying in 2s
+[31m2019-01-29 10:44:35.064 UTC [ConnProducer] NewConnection -> ERRO 120[0m Failed connecting to orderer0.hospital2.switch2logic.co.za:8050 , error: context deadline exceeded
+2019-01-29 10:51:30.109 UTC [gossip/gossip] Stop -> INFO 121[0m Stopping gossip
+2019-01-29 10:51:30.109 UTC [gossip/discovery] Stop -> INFO 122[0m Stopping
+2019-01-29 10:51:30.109 UTC [gossip/discovery] Stop -> INFO 123[0m Stopped
+[33m2019-01-29 10:51:30.109 UTC [deliveryClient] try -> WARN 124[0m Got error: rpc error: code = Canceled desc = context canceled , at 1 attempt. Retrying in 1s
+[33m2019-01-29 10:51:30.109 UTC [blocksProvider] DeliverBlocks -> WARN 125[0m [comunitychannel] Receive error: client is closing
+2019-01-29 10:51:30.109 UTC [gossip/comm] Stop -> INFO 126[0m Stopping
+2019-01-29 10:51:30.109 UTC [gossip/comm] Stop -> INFO 127[0m Stopped
+2019-01-29 10:51:33.144 UTC [msp] getMspConfig -> INFO 001[0m Loading NodeOUs
+2019-01-29 10:51:33.171 UTC [nodeCmd] serve -> INFO 002[0m Starting peer:
+ Version: 1.2.0
+ Commit SHA: cae2ad4
+ Go version: go1.10
+ OS/Arch: linux/amd64
+ Experimental features: false
+ Chaincode:
+  Base Image Version: 0.4.10
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+
+2019-01-29 10:51:33.171 UTC [ledgermgmt] initialize -> INFO 003[0m Initializing ledger mgmt
+2019-01-29 10:51:33.171 UTC [kvledger] NewProvider -> INFO 004[0m Initializing ledger provider
+[33m2019-01-29 10:51:33.205 UTC [couchdb] handleRequest -> WARN 005[0m Retrying couchdb request in 125ms. Attempt:1  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.35:5984: connect: connection refused
+[33m2019-01-29 10:51:33.331 UTC [couchdb] handleRequest -> WARN 006[0m Retrying couchdb request in 250ms. Attempt:2  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.35:5984: connect: connection refused
+[33m2019-01-29 10:51:33.582 UTC [couchdb] handleRequest -> WARN 007[0m Retrying couchdb request in 500ms. Attempt:3  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.35:5984: connect: connection refused
+[33m2019-01-29 10:51:34.083 UTC [couchdb] handleRequest -> WARN 008[0m Retrying couchdb request in 1s. Attempt:4  Error:Get http://couchdb.peer0.hospital1.switch2logic.co.za:5984/: dial tcp 10.0.0.35:5984: connect: connection refused
+2019-01-29 10:51:35.171 UTC [kvledger] NewProvider -> INFO 009[0m ledger provider Initialized
+2019-01-29 10:51:35.171 UTC [ledgermgmt] initialize -> INFO 00a[0m ledger mgmt initialized
+2019-01-29 10:51:35.172 UTC [peer] func1 -> INFO 00b[0m Auto-detected peer address: 10.0.0.34:7051
+2019-01-29 10:51:35.172 UTC [peer] func1 -> INFO 00c[0m Returning peer0.hospital1.switch2logic.co.za:7051
+2019-01-29 10:51:35.172 UTC [peer] func1 -> INFO 00d[0m Auto-detected peer address: 10.0.0.34:7051
+2019-01-29 10:51:35.172 UTC [peer] func1 -> INFO 00e[0m Returning peer0.hospital1.switch2logic.co.za:7051
+2019-01-29 10:51:35.174 UTC [nodeCmd] serve -> INFO 00f[0m Starting peer with TLS enabled
+2019-01-29 10:51:35.175 UTC [eventhub_producer] start -> INFO 010[0m Event processor started
+2019-01-29 10:51:35.176 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 011[0m Entering computeChaincodeEndpoint with peerHostname: peer0.hospital1.switch2logic.co.za
+2019-01-29 10:51:35.176 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 012[0m Exit with ccEndpoint: peer0.hospital1.switch2logic.co.za:7052
+2019-01-29 10:51:35.177 UTC [sccapi] registerSysCC -> INFO 013[0m system chaincode cscc(github.com/hyperledger/fabric/core/scc/cscc) registered
+2019-01-29 10:51:35.177 UTC [sccapi] registerSysCC -> INFO 014[0m system chaincode lscc(github.com/hyperledger/fabric/core/scc/lscc) registered
+2019-01-29 10:51:35.177 UTC [sccapi] registerSysCC -> INFO 015[0m system chaincode qscc(github.com/hyperledger/fabric/core/scc/qscc) registered
+2019-01-29 10:51:35.183 UTC [gossip/gossip] NewGossipService -> INFO 016[0m Creating gossip service with self membership of {peer0.hospital1.switch2logic.co.za:7051 [] [97 15 22 24 60 183 255 127 100 13 239 70 46 88 180 28 62 250 12 124 176 242 157 194 203 149 248 202 234 104 203 137] peer0.hospital1.switch2logic.co.za:7051 <nil> <nil>}
+2019-01-29 10:51:35.184 UTC [gossip/gossip] start -> INFO 017[0m Gossip instance peer0.hospital1.switch2logic.co.za:7051 started
+2019-01-29 10:51:35.184 UTC [cscc] Init -> INFO 018[0m Init CSCC
+2019-01-29 10:51:35.184 UTC [sccapi] deploySysCC -> INFO 019[0m system chaincode cscc/(github.com/hyperledger/fabric/core/scc/cscc) deployed
+2019-01-29 10:51:35.185 UTC [sccapi] deploySysCC -> INFO 01a[0m system chaincode lscc/(github.com/hyperledger/fabric/core/scc/lscc) deployed
+2019-01-29 10:51:35.186 UTC [qscc] Init -> INFO 01b[0m Init QSCC
+2019-01-29 10:51:35.186 UTC [sccapi] deploySysCC -> INFO 01c[0m system chaincode qscc/(github.com/hyperledger/fabric/core/scc/qscc) deployed
+2019-01-29 10:51:35.186 UTC [nodeCmd] serve -> INFO 01d[0m Deployed system chaincodes
+2019-01-29 10:51:35.186 UTC [peer] Initialize -> INFO 01e[0m Loading chain comunitychannel
+2019-01-29 10:51:35.186 UTC [ledgermgmt] OpenLedger -> INFO 01f[0m Opening ledger with id = comunitychannel
+2019-01-29 10:51:35.193 UTC [ledgermgmt] OpenLedger -> INFO 020[0m Opened ledger with id = comunitychannel
+2019-01-29 10:51:35.222 UTC [cscc] Init -> INFO 021[0m Init CSCC
+2019-01-29 10:51:35.222 UTC [sccapi] deploySysCC -> INFO 022[0m system chaincode cscc/comunitychannel(github.com/hyperledger/fabric/core/scc/cscc) deployed
+2019-01-29 10:51:35.222 UTC [sccapi] deploySysCC -> INFO 023[0m system chaincode lscc/comunitychannel(github.com/hyperledger/fabric/core/scc/lscc) deployed
+2019-01-29 10:51:35.222 UTC [qscc] Init -> INFO 024[0m Init QSCC
+2019-01-29 10:51:35.222 UTC [sccapi] deploySysCC -> INFO 025[0m system chaincode qscc/comunitychannel(github.com/hyperledger/fabric/core/scc/qscc) deployed
+2019-01-29 10:51:35.223 UTC [discovery] NewService -> INFO 026[0m Created with config TLS: true, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+2019-01-29 10:51:35.223 UTC [nodeCmd] registerDiscoveryService -> INFO 027[0m Discovery service activated
+2019-01-29 10:51:35.223 UTC [nodeCmd] serve -> INFO 028[0m Starting peer with ID=[name:"peer0.hospital1.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital1.switch2logic.co.za:7051]
+2019-01-29 10:51:35.224 UTC [nodeCmd] serve -> INFO 029[0m Started peer with ID=[name:"peer0.hospital1.switch2logic.co.za" ], network ID=[dev], address=[peer0.hospital1.switch2logic.co.za:7051]
+2019-01-29 10:51:35.224 UTC [nodeCmd] func9 -> INFO 02a[0m Starting profiling server with listenAddress = 0.0.0.0:6060
+2019-01-29 10:51:41.224 UTC [gossip/election] beLeader -> INFO 02b[0m [97 15 22 24 60 183 255 127 100 13 239 70 46 88 180 28 62 250 12 124 176 242 157 194 203 149 248 202 234 104 203 137] : Becoming a leader
+[31m2019-01-29 10:51:44.227 UTC [ConnProducer] NewConnection -> ERRO 02c[0m Failed connecting to orderer0.hospital3.switch2logic.co.za:9050 , error: context deadline exceeded
+2019-01-29 11:21:22.064 UTC [kvledger] CommitWithPvtData -> INFO 02d[0m Channel [comunitychannel]: Committed block [1] with 1 transaction(s)
+[33m2019-01-29 11:21:22.181 UTC [gossip/gossip] validateMsg -> WARN 02e[0m StateInfo message GossipMessage: tag:CHAN_OR_ORG state_info:<timestamp:<inc_num:1548760518166163897 seq_num:1548760882124721412 > pki_id:"\201\240El\360\201\204'\340[\205\006\357\317el\312]\375\240\335\343\033\306S}\273l\023(\373g" channel_MAC:"a5\275\223[}6\367K\342\017\206t@\"\342%\364\211c(0\271\3417\207l@\274\203\334W" properties:<ledger_height:2 > > , Envelope: 98 bytes, Signature: 70 bytes is found invalid: PKIID wasn't found
+[33m2019-01-29 11:21:22.181 UTC [gossip/gossip] handleMessage -> WARN 02f[0m Message GossipMessage: tag:CHAN_OR_ORG state_info:<timestamp:<inc_num:1548760518166163897 seq_num:1548760882124721412 > pki_id:"\201\240El\360\201\204'\340[\205\006\357\317el\312]\375\240\335\343\033\306S}\273l\023(\373g" channel_MAC:"a5\275\223[}6\367K\342\017\206t@\"\342%\364\211c(0\271\3417\207l@\274\203\334W" properties:<ledger_height:2 > > , Envelope: 98 bytes, Signature: 70 bytes isn't valid
+2019-01-29 11:21:24.574 UTC [gossip/gossip] func2 -> INFO 030[0m Learned of a new certificate: [10 12 72 111 115 112 105 116 97 108 51 77 83 80 18 219 6 45 45 45 45 45 66 69 71 73 78 32 67 69 82 84 73 70 73 67 65 84 69 45 45 45 45 45 10 77 73 73 67 84 106 67 67 65 102 83 103 65 119 73 66 65 103 73 82 65 75 65 110 69 52 80 98 68 87 77 101 82 108 48 68 105 120 100 76 105 86 115 119 67 103 89 73 75 111 90 73 122 106 48 69 65 119 73 119 103 89 115 120 10 67 122 65 74 66 103 78 86 66 65 89 84 65 108 86 84 77 82 77 119 69 81 89 68 86 81 81 73 69 119 112 68 89 87 120 112 90 109 57 121 98 109 108 104 77 82 89 119 70 65 89 68 86 81 81 72 69 119 49 84 89 87 52 103 10 82 110 74 104 98 109 78 112 99 50 78 118 77 83 85 119 73 119 89 68 86 81 81 75 69 120 120 111 98 51 78 119 97 88 82 104 98 68 77 117 99 51 100 112 100 71 78 111 77 109 120 118 90 50 108 106 76 109 78 118 76 110 112 104 10 77 83 103 119 74 103 89 68 86 81 81 68 69 120 57 106 89 83 53 111 98 51 78 119 97 88 82 104 98 68 77 117 99 51 100 112 100 71 78 111 77 109 120 118 90 50 108 106 76 109 78 118 76 110 112 104 77 66 52 88 68 84 69 53 10 77 68 69 121 79 84 65 51 78 68 69 49 78 70 111 88 68 84 73 53 77 68 69 121 78 106 65 51 78 68 69 49 78 70 111 119 100 106 69 76 77 65 107 71 65 49 85 69 66 104 77 67 86 86 77 120 69 122 65 82 66 103 78 86 10 66 65 103 84 67 107 78 104 98 71 108 109 98 51 74 117 97 87 69 120 70 106 65 85 66 103 78 86 66 65 99 84 68 86 78 104 98 105 66 71 99 109 70 117 89 50 108 122 89 50 56 120 68 84 65 76 66 103 78 86 66 65 115 84 10 66 72 66 108 90 88 73 120 75 122 65 112 66 103 78 86 66 65 77 84 73 110 66 108 90 88 73 119 76 109 104 118 99 51 66 112 100 71 70 115 77 121 53 122 100 50 108 48 89 50 103 121 98 71 57 110 97 87 77 117 89 50 56 117 10 101 109 69 119 87 84 65 84 66 103 99 113 104 107 106 79 80 81 73 66 66 103 103 113 104 107 106 79 80 81 77 66 66 119 78 67 65 65 83 65 118 87 87 50 108 57 88 106 119 102 105 77 105 90 54 80 116 56 81 114 107 56 49 69 10 68 97 73 102 71 56 104 82 112 67 86 55 75 72 122 114 72 109 112 105 121 51 121 56 56 80 108 103 122 81 104 104 51 115 81 53 105 89 113 65 113 119 48 81 106 122 54 66 114 69 98 104 101 100 71 113 112 118 54 80 111 48 48 119 10 83 122 65 79 66 103 78 86 72 81 56 66 65 102 56 69 66 65 77 67 66 52 65 119 68 65 89 68 86 82 48 84 65 81 72 47 66 65 73 119 65 68 65 114 66 103 78 86 72 83 77 69 74 68 65 105 103 67 65 55 118 86 87 70 10 88 87 112 103 90 66 111 106 81 49 90 76 120 85 118 103 66 76 101 105 97 53 57 77 105 118 73 82 99 106 120 109 89 97 110 112 121 84 65 75 66 103 103 113 104 107 106 79 80 81 81 68 65 103 78 73 65 68 66 70 65 105 69 65 10 50 69 48 53 51 55 115 107 108 53 121 88 107 86 75 83 106 114 106 114 48 85 74 67 51 71 82 80 84 56 99 122 82 108 110 51 70 50 78 66 50 121 103 67 73 65 112 71 51 111 108 105 99 56 102 118 89 65 74 115 112 77 81 72 10 57 50 70 122 90 108 78 87 81 51 66 87 68 66 52 100 54 100 113 51 65 101 43 47 10 45 45 45 45 45 69 78 68 32 67 69 82 84 73 70 73 67 65 84 69 45 45 45 45 45 10]
+2019-01-29 11:22:06.391 UTC [kvledger] CommitWithPvtData -> INFO 031[0m Channel [comunitychannel]: Committed block [2] with 1 transaction(s)
+[33m2019-01-29 11:22:06.399 UTC [gossip/comm] func1 -> WARN 032[0m peer0.hospital3.switch2logic.co.za:7051, PKIid:[80 222 25 174 161 203 82 60 131 42 133 251 211 175 214 192 133 135 100 215 68 201 172 154 146 205 91 49 1 96 28 117] isn't responsive: EOF
+[33m2019-01-29 11:22:06.399 UTC [gossip/discovery] expireDeadMembers -> WARN 033[0m Entering [[80 222 25 174 161 203 82 60 131 42 133 251 211 175 214 192 133 135 100 215 68 201 172 154 146 205 91 49 1 96 28 117]]
+[33m2019-01-29 11:22:06.399 UTC [gossip/discovery] expireDeadMembers -> WARN 034[0m Closing connection to Endpoint: peer0.hospital3.switch2logic.co.za:7051, InternalEndpoint: , PKI-ID: [80 222 25 174 161 203 82 60 131 42 133 251 211 175 214 192 133 135 100 215 68 201 172 154 146 205 91 49 1 96 28 117], Metadata: []
+[33m2019-01-29 11:22:06.399 UTC [gossip/discovery] expireDeadMembers -> WARN 035[0m Exiting
+2019-01-29 11:22:07.509 UTC [gossip/discovery] resurrectMember -> INFO 036[0m Entering, AliveMessage: GossipMessage: tag:EMPTY alive_msg:<membership:<endpoint:"peer0.hospital3.switch2logic.co.za:7051" pki_id:"P\336\031\256\241\313R<\203*\205\373\323\257\326\300\205\207d\327D\311\254\232\222\315[1\001`\034u" > timestamp:<inc_num:1548758038754509519 seq_num:1332 > > , Envelope: 96 bytes, Signature: 70 bytes t: {1548758038754509519 1332}
+2019-01-29 11:22:07.509 UTC [gossip/discovery] resurrectMember -> INFO 037[0m Exiting
+2019-01-29 11:22:08.585 UTC [gossip/gossip] func2 -> INFO 038[0m Learned of a new certificate: [10 12 72 111 115 112 105 116 97 108 50 77 83 80 18 219 6 45 45 45 45 45 66 69 71 73 78 32 67 69 82 84 73 70 73 67 65 84 69 45 45 45 45 45 10 77 73 73 67 84 68 67 67 65 102 79 103 65 119 73 66 65 103 73 81 89 90 49 69 54 67 76 51 84 73 53 114 57 74 48 88 53 67 89 47 54 122 65 75 66 103 103 113 104 107 106 79 80 81 81 68 65 106 67 66 105 122 69 76 10 77 65 107 71 65 49 85 69 66 104 77 67 86 86 77 120 69 122 65 82 66 103 78 86 66 65 103 84 67 107 78 104 98 71 108 109 98 51 74 117 97 87 69 120 70 106 65 85 66 103 78 86 66 65 99 84 68 86 78 104 98 105 66 71 10 99 109 70 117 89 50 108 122 89 50 56 120 74 84 65 106 66 103 78 86 66 65 111 84 72 71 104 118 99 51 66 112 100 71 70 115 77 105 53 122 100 50 108 48 89 50 103 121 98 71 57 110 97 87 77 117 89 50 56 117 101 109 69 120 10 75 68 65 109 66 103 78 86 66 65 77 84 72 50 78 104 76 109 104 118 99 51 66 112 100 71 70 115 77 105 53 122 100 50 108 48 89 50 103 121 98 71 57 110 97 87 77 117 89 50 56 117 101 109 69 119 72 104 99 78 77 84 107 119 10 77 84 73 53 77 68 99 48 77 84 85 48 87 104 99 78 77 106 107 119 77 84 73 50 77 68 99 48 77 84 85 48 87 106 66 50 77 81 115 119 67 81 89 68 86 81 81 71 69 119 74 86 85 122 69 84 77 66 69 71 65 49 85 69 10 67 66 77 75 81 50 70 115 97 87 90 118 99 109 53 112 89 84 69 87 77 66 81 71 65 49 85 69 66 120 77 78 85 50 70 117 73 69 90 121 89 87 53 106 97 88 78 106 98 122 69 78 77 65 115 71 65 49 85 69 67 120 77 69 10 99 71 86 108 99 106 69 114 77 67 107 71 65 49 85 69 65 120 77 105 99 71 86 108 99 106 65 117 97 71 57 122 99 71 108 48 89 87 119 121 76 110 78 51 97 88 82 106 97 68 74 115 98 50 100 112 89 121 53 106 98 121 53 54 10 89 84 66 90 77 66 77 71 66 121 113 71 83 77 52 57 65 103 69 71 67 67 113 71 83 77 52 57 65 119 69 72 65 48 73 65 66 79 111 69 122 122 48 70 70 100 89 78 118 56 57 73 103 87 49 107 109 76 97 82 104 83 117 120 10 90 90 121 83 54 70 102 77 110 47 115 43 101 76 74 73 110 104 78 56 88 90 82 99 102 111 53 106 65 76 53 119 72 81 117 115 57 107 97 53 101 114 114 43 55 80 70 122 110 57 43 68 81 108 69 73 98 52 54 106 84 84 66 76 10 77 65 52 71 65 49 85 100 68 119 69 66 47 119 81 69 65 119 73 72 103 68 65 77 66 103 78 86 72 82 77 66 65 102 56 69 65 106 65 65 77 67 115 71 65 49 85 100 73 119 81 107 77 67 75 65 73 80 69 67 97 108 105 106 10 50 108 57 117 66 121 68 99 69 85 117 114 67 68 82 85 115 69 81 47 117 79 78 80 51 72 69 112 55 120 86 87 104 104 100 117 77 65 111 71 67 67 113 71 83 77 52 57 66 65 77 67 65 48 99 65 77 69 81 67 73 69 83 73 10 54 82 111 47 117 72 83 54 116 67 57 99 99 106 90 117 109 66 78 69 43 102 102 110 75 106 73 50 85 111 90 101 76 51 122 71 82 88 86 88 65 105 66 101 105 114 98 100 86 76 67 90 52 54 76 104 83 80 97 121 105 102 105 67 10 76 74 106 47 69 70 43 122 56 107 80 86 76 89 101 47 83 111 68 83 82 103 61 61 10 45 45 45 45 45 69 78 68 32 67 69 82 84 73 70 73 67 65 84 69 45 45 45 45 45 10]
+2019-01-29 11:22:46.421 UTC [gossip/gossip] learnAnchorPeers -> INFO 039[0m Anchor peer with same endpoint, skipping connecting to myself
+2019-01-29 11:22:46.456 UTC [kvledger] CommitWithPvtData -> INFO 03a[0m Channel [comunitychannel]: Committed block [3] with 1 transaction(s)
+[33m2019-01-29 11:22:46.456 UTC [gossip/comm] func1 -> WARN 03b[0m peer0.hospital2.switch2logic.co.za:7051, PKIid:[129 160 69 108 240 129 132 39 224 91 133 6 239 207 101 108 202 93 253 160 221 227 27 198 83 125 187 108 19 40 251 103] isn't responsive: rpc error: code = Unavailable desc = transport is closing
+[33m2019-01-29 11:22:46.456 UTC [gossip/discovery] expireDeadMembers -> WARN 03c[0m Entering [[129 160 69 108 240 129 132 39 224 91 133 6 239 207 101 108 202 93 253 160 221 227 27 198 83 125 187 108 19 40 251 103]]
+[33m2019-01-29 11:22:46.457 UTC [gossip/discovery] expireDeadMembers -> WARN 03d[0m Closing connection to Endpoint: peer0.hospital2.switch2logic.co.za:7051, InternalEndpoint: , PKI-ID: [129 160 69 108 240 129 132 39 224 91 133 6 239 207 101 108 202 93 253 160 221 227 27 198 83 125 187 108 19 40 251 103], Metadata: []
+[33m2019-01-29 11:22:46.457 UTC [gossip/discovery] expireDeadMembers -> WARN 03e[0m Exiting
+2019-01-29 11:22:47.482 UTC [gossip/discovery] resurrectMember -> INFO 03f[0m Entering, AliveMessage: GossipMessage: tag:EMPTY alive_msg:<membership:<endpoint:"peer0.hospital2.switch2logic.co.za:7051" pki_id:"\201\240El\360\201\204'\340[\205\006\357\317el\312]\375\240\335\343\033\306S}\273l\023(\373g" > timestamp:<inc_num:1548759115067934393 seq_num:887 > > , Envelope: 96 bytes, Signature: 71 bytes t: {1548759115067934393 887}
+2019-01-29 11:22:47.483 UTC [gossip/discovery] resurrectMember -> INFO 040[0m Exiting
