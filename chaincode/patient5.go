@@ -26,6 +26,7 @@ import (
 	"time"
 
 	"github.com/hyperledger/fabric/core/chaincode/shim"
+	"github.com/hyperledger/fabric/core/chaincode/shim/ext/cid"
 	sc "github.com/hyperledger/fabric/protos/peer"
 )
 
@@ -59,13 +60,30 @@ func (s *SmartContract) Invoke(APIstub shim.ChaincodeStubInterface) sc.Response 
 
 	function, args := APIstub.GetFunctionAndParameters()
 	if function == "addPatient" {
+		err := cid.AssertAttributeValue(APIstub, "dev1", "true")
+		if err != nil {
+			return shim.Error("Unauthorised access dectected fagster")
+		}
 		return s.addPatient(APIstub, args)
 	} else if function == "getPatient" {
+		err := cid.AssertAttributeValue(APIstub, "dev1", "true")
+		if err != nil {
+			return shim.Error("Unauthorised access dectected fagster")
+		}
 		return s.getPatient(APIstub, args)
 	} else if function == "updatePatient" {
+		err := cid.AssertAttributeValue(APIstub, "dev1", "true")
+		if err != nil {
+			return shim.Error("Unauthorised access dectected fagster")
+		}
 		return s.updatePatient(APIstub, args)
 	} else if function == "addDoctor" {
+		err := cid.AssertAttributeValue(APIstub, "dev2", "true")
+		if err != nil {
+			return shim.Error(err.Error())
+		}
 		return s.addDoctor(APIstub, args)
+
 	} else if function == "getPatientHistory" {
 		return s.getHistoryForPatient(APIstub, args)
 	} else if function == "initLedger" {
@@ -76,6 +94,11 @@ func (s *SmartContract) Invoke(APIstub shim.ChaincodeStubInterface) sc.Response 
 }
 
 func (s *SmartContract) getPatient(APIstub shim.ChaincodeStubInterface, args []string) sc.Response {
+
+	err := cid.AssertAttributeValue(APIstub, "dev1", "true")
+	if err != nil {
+		return shim.Error("Unauthorised access dectected fagster")
+	}
 
 	if len(args) != 1 {
 		return shim.Error("Incorrect number of arguments. Expecting 1")
@@ -134,6 +157,7 @@ func (s *SmartContract) addDoctor(APIstub shim.ChaincodeStubInterface, args []st
 	if len(args) != 4 {
 		return shim.Error("Incorrect number of arguments. Expecting 5")
 	}
+
 	doctor := Doctor{DoctorID: args[1], DoctorName: args[2], DoctorSurname: args[3]}
 	doctorAsBytes, _ := json.Marshal(doctor)
 	APIstub.PutState(args[0], doctorAsBytes)

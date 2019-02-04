@@ -18,7 +18,9 @@ services:
     container_name: orderer0.hospital1.switch2logic.co.za
     image: hyperledger/fabric-orderer:latest
     environment:
-      - ORDERER_GENERAL_LOGLEVEL=debug
+      #- ORDERER_GENERAL_LOGLEVEL=debug
+      #- FABRIC_LOGGING_SPEC=INFO
+      - FABRIC_LOGGING_SPEC=DEBUG     
       - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
       - ORDERER_GENERAL_GENESISMETHOD=file
       - ORDERER_GENERAL_GENESISFILE=/etc/hyperledger/fabric/orderer/channel-artifacts/genesis.block
@@ -29,6 +31,9 @@ services:
       - ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/fabric/orderer/tls/server.key
       - ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/fabric/orderer/tls/server.crt
       - ORDERER_GENERAL_TLS_ROOTCAS=[/etc/hyperledger/fabric/orderer/tls/ca.crt]
+      #ClientTLS
+      #- ORDERER_GENERAL_TLS_CLIENTAUTHREQUIRED=true
+      #- ORDERER_GENERAL_TLS_CLIENTROOTCAS=/etc/hyperledger/fabric/orderer/tls/ca.crt
       #Kafka
       - ORDERER_KAFKA_RETRY_SHORTINTERVAL=1s
       - ORDERER_KAFKA_RETRY_SHORTTOTAL=30s
@@ -78,7 +83,8 @@ services:
       - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
       - CORE_PEER_ID=peer0.hospital1.switch2logic.co.za
       - CORE_LOGGING_PEER=debug
-      - CORE_CHAINCODE_LOGGING_LEVEL=DEBUG
+      #- CORE_CHAINCODE_LOGGING_LEVEL=DEBUG
+      - FABRIC_LOGGING_SPEC=DEBUG          
       - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7052
       - CORE_PEER_GOSSIP_USELEADERELECTION=true
       - CORE_PEER_GOSSIP_ORGLEADER=false
@@ -92,11 +98,14 @@ services:
       - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/fabric/tls/server.crt
       - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key
       - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
+      #TLS
+      #- CORE_PEER_TLS_CLIENTAUTHREQUIRED=true
+      #- CORE_PEER_TLS_CLIENTROOTCAS_FILES=/etc/hyperledger/fabric/tls/ca.crt
       #State Database Config
       - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
       - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb.peer0.hospital1.switch2logic.co.za:5984
-      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
-      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=Switch2logic  
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=Admin@Space2018
       #Network
       - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=hospital-network
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
@@ -134,7 +143,7 @@ services:
     environment:
       - GOPATH=/opt/gopath
       - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
-      - CORE_LOGGING_LEVEL=DEBUG
+      - FABRIC_LOGGING_SPEC=DEBUG    
       - CORE_PEER_ID=peer0.hospital1.switch2logic.co.za
       - CORE_PEER_ADDRESS=peer0.hospital1.switch2logic.co.za:7051
       - CORE_PEER_LOCALMSPID=Hospital1MSP
