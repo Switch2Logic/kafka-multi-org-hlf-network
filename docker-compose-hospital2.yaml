@@ -29,6 +29,9 @@ services:
       - ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/fabric/orderer/tls/server.key
       - ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/fabric/orderer/tls/server.crt
       - ORDERER_GENERAL_TLS_ROOTCAS=[/etc/hyperledger/fabric/orderer/tls/ca.crt]
+      #Client TLS
+      - ORDERER_GENERAL_TLS_CLIENTAUTHREQUIRED=true
+      - ORDERER_GENERAL_TLS_CLIENTROOTCAS=/etc/hyperledger/fabric/orderer/tls/ca.crt
       #Kafka
       - ORDERER_KAFKA_RETRY_SHORTINTERVAL=1s
       - ORDERER_KAFKA_RETRY_SHORTTOTAL=30s
@@ -91,6 +94,11 @@ services:
       - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/fabric/tls/server.crt
       - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key
       - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
+      #Client TLS
+      - CORE_PEER_TLS_CLIENTAUTHREQUIRED=true
+      - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/etc/hyperledger/fabric/tls/ca.crt
+      - CORE_PEER_TLS_CLIENTCERT_FILE=/etc/hyperledger/msp/users/tls/client.crt
+      - CORE_PEER_TLS_CLIENTKEY_FILE=/etc/hyperledger/msp/users/tls/client.key
       #State Database Config
       - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
       - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb.peer0.hospital2.switch2logic.co.za:5984
@@ -108,7 +116,7 @@ services:
         - /var/run/:/host/var/run/
         - ./crypto-config/peerOrganizations/hospital2.switch2logic.co.za/peers/peer0.hospital2.switch2logic.co.za/msp:/etc/hyperledger/fabric/msp
         - ./crypto-config/peerOrganizations/hospital2.switch2logic.co.za/peers/peer0.hospital2.switch2logic.co.za/tls:/etc/hyperledger/fabric/tls
-       # - ./crypto-config/peerOrganizations/hospital2.switch2logic.co.za/users:/etc/hyperledger/msp/users 
+        - ./crypto-config/peerOrganizations/hospital2.switch2logic.co.za/users/User1@hospital2.switch2logic.co.za/tls:/etc/hyperledger/msp/users/tls 
     networks:
       - hospital-network
     restart: always  
@@ -139,10 +147,15 @@ services:
       - CORE_PEER_LOCALMSPID=Hospital2MSP
       - CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto-config/peerOrganizations/hospital2.switch2logic.co.za/users/Admin@hospital2.switch2logic.co.za/msp
       - CORE_CHAINCODE_KEEPALIVE=10
+      #TLS
       - CORE_PEER_TLS_ENABLED=true
       - CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto-config/peerOrganizations/hospital2.switch2logic.co.za/peers/peer0.hospital2.switch2logic.co.za/tls/ca.crt
       - CORE_PEER_TLS_CERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto-config/peerOrganizations/hospital2.switch2logic.co.za/peers/peer0.hospital2.switch2logic.co.za/tls/server.crt
       - CORE_PEER_TLS_KEY_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto-config/peerOrganizations/hospital2.switch2logic.co.za/peers/peer0.hospital2.switch2logic.co.za/tls/server.key
+      #Client TLS
+      - CORE_PEER_TLS_CLIENTAUTHREQUIRED=true
+      - CORE_PEER_TLS_CLIENTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto-config/peerOrganizations/hospital2.switch2logic.co.za/users/User1@hospital2.switch2logic.co.za/tls/client.crt
+      - CORE_PEER_TLS_CLIENTKEY_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto-config/peerOrganizations/hospital2.switch2logic.co.za/users/User1@hospital2.switch2logic.co.za/tls/client.key
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
     command: /bin/bash
     volumes:
