@@ -38,4 +38,4 @@
 `$ peer chaincode query --clientauth --keyfile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto-config/peerOrganizations/hospital1.switch2logic.co.za/users/User1@hospital1.switch2logic.co.za/tls/client.key --certfile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto-config/peerOrganizations/hospital1.switch2logic.co.za/users/User1@hospital1.switch2logic.co.za/tls/client.crt  -C comunitychannel -n patient_private -c '{"Args":["getPatient","testkey"]}'` <br />
 
 # Query/Inovke with Fabric-Node-SDK
-`Find my fabri-sdk-node compatible example application for this network at https://github.com/Switch2Logic/fabric-node-patient-multi-org`
+`Find my fabri-sdk-node compatible example application for this network at [fabric-node-patient-multi-org](https://github.com/Switch2Logic/fabric-node-patient-multi-org)`
