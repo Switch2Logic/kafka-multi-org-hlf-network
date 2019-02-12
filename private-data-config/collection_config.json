@@ -1,0 +1,35 @@
+[
+    {
+          "name": "hospital1_2_collection",
+          "policy": "OR('Hospital1MSP.member', 'Hospital2MSP.member')",
+          "requiredPeerCount": 0,
+          "maxPeerCount": 3,
+          "blockToLive":0,
+          "memberOnlyRead": true
+    },
+    {
+          "name": "hospital1_3_collection",
+          "policy": "OR('Hospital1MSP.member', 'Hospital3MSP.member')",
+          "requiredPeerCount": 0,
+          "maxPeerCount": 3,
+          "blockToLive":0,
+          "memberOnlyRead": true
+     },
+     {
+          "name": "hospital2_3_collection",
+          "policy": "OR('Hospital2MSP.member', 'Hospital3MSP.member')",
+          "requiredPeerCount": 0,
+          "maxPeerCount": 3,
+          "blockToLive":0,
+          "memberOnlyRead": true
+     },
+     {
+          "name": "private_patient_collection",
+          "policy": "OR('Hospital1MSP.member', 'Hospital2MSP.member')",
+          "requiredPeerCount": 0,
+          "maxPeerCount": 3,
+          " blockToLive":5,
+          "memberOnlyRead": false
+      }
+
+  ]

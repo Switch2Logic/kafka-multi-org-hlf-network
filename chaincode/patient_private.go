@@ -56,6 +56,10 @@ func (s *SmartContract) Init(APIstub shim.ChaincodeStubInterface) sc.Response {
 }
 
 //Invoke method
+/*Access Contol:
+* Only dev1 can update the ledger
+* Only dev2 can read the ledger
+ */
 func (s *SmartContract) Invoke(APIstub shim.ChaincodeStubInterface) sc.Response {
 
 	function, args := APIstub.GetFunctionAndParameters()
@@ -66,7 +70,7 @@ func (s *SmartContract) Invoke(APIstub shim.ChaincodeStubInterface) sc.Response 
 		}
 		return s.addPatient(APIstub, args)
 	} else if function == "getPatient" {
-		err := cid.AssertAttributeValue(APIstub, "dev1", "true")
+		err := cid.AssertAttributeValue(APIstub, "dev2", "true")
 		if err != nil {
 			return shim.Error("Unauthorised access dectected fagster")
 		}
@@ -78,34 +82,35 @@ func (s *SmartContract) Invoke(APIstub shim.ChaincodeStubInterface) sc.Response 
 		}
 		return s.updatePatient(APIstub, args)
 	} else if function == "addDoctor" {
-		err := cid.AssertAttributeValue(APIstub, "dev2", "true")
+		err := cid.AssertAttributeValue(APIstub, "dev1", "true")
 		if err != nil {
 			return shim.Error(err.Error())
 		}
 		return s.addDoctor(APIstub, args)
 
 	} else if function == "getPatientHistory" {
+		err := cid.AssertAttributeValue(APIstub, "dev2", "true")
+		if err != nil {
+			return shim.Error(err.Error())
+		}
 		return s.getHistoryForPatient(APIstub, args)
+	} else if function == "addPatientPrivate" {
+		err := cid.AssertAttributeValue(APIstub, "dev1", "true")
+		if err != nil {
+			return shim.Error(err.Error())
+		}
+		return s.addPatientPrivate(APIstub, args)
+	} else if function == "getPatientPrivate" {
+		err := cid.AssertAttributeValue(APIstub, "dev2", "true")
+		if err != nil {
+			return shim.Error(err.Error())
+		}
+		return s.getPatientPrivate(APIstub, args)
 	} else if function == "initLedger" {
 		return s.initLedger(APIstub)
 	}
 
 	return shim.Error("Invalid Smart Contract function name.")
-}
-
-func (s *SmartContract) getPatient(APIstub shim.ChaincodeStubInterface, args []string) sc.Response {
-
-	err := cid.AssertAttributeValue(APIstub, "dev1", "true")
-	if err != nil {
-		return shim.Error("Unauthorised access dectected fagster")
-	}
-
-	if len(args) != 1 {
-		return shim.Error("Incorrect number of arguments. Expecting 1")
-	}
-
-	patientAsBytes, _ := APIstub.GetState(args[0])
-	return shim.Success(patientAsBytes)
 }
 
 func (s *SmartContract) initLedger(APIstub shim.ChaincodeStubInterface) sc.Response {
@@ -120,6 +125,7 @@ func (s *SmartContract) initLedger(APIstub shim.ChaincodeStubInterface) sc.Respo
 	return shim.Success(nil)
 }
 
+//Add normal patient
 func (s *SmartContract) addPatient(APIstub shim.ChaincodeStubInterface, args []string) sc.Response {
 
 	if len(args) != 5 {
@@ -133,6 +139,7 @@ func (s *SmartContract) addPatient(APIstub shim.ChaincodeStubInterface, args []s
 	return shim.Success(nil)
 }
 
+//Update normal patient
 func (s *SmartContract) updatePatient(APIstub shim.ChaincodeStubInterface, args []string) sc.Response {
 
 	if len(args) != 4 {
@@ -152,6 +159,59 @@ func (s *SmartContract) updatePatient(APIstub shim.ChaincodeStubInterface, args 
 	return shim.Success(nil)
 }
 
+//Normal get patient
+func (s *SmartContract) getPatient(APIstub shim.ChaincodeStubInterface, args []string) sc.Response {
+
+	if len(args) != 1 {
+		return shim.Error("Incorrect number of arguments. Expecting 1")
+	}
+
+	patientAsBytes, _ := APIstub.GetState(args[0])
+	return shim.Success(patientAsBytes)
+}
+
+//Add Patient privately
+func (s *SmartContract) addPatientPrivate(APIstub shim.ChaincodeStubInterface, args []string) sc.Response {
+
+	transMap, err := APIstub.GetTransient()
+
+	if _, ok := transMap["patient_details"]; !ok {
+		return shim.Error("marble must be a key in the transient map")
+	}
+
+	var patientTransient Patient
+	err = json.Unmarshal(transMap["patient_details"], &patientTransient)
+	if err != nil {
+		return shim.Error("Failed to decode JSON of: " + string(transMap["patient_details"]))
+	}
+
+	patient := Patient{
+		PatientID:      patientTransient.PatientID,
+		PatientName:    patientTransient.PatientName,
+		PatientSurname: patientTransient.PatientSurname,
+		PatientFileURL: patientTransient.PatientFileURL,
+	}
+
+	//patient := Patient{PatientID: args[1], PatientName: args[2], PatientSurname: args[3], PatientFileURL: args[4]}
+
+	patientAsBytes, _ := json.Marshal(patient)
+	APIstub.PutPrivateData("private_patient_collection", patientTransient.PatientID, patientAsBytes)
+
+	return shim.Success(nil)
+}
+
+//Get Patient privately
+func (s *SmartContract) getPatientPrivate(APIstub shim.ChaincodeStubInterface, args []string) sc.Response {
+
+	if len(args) != 1 {
+		return shim.Error("Incorrect number of arguments. Expecting 1")
+	}
+
+	patientAsBytes, _ := APIstub.GetPrivateData("private_patient_collection", args[0])
+	return shim.Success(patientAsBytes)
+}
+
+//Add a Doctor
 func (s *SmartContract) addDoctor(APIstub shim.ChaincodeStubInterface, args []string) sc.Response {
 
 	if len(args) != 4 {
@@ -164,6 +224,7 @@ func (s *SmartContract) addDoctor(APIstub shim.ChaincodeStubInterface, args []st
 	return shim.Success(nil)
 }
 
+//Get normal Patient history
 func (s *SmartContract) getHistoryForPatient(stub shim.ChaincodeStubInterface, args []string) sc.Response {
 
 	if len(args) < 1 {

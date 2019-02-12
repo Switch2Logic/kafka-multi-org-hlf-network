@@ -4,3 +4,5 @@
 /crypto-config/peerOrganizations/hospital1.switch2logic.co.za/ca/msp/keystore/5553b0e83fd32c7ff9cd4cd97ae45c7001767cd9e686053ef359877287841b06_sk
 /crypto-config/peerOrganizations/hospital2.switch2logic.co.za/ca/msp/keystore/f1026a58a3da5f6e0720dc114bab083454b0443fb8e34fdc7129ef155686176e_sk
 /crypto-config/peerOrganizations/hospital3.switch2logic.co.za/ca/msp/keystore/3bbd55855d6a60641a2343564bc54be004b7a26b9f4c8af211723c6661a9e9c9_sk
+/crypto-config/peerOrganizations/hospital1.switch2logic.co.za/ca/msp/keystore/044ecf840fbfe814b6734ce8ee3e9648e01f946f040c96eb47f06732ff4cb310_sk
+
